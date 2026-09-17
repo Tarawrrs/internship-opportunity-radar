@@ -1,0 +1,22 @@
+{
+  "last_successful_scan": "2026-09-17T02:23:25.777286Z",
+  "interval_days": 5,
+  "job_count": 7,
+  "sources": [
+    {
+      "source": "Appier",
+      "status": "ok",
+      "matches": 1
+    },
+    {
+      "source": "Point72",
+      "status": "ok",
+      "matches": 0
+    },
+    {
+      "source": "ShopBack",
+      "status": "ok",
+      "matches": 2
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "id": "gh-appier-7495834",
+    "title": "Data Analyst Intern",
+    "company": "Appier",
+    "location": "臺北／臺灣",
+    "locationKey": "tw",
+    "track": "industry",
+    "score": 95,
+    "priority": "優先投",
+    "priorityType": "priority",
+    "timing": "官方頁目前列出；每週 2–3 天、至少 6 個月，申請欄另提及 12 個月安排",
+    "eligibility": "大四或研究生；SQL、統計、Excel、Python automation；英文溝通",
+    "fit": "與產品 R&D 合作，做資料分析、監控與流程自動化；能直接推進 SQL／Python 與商業轉譯。",
+    "risk": "先確認學期能否穩定排出每週 2–3 天，以及 6 個月與 12 個月敘述的實際承諾。",
+    "source": "https://job-boards.greenhouse.io/appier/jobs/7495834",
+    "checked": "2026-09-17",
+    "skills": [
+      "SQL",
+      "Python",
+      "產品分析",
+      "統計"
+    ]
+  },
+  {
+    "id": "simular-data-analyst-intern",
+    "title": "Data Analyst Intern",
+    "company": "Simular",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 93,
+    "priority": "先查資格",
+    "priorityType": "watch",
+    "timing": "目前開放；on-site",
+    "eligibility": "統計、CS、經濟等學士／碩士在學；SQL、Python 或 R；職缺未在頁面明示工作授權",
+    "fit": "直接做 activation、retention、task success、實驗設計與 agent reliability，工作內容和 experimentation／product analytics 高度重合。",
+    "risk": "工作授權、實習長度與是否能配合碩士課程皆需先確認。",
+    "source": "https://jobs.ashbyhq.com/simular/7147a575-c7da-44d3-a6d6-2cdd4d24b94a",
+    "skills": [
+      "SQL",
+      "Python/R",
+      "實驗設計",
+      "產品指標"
+    ],
+    "checked": "2026-09-17"
+  },
+  {
+    "id": "jpal-general-data-ra-2027",
+    "title": "General Data Research Associate",
+    "company": "J-PAL／合作研究機構",
+    "location": "多地，依計畫配置",
+    "locationKey": "global",
+    "track": "research",
+    "score": 91,
+    "priority": "準備申請",
+    "priorityType": "priority",
+    "timing": "早鳥申請 2026-09-08 至 2026-10-09；預計 2027 夏季起",
+    "eligibility": "經濟／社科／公共政策／數理相關學士或碩士；micro、econometrics、statistics；Stata 或同類工具與大型資料經驗",
+    "fit": "資料清理分析、研究報告、IRB 與 field-data quality；對 applied micro、因果推論、推薦信和 PhD option value 很強。",
+    "risk": "這是畢業前後的 RA／predoc 型機會，不是一般學期間實習；各地工作授權與到職時間需逐一確認。",
+    "source": "https://www.povertyactionlab.org/careers/general-data-research-associate-job-105606",
+    "skills": [
+      "Stata/R",
+      "因果推論",
+      "研究設計",
+      "Applied micro"
+    ],
+    "checked": "2026-09-17"
+  },
+  {
+    "id": "watsons-ai-data-science-intern",
+    "title": "AI & Data Science Intern",
+    "company": "台灣屈臣氏",
+    "location": "臺北，臺灣",
+    "locationKey": "tw",
+    "track": "industry",
+    "score": 86,
+    "priority": "值得投",
+    "priorityType": "priority",
+    "timing": "2026-09 查核時仍刊登；每週 2–3 天（約 16–24 小時）",
+    "eligibility": "職缺頁面主打銷售預測、商品分群與誤差分析；詳細資格需進入招募頁確認",
+    "fit": "有完整問題定義、模型、誤差診斷到落地流程，能留下可描述的商業分析成果。",
+    "risk": "偏 forecasting／data science，需確認實際 mentor、SQL／Python 使用比例與是否能形成可公開作品。",
+    "source": "https://www.104.com.tw/jobs/search/?keyword=%E5%8F%B0%E7%81%A3%E5%B1%88%E8%87%A3%E6%B0%8F%20AI%20Data%20Science%20Intern",
+    "skills": [
+      "預測",
+      "商品分群",
+      "模型診斷",
+      "零售資料"
+    ],
+    "checked": "2026-09-17"
+  },
+  {
+    "id": "nanshan-data-intern",
+    "title": "數據分析實習",
+    "company": "南山人壽",
+    "location": "臺北，臺灣",
+    "locationKey": "tw",
+    "track": "finance",
+    "score": 82,
+    "priority": "列入組合",
+    "priorityType": "watch",
+    "timing": "下半年通常 10–12 月；總公司學期實習每週至少 2 日",
+    "eligibility": "大專院校在學生，大三以上或碩士生尤佳；官方 FAQ 列出碩士學期實習時薪 NT$240",
+    "fit": "數據洞察、使用者研究與數位專案，可測試金融資料／風控次線，同時維持分析主軸。",
+    "risk": "官方頁是實習計畫總覽，不是單一職缺；投遞前需查當期部門、內容與截止日。",
+    "source": "https://www.nanshanlife.com.tw/nanshanlife/nsintern-1/",
+    "skills": [
+      "金融資料",
+      "數據洞察",
+      "數位專案"
+    ],
+    "checked": "2026-09-17"
+  },
+  {
+    "id": "lever-shopback-2-14943fda-43e2-4add-80f9-a29f83d215b1",
+    "title": "Product Management Intern",
+    "company": "ShopBack",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 81,
+    "priority": "先查資格",
+    "priorityType": "watch",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://jobs.lever.co/shopback-2/14943fda-43e2-4add-80f9-a29f83d215b1",
+    "checked": "2026-09-17",
+    "skills": [
+      "產品指標"
+    ]
+  },
+  {
+    "id": "lever-shopback-2-b216d68c-48b0-4fa5-8f1e-9e0375b993e1",
+    "title": "Data Analyst (Internship) (H1 2027)",
+    "company": "ShopBack",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 80,
+    "priority": "觀察",
+    "priorityType": "risk",
+    "timing": "2027 上半年；至少 6 個月 full-time、on-site",
+    "eligibility": "SQL 必備，Python 加分；官方頁目前只考慮人在新加坡的候選人",
+    "fit": "metrics、data model、dashboard、AI data tools 與 stakeholder decision support 很貼近目標定位。",
+    "risk": "六個月全職與目前碩士主線可能衝突；且地點限制明確，不應在未解決資格前投入大量申請時間。",
+    "source": "https://jobs.lever.co/shopback-2/b216d68c-48b0-4fa5-8f1e-9e0375b993e1",
+    "checked": "2026-09-17",
+    "skills": [
+      "SQL",
+      "Python",
+      "Dashboard",
+      "數據模型"
+    ]
+  }
+]

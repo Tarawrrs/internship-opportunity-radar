@@ -1,0 +1,47 @@
+name: Refresh internship radar
+
+on:
+  schedule:
+    - cron: "23 8 * * *"
+      timezone: "Asia/Taipei"
+  workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: "Ignore the five-day guard and refresh now"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: internship-radar-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Refresh official job feeds
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_refresh }}" = "true" ]; then
+            python3 scripts/refresh_jobs.py --force
+          else
+            python3 scripts/refresh_jobs.py --if-due 5
+          fi
+
+      - name: Commit refreshed data when changed
+        run: |
+          if git diff --quiet -- dist/data; then
+            echo "No published data change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/data
+          git commit -m "chore: refresh internship radar data"
+          git push
