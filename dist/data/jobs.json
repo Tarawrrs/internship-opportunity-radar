@@ -1,6 +1,7 @@
 [
   {
     "id": "gh-appier-7495834",
+    "sourceKey": "greenhouse:appier",
     "title": "Data Analyst Intern",
     "company": "Appier",
     "location": "臺北／臺灣",
@@ -20,7 +21,10 @@
       "Python",
       "產品分析",
       "統計"
-    ]
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   },
   {
     "id": "simular-data-analyst-intern",
@@ -43,7 +47,11 @@
       "實驗設計",
       "產品指標"
     ],
-    "checked": "2026-09-17"
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   },
   {
     "id": "jpal-general-data-ra-2027",
@@ -66,7 +74,61 @@
       "研究設計",
       "Applied micro"
     ],
-    "checked": "2026-09-17"
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "lever-shopback-2-14943fda-43e2-4add-80f9-a29f83d215b1",
+    "sourceKey": "lever:shopback-2",
+    "title": "Product Management Intern",
+    "company": "ShopBack",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 91,
+    "priority": "優先查核",
+    "priorityType": "priority",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://jobs.lever.co/shopback-2/14943fda-43e2-4add-80f9-a29f83d215b1",
+    "checked": "2026-09-17",
+    "skills": [
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-anthropic-5183044008",
+    "sourceKey": "greenhouse:anthropic",
+    "title": "Anthropic Fellows Program, AI Safety & Security",
+    "company": "Anthropic",
+    "location": "London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA",
+    "locationKey": "global",
+    "track": "research",
+    "score": 88,
+    "priority": "值得查",
+    "priorityType": "priority",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://job-boards.greenhouse.io/anthropic/jobs/5183044008",
+    "checked": "2026-09-17",
+    "skills": [
+      "Python",
+      "實驗設計",
+      "研究"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   },
   {
     "id": "watsons-ai-data-science-intern",
@@ -89,7 +151,65 @@
       "模型診斷",
       "零售資料"
     ],
-    "checked": "2026-09-17"
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-anthropic-5183053008",
+    "sourceKey": "greenhouse:anthropic",
+    "title": "Anthropic Fellows Program, The Anthropic Institute (Economics & Policy)",
+    "company": "Anthropic",
+    "location": "London, UK; Ontario, CAN; Remote-Friendly, United States; San Francisco, CA",
+    "locationKey": "global",
+    "track": "research",
+    "score": 84,
+    "priority": "值得查",
+    "priorityType": "priority",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://job-boards.greenhouse.io/anthropic/jobs/5183053008",
+    "checked": "2026-09-17",
+    "skills": [
+      "Python",
+      "R",
+      "研究",
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "jpal-general-field-ra-2027",
+    "title": "General Field Research Associate",
+    "company": "J-PAL／合作研究機構",
+    "location": "多地，依計畫配置",
+    "locationKey": "global",
+    "track": "research",
+    "score": 84,
+    "priority": "值得查",
+    "priorityType": "priority",
+    "timing": "完整招募期預計 2026-11-25 開放，2027-01-13 截止；預計 2027 夏季起",
+    "eligibility": "經濟／社科／公共政策等學士或碩士；micro、econometrics、statistics；Stata 與 field research 經驗加分",
+    "fit": "可累積 RCT、survey、field operations 與資料品質管理經驗，適合用來測試 research／predoc 路線。",
+    "risk": "相較 Data Research Associate，現場管理與協調比重更高；各地工作授權與長期派駐需逐案確認。",
+    "source": "https://www.povertyactionlab.org/careers/general-field-research-associate-job-105607",
+    "skills": [
+      "Stata",
+      "RCT",
+      "Survey",
+      "Field research"
+    ],
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   },
   {
     "id": "nanshan-data-intern",
@@ -111,30 +231,15 @@
       "數據洞察",
       "數位專案"
     ],
-    "checked": "2026-09-17"
-  },
-  {
-    "id": "lever-shopback-2-14943fda-43e2-4add-80f9-a29f83d215b1",
-    "title": "Product Management Intern",
-    "company": "ShopBack",
-    "location": "新加坡",
-    "locationKey": "sg",
-    "track": "industry",
-    "score": 81,
-    "priority": "先查資格",
-    "priorityType": "watch",
-    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
-    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
-    "fit": "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。",
-    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
-    "source": "https://jobs.lever.co/shopback-2/14943fda-43e2-4add-80f9-a29f83d215b1",
+    "sourceKey": "manual",
     "checked": "2026-09-17",
-    "skills": [
-      "產品指標"
-    ]
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   },
   {
     "id": "lever-shopback-2-b216d68c-48b0-4fa5-8f1e-9e0375b993e1",
+    "sourceKey": "lever:shopback-2",
     "title": "Data Analyst (Internship) (H1 2027)",
     "company": "ShopBack",
     "location": "新加坡",
@@ -154,6 +259,189 @@
       "Python",
       "Dashboard",
       "數據模型"
-    ]
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-worldquant-4069460006",
+    "sourceKey": "greenhouse:worldquant",
+    "title": "Data Science Intern",
+    "company": "WorldQuant",
+    "location": "北京／上海",
+    "locationKey": "asia",
+    "track": "research",
+    "score": 80,
+    "priority": "先查資格",
+    "priorityType": "watch",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://job-boards.greenhouse.io/worldquant/jobs/4069460006",
+    "checked": "2026-09-17",
+    "skills": [
+      "Python",
+      "研究",
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "lever-shopback-2-431888d3-d08a-43d8-b6fd-f95c3a5ff076",
+    "sourceKey": "lever:shopback-2",
+    "title": "Business & Strategy Analyst Intern (Regional Payments)",
+    "company": "ShopBack",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 77,
+    "priority": "先查資格",
+    "priorityType": "watch",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://jobs.lever.co/shopback-2/431888d3-d08a-43d8-b6fd-f95c3a5ff076",
+    "checked": "2026-09-17",
+    "skills": [
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-point72-7297598002",
+    "sourceKey": "greenhouse:point72",
+    "title": "Cubist Quantitative Researcher Intern",
+    "company": "Point72",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "research",
+    "score": 76,
+    "priority": "先查資格",
+    "priorityType": "watch",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://boards.greenhouse.io/point72/jobs/7297598002?gh_jid=7297598002",
+    "checked": "2026-09-17",
+    "skills": [
+      "SQL",
+      "Python",
+      "R",
+      "研究"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-point72-7297611002",
+    "sourceKey": "greenhouse:point72",
+    "title": "Cubist Quantitative Researcher Intern",
+    "company": "Point72",
+    "location": "香港",
+    "locationKey": "asia",
+    "track": "research",
+    "score": 74,
+    "priority": "觀察",
+    "priorityType": "risk",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://boards.greenhouse.io/point72/jobs/7297611002?gh_jid=7297611002",
+    "checked": "2026-09-17",
+    "skills": [
+      "SQL",
+      "Python",
+      "R",
+      "研究"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "lever-shopback-2-5e5c78b0-1b9a-4c09-843d-49ea41e991fe",
+    "sourceKey": "lever:shopback-2",
+    "title": "Product Builder Intern",
+    "company": "ShopBack",
+    "location": "新加坡",
+    "locationKey": "sg",
+    "track": "industry",
+    "score": 69,
+    "priority": "觀察",
+    "priorityType": "risk",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://jobs.lever.co/shopback-2/5e5c78b0-1b9a-4c09-843d-49ea41e991fe",
+    "checked": "2026-09-17",
+    "skills": [
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-worldquant-4084570006",
+    "sourceKey": "greenhouse:worldquant",
+    "title": "Quantitative Research Intern",
+    "company": "WorldQuant",
+    "location": "北京／上海",
+    "locationKey": "asia",
+    "track": "research",
+    "score": 64,
+    "priority": "低契合備選",
+    "priorityType": "risk",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://job-boards.greenhouse.io/worldquant/jobs/4084570006",
+    "checked": "2026-09-17",
+    "skills": [
+      "Python",
+      "研究",
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
+  },
+  {
+    "id": "gh-worldquant-4434997006",
+    "sourceKey": "greenhouse:worldquant",
+    "title": "Quantitative Research Intern (LLMs & AI Agents)",
+    "company": "WorldQuant",
+    "location": "越南",
+    "locationKey": "asia",
+    "track": "research",
+    "score": 64,
+    "priority": "低契合備選",
+    "priorityType": "risk",
+    "timing": "官方招募頁在本次掃描時仍列出；精確起訖與截止日請開啟來源確認",
+    "eligibility": "由官方招募系統擷取；投遞前請核對完整資格",
+    "fit": "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。",
+    "risk": "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。",
+    "source": "https://job-boards.greenhouse.io/worldquant/jobs/4434997006",
+    "checked": "2026-09-17",
+    "skills": [
+      "Python",
+      "研究",
+      "產品指標"
+    ],
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "active"
   }
 ]

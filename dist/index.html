@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="依研究、資料與產品分析方向整理的私人實習機會雷達。" />
+  <meta name="description" content="依研究、資料與產品分析方向整理的個人化實習機會雷達。" />
   <meta name="color-scheme" content="light" />
   <title>實習機會雷達</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1830'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%238cf2c6' stroke-width='4'/%3E%3Cpath d='M32 32 46 20' stroke='%23ffca6b' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23fff'/%3E%3C/svg%3E" />
@@ -54,7 +54,7 @@
     .primary-btn { border: 0; background: var(--ink); color: #fff; padding: 12px 15px; border-radius: 12px; font-weight: 750; cursor: pointer; display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
     .primary-btn:hover { background: #16294a; }
     .primary-btn:focus-visible, .icon-btn:focus-visible, .filter:focus-visible, .search:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 22px; }
+    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 0 0 22px; }
     .stat { background: var(--card); border: 1px solid var(--line); border-radius: 15px; padding: 15px 17px; }
     .stat b { display: block; font-size: 1.45rem; line-height: 1.1; }
     .stat span { color: var(--muted); font-size: .8rem; }
@@ -66,6 +66,8 @@
     .job-list { display: grid; gap: 13px; }
     .job-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
     .job-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #bdc9d8; }
+    .job-card.archived { border-style: dashed; }
+    .job-card.archived .score { background: #536176; }
     .job-main { padding: 20px; display: grid; grid-template-columns: 74px minmax(0,1fr) auto; gap: 18px; align-items: start; }
     .score { width: 68px; height: 68px; border-radius: 18px; background: var(--ink); color: white; display: grid; place-items: center; text-align: center; }
     .score b { font-size: 1.45rem; display: block; line-height: 1; }
@@ -175,13 +177,14 @@
           <div class="stat"><b id="statPriority">0</b><span>優先處理</span></div>
           <div class="stat"><b id="statTaiwan">0</b><span>臺灣機會</span></div>
           <div class="stat"><b id="statSaved">0</b><span>已收藏</span></div>
+          <div class="stat"><b id="statArchive">0</b><span>Archive</span></div>
         </div>
 
         <div class="toolbar" aria-label="篩選機會">
           <label class="search-wrap"><span class="sr-only">搜尋</span><input id="search" class="search" type="search" placeholder="搜尋職稱、公司或技能…" /></label>
           <label><span class="sr-only">方向</span><select id="trackFilter" class="filter"><option value="all">所有方向</option><option value="industry">產品／資料</option><option value="research">研究／predoc</option><option value="finance">風控／金融資料</option></select></label>
-          <label><span class="sr-only">地點</span><select id="locationFilter" class="filter"><option value="all">所有地點</option><option value="tw">臺灣</option><option value="sg">新加坡</option><option value="global">多地／海外</option></select></label>
-          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部狀態</option></select></label>
+          <label><span class="sr-only">地點</span><select id="locationFilter" class="filter"><option value="all">所有地點</option><option value="tw">臺灣</option><option value="sg">新加坡</option><option value="jp">日本</option><option value="asia">其他亞洲</option><option value="global">多地／海外</option></select></label>
+          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／已下架</option></select></label>
         </div>
 
         <div class="results-head"><h2>機會清單</h2><span id="resultsMeta">按個人契合度排序</span></div>
@@ -207,6 +210,11 @@
             <a class="source-item" href="https://job-boards.greenhouse.io/appier?offices%5B%5D=23563" target="_blank" rel="noreferrer"><span>Appier 官方職缺</span><span>背景掃描</span></a>
             <a class="source-item" href="https://jobs.lever.co/shopback-2?commitment=Intern" target="_blank" rel="noreferrer"><span>ShopBack Intern</span><span>背景掃描</span></a>
             <a class="source-item" href="https://job-boards.greenhouse.io/point72" target="_blank" rel="noreferrer"><span>Point72 Asia</span><span>背景掃描</span></a>
+            <a class="source-item" href="https://job-boards.greenhouse.io/worldquant" target="_blank" rel="noreferrer"><span>WorldQuant</span><span>背景掃描</span></a>
+            <a class="source-item" href="https://job-boards.greenhouse.io/agoda" target="_blank" rel="noreferrer"><span>Agoda</span><span>背景掃描</span></a>
+            <a class="source-item" href="https://job-boards.greenhouse.io/anthropic" target="_blank" rel="noreferrer"><span>Anthropic</span><span>背景掃描</span></a>
+            <a class="source-item" href="https://job-boards.greenhouse.io/mercari" target="_blank" rel="noreferrer"><span>Mercari Japan</span><span>背景掃描</span></a>
+            <a class="source-item" href="https://jobs.lever.co/ninjavan" target="_blank" rel="noreferrer"><span>Ninja Van</span><span>背景掃描</span></a>
             <a class="source-item" href="https://www.povertyactionlab.org/careers" target="_blank" rel="noreferrer"><span>J-PAL Careers</span><span>人工查核</span></a>
             <a class="source-item" href="https://www.nanshanlife.com.tw/nanshanlife/nsintern-1/" target="_blank" rel="noreferrer"><span>南山實習計畫</span><span>人工查核</span></a>
             <a class="source-item" href="https://www.104.com.tw/jobs/search/?keyword=%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%AF%A6%E7%BF%92" target="_blank" rel="noreferrer"><span>104 數據實習</span><span>人工查核</span></a>
@@ -215,16 +223,17 @@
 
         <section class="panel">
           <h2>更新怎麼運作</h2>
-          <p class="notice">這版不使用 GPT 排程。GitHub Actions 每天檢查一次，只有距上次成功掃描滿五天才更新資料；網站沒開、電腦休眠也不影響。按上方按鈕則只會在目前瀏覽器做一次即時查核。</p>
+          <p class="notice">這版不使用 GPT 排程。GitHub Actions 每天檢查一次，只有距上次成功掃描滿五天才更新資料；網站沒開、電腦休眠也不影響。成功掃描後消失或到期的項目會永久移入 Archive，來源暫時故障時則保留舊資料。</p>
         </section>
 
         <section class="panel">
           <h2>你的處理狀態</h2>
-          <p class="notice">收藏、略過與已申請只存於這台裝置，不會送回任何公司或第三方。</p>
+          <p class="notice">收藏、略過與已申請只存於這台裝置，不會送回任何公司或第三方。Archive 則跟著網站保存，可跨裝置查看。</p>
           <div class="status-row">
             <button class="mini-btn active" data-quick="active" type="button">目前</button>
             <button class="mini-btn" data-quick="saved" type="button">收藏</button>
             <button class="mini-btn" data-quick="applied" type="button">已申請</button>
+            <button class="mini-btn" data-quick="archive" type="button">Archive</button>
           </div>
         </section>
       </aside>
@@ -357,6 +366,7 @@
     };
     const state = {
       jobs: mergeJobs(initialJobs, readJson("radar_fetched_jobs_v1", [])),
+      archiveJobs: [],
       actions: readJson("radar_actions_v1", {}),
       lastScan: localStorage.getItem("radar_last_scan_v1") || VERIFIED_AT,
       scanning: false
@@ -388,48 +398,63 @@
     }
     function filteredJobs() {
       const query = els.search.value.trim().toLowerCase();
-      return state.jobs.filter(job => {
+      const showingArchive = els.state.value === "archive";
+      const source = showingArchive ? state.archiveJobs : state.jobs;
+      return source.filter(job => {
         const action = getAction(job.id);
-        const stateMatch = els.state.value === "all" || (els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
-        const haystack = [job.title, job.company, job.location, job.fit, job.eligibility, ...(job.skills || [])].join(" ").toLowerCase();
+        const stateMatch = showingArchive || els.state.value === "all" || (els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
+        const haystack = [job.title, job.company, job.location, job.fit, job.eligibility, job.archiveReason, ...(job.skills || [])].join(" ").toLowerCase();
         return stateMatch && (els.track.value === "all" || job.track === els.track.value) && (els.location.value === "all" || job.locationKey === els.location.value) && (!query || haystack.includes(query));
       });
     }
     function render() {
       const jobs = filteredJobs();
-      els.meta.textContent = `${jobs.length} 筆結果 · 按契合度排序`;
+      const showingArchive = els.state.value === "archive";
+      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依最後出現日期` : `${jobs.length} 筆結果 · 按契合度排序`;
       document.querySelector("#statTotal").textContent = jobs.length;
-      document.querySelector("#statPriority").textContent = jobs.filter(j => j.score >= 90).length;
+      document.querySelector("#statPriority").textContent = showingArchive ? "—" : jobs.filter(j => j.score >= 90).length;
       document.querySelector("#statTaiwan").textContent = jobs.filter(j => j.locationKey === "tw").length;
       document.querySelector("#statSaved").textContent = Object.values(state.actions).filter(v => v === "saved").length;
+      document.querySelector("#statArchive").textContent = state.archiveJobs.length;
       if (!jobs.length) {
-        els.list.innerHTML = '<div class="empty"><strong>這個篩選組合目前沒有機會。</strong><br>調整條件或回到「目前機會」。</div>';
+        els.list.innerHTML = showingArchive
+          ? '<div class="empty"><strong>Archive 目前沒有符合條件的紀錄。</strong><br>調整地點、方向或搜尋文字。</div>'
+          : '<div class="empty"><strong>這個篩選組合目前沒有機會。</strong><br>調整條件或回到「目前機會」。</div>';
         return;
       }
       els.list.innerHTML = jobs.map(job => {
         const action = getAction(job.id);
-        return `<article class="job-card">
+        const archived = showingArchive || job.status === "archived";
+        const actions = archived ? "" : `<div class="actions" aria-label="處理 ${escapeHtml(job.title)}">
+              <button class="icon-btn ${action === "saved" ? "active" : ""}" type="button" data-action="saved" data-id="${job.id}" title="收藏" aria-label="收藏">★</button>
+              <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${job.id}" title="標記已申請" aria-label="標記已申請">✓</button>
+              <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${job.id}" title="略過" aria-label="略過">×</button>
+            </div>`;
+        const statusTag = archived ? '<span class="tag risk">已下架／歷史</span>' : `<span class="tag ${job.priorityType}">${escapeHtml(job.priority)}</span>`;
+        const details = archived ? `
+              <div><h4>出現紀錄</h4><p>首次：${escapeHtml(job.firstSeen || job.checked || "未知")} · 最後：${escapeHtml(job.lastSeen || job.checked || "未知")}</p></div>
+              <div><h4>封存</h4><p>${escapeHtml(job.archivedAt || "未知")} · ${escapeHtml(job.archiveReason || "已不在目前清單")}</p></div>
+              <div><h4>當時資訊</h4><p>${escapeHtml(job.timing || "未記錄")}</p></div>
+              <div><h4>原始來源</h4><p><a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>` : `
+              <div><h4>時間</h4><p>${escapeHtml(job.timing)}</p></div>
+              <div><h4>資格</h4><p>${escapeHtml(job.eligibility)}</p></div>
+              <div><h4>申請前先確認</h4><p>${escapeHtml(job.risk)}</p></div>
+              <div><h4>查核</h4><p>${escapeHtml(job.checked)}${job.firstSeen ? ` · 首次看見 ${escapeHtml(job.firstSeen)}` : ""} · <a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>`;
+        return `<article class="job-card ${archived ? "archived" : ""}">
           <div class="job-main">
             <div class="score"><div><b>${job.score}</b><small>FIT</small></div></div>
             <div>
-              <div class="job-title"><h3>${escapeHtml(job.title)}</h3><span class="tag ${job.priorityType}">${escapeHtml(job.priority)}</span></div>
+              <div class="job-title"><h3>${escapeHtml(job.title)}</h3>${statusTag}</div>
               <div class="company">${escapeHtml(job.company)} · ${escapeHtml(job.location)}</div>
               <div class="tags">${(job.skills || []).map(skill => `<span class="tag">${escapeHtml(skill)}</span>`).join("")}</div>
               <p class="job-summary">${escapeHtml(job.fit)}</p>
             </div>
-            <div class="actions" aria-label="處理 ${escapeHtml(job.title)}">
-              <button class="icon-btn ${action === "saved" ? "active" : ""}" type="button" data-action="saved" data-id="${job.id}" title="收藏" aria-label="收藏">★</button>
-              <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${job.id}" title="標記已申請" aria-label="標記已申請">✓</button>
-              <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${job.id}" title="略過" aria-label="略過">×</button>
-            </div>
+            ${actions}
           </div>
           <details>
-            <summary>資格、風險與來源</summary>
+            <summary>${archived ? "出現紀錄與原始來源" : "資格、風險與來源"}</summary>
             <div class="detail-grid">
-              <div><h4>時間</h4><p>${escapeHtml(job.timing)}</p></div>
-              <div><h4>資格</h4><p>${escapeHtml(job.eligibility)}</p></div>
-              <div><h4>申請前先確認</h4><p>${escapeHtml(job.risk)}</p></div>
-              <div><h4>查核</h4><p>${escapeHtml(job.checked)} · <a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>
+              ${details}
             </div>
           </details>
         </article>`;
@@ -503,9 +528,10 @@
 
     async function loadPublishedData() {
       try {
-        const [jobsResponse, metaResponse] = await Promise.all([
+        const [jobsResponse, metaResponse, archiveResponse] = await Promise.all([
           fetch("./data/jobs.json", { cache: "no-store" }),
-          fetch("./data/scan-meta.json", { cache: "no-store" })
+          fetch("./data/scan-meta.json", { cache: "no-store" }),
+          fetch("./data/archive.json", { cache: "no-store" })
         ]);
         if (jobsResponse.ok) {
           const jobs = await jobsResponse.json();
@@ -514,6 +540,10 @@
         if (metaResponse.ok) {
           const meta = await metaResponse.json();
           if (meta.last_successful_scan) state.lastScan = meta.last_successful_scan;
+        }
+        if (archiveResponse.ok) {
+          const archive = await archiveResponse.json();
+          if (Array.isArray(archive)) state.archiveJobs = archive;
         }
       } catch (error) {
         // The embedded snapshot remains usable when the published data file is unavailable.

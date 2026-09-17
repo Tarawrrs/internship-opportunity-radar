@@ -1,22 +1,56 @@
 {
-  "last_successful_scan": "2026-09-17T02:25:08.363557Z",
+  "last_successful_scan": "2026-09-17T02:38:42.413887Z",
   "interval_days": 5,
-  "job_count": 7,
+  "job_count": 17,
+  "archive_count": 3,
   "sources": [
     {
       "source": "Appier",
+      "sourceKey": "greenhouse:appier",
       "status": "ok",
       "matches": 1
     },
     {
       "source": "Point72",
+      "sourceKey": "greenhouse:point72",
+      "status": "ok",
+      "matches": 2
+    },
+    {
+      "source": "WorldQuant",
+      "sourceKey": "greenhouse:worldquant",
+      "status": "ok",
+      "matches": 3
+    },
+    {
+      "source": "Agoda",
+      "sourceKey": "greenhouse:agoda",
+      "status": "ok",
+      "matches": 0
+    },
+    {
+      "source": "Anthropic",
+      "sourceKey": "greenhouse:anthropic",
+      "status": "ok",
+      "matches": 2
+    },
+    {
+      "source": "Mercari",
+      "sourceKey": "greenhouse:mercari",
       "status": "ok",
       "matches": 0
     },
     {
       "source": "ShopBack",
+      "sourceKey": "lever:shopback-2",
       "status": "ok",
-      "matches": 2
+      "matches": 4
+    },
+    {
+      "source": "Ninja Van",
+      "sourceKey": "lever:ninjavan",
+      "status": "ok",
+      "matches": 0
     }
   ]
 }
