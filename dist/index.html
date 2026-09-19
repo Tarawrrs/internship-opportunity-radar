@@ -159,8 +159,8 @@
         <div class="intro">
           <div class="headline">
             <p class="eyebrow">Personal opportunity desk · 2026–2028</p>
-            <h1>只留下值得你花時間申請的機會。</h1>
-            <p>依 applied micro、behavioral／experimental、labor、causal 與 product/data analytics 的共同資產排序；把資格、時程與工作授權風險放在同一張卡上。</p>
+            <h1>留在台北，也能接軌國際。</h1>
+            <p>只看台北實體／混合辦公，或明示台灣、全球可申請的全遠端機會。研究、因果推論與產品／資料分析仍是主軸；海外工作須能全程線上。</p>
           </div>
           <div class="scan-card">
             <div>
@@ -168,14 +168,14 @@
               <strong id="scanHeadline">資料是新的</strong>
               <p id="scanNote">GitHub 每天檢查一次；距上次成功掃描滿五天時，才重新讀取官方職缺來源。</p>
             </div>
-            <button id="scanBtn" class="primary-btn" type="button"><span aria-hidden="true">↻</span> 這台裝置立即查核</button>
+            <button id="scanBtn" class="primary-btn" type="button"><span aria-hidden="true">↻</span> 讀取最新資料</button>
           </div>
         </div>
 
         <div class="stats" aria-label="機會摘要">
           <div class="stat"><b id="statTotal">0</b><span>目前顯示</span></div>
           <div class="stat"><b id="statPriority">0</b><span>優先處理</span></div>
-          <div class="stat"><b id="statTaiwan">0</b><span>臺灣機會</span></div>
+          <div class="stat"><b id="statTaiwan">0</b><span>台北機會</span></div>
           <div class="stat"><b id="statSaved">0</b><span>已收藏</span></div>
           <div class="stat"><b id="statArchive">0</b><span>Archive</span></div>
         </div>
@@ -183,8 +183,8 @@
         <div class="toolbar" aria-label="篩選機會">
           <label class="search-wrap"><span class="sr-only">搜尋</span><input id="search" class="search" type="search" placeholder="搜尋職稱、公司或技能…" /></label>
           <label><span class="sr-only">方向</span><select id="trackFilter" class="filter"><option value="all">所有方向</option><option value="industry">產品／資料</option><option value="research">研究／predoc</option><option value="finance">風控／金融資料</option></select></label>
-          <label><span class="sr-only">地點</span><select id="locationFilter" class="filter"><option value="all">所有地點</option><option value="tw">臺灣</option><option value="sg">新加坡</option><option value="jp">日本</option><option value="asia">其他亞洲</option><option value="global">多地／海外</option></select></label>
-          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／已下架</option></select></label>
+          <label><span class="sr-only">工作位置</span><select id="locationFilter" class="filter"><option value="all">所有工作位置</option><option value="taipei">台北實體／混合</option><option value="remote">可從台灣遠端</option><option value="remote-review">遠端地區待確認</option></select></label>
+          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="review">遠端資格待確認</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／歷史紀錄</option></select></label>
         </div>
 
         <div class="results-head"><h2>機會清單</h2><span id="resultsMeta">按個人契合度排序</span></div>
@@ -195,10 +195,10 @@
         <section class="panel dark">
           <h2>排序原則</h2>
           <div class="criteria">
-            <div class="criterion"><b>1</b><span>分析／研究設計含量與可交付成果</span></div>
+            <div class="criterion"><b>1</b><span>先過地點門檻：台北，或可從台灣全遠端；不把新北或僅寫「台灣」當成台北</span></div>
             <div class="criterion"><b>2</b><span>applied micro、experimentation、labor 與 causal fit</span></div>
             <div class="criterion"><b>3</b><span>SQL／Python／Stata 可累積為作品的程度</span></div>
-            <div class="criterion"><b>4</b><span>臺灣、日本、新加坡的可行性與可攜性</span></div>
+            <div class="criterion"><b>4</b><span>國際遠端須確認招募地區、時區、聘僱資格；限定美國等地或必須海外到場者排除</span></div>
             <div class="criterion"><b>5</b><span>mentor、推薦信與 PhD option value</span></div>
             <div class="criterion"><b>6</b><span>避開陌生開發、強銷售與純行政工作</span></div>
           </div>
@@ -223,17 +223,18 @@
 
         <section class="panel">
           <h2>更新怎麼運作</h2>
-          <p class="notice">這版不使用 GPT 排程。GitHub Actions 每天檢查一次，只有距上次成功掃描滿五天才更新資料；網站沒開、電腦休眠也不影響。成功掃描後消失或到期的項目會永久移入 Archive，來源暫時故障時則保留舊資料。</p>
+          <p class="notice">每五天背景掃描官方來源，不必開著網站。上方按鈕只讀取已發布的最新資料。遠端地區不明的機會放在「待確認」，不混入主清單。來源故障時保留仍符合地點條件的舊資料；人工追蹤項目會標示實際查核日。</p>
         </section>
 
         <section class="panel">
           <h2>你的處理狀態</h2>
-          <p class="notice">收藏、略過與已申請只存於這台裝置，不會送回任何公司或第三方。Archive 則跟著網站保存，可跨裝置查看。</p>
+          <p class="notice">收藏、略過與已申請只存於這台裝置。Archive 跨裝置保存；因地點偏好調整而移出的機會也保留，並不代表原職缺已截止。查看 Archive 時可選「所有工作位置」回顧海外紀錄。</p>
           <div class="status-row">
             <button class="mini-btn active" data-quick="active" type="button">目前</button>
             <button class="mini-btn" data-quick="saved" type="button">收藏</button>
             <button class="mini-btn" data-quick="applied" type="button">已申請</button>
             <button class="mini-btn" data-quick="archive" type="button">Archive</button>
+            <button class="mini-btn" data-quick="review" type="button">遠端待確認</button>
           </div>
         </section>
       </aside>
@@ -244,117 +245,7 @@
 
   <script>
     const FIVE_DAYS = 5 * 24 * 60 * 60 * 1000;
-    const VERIFIED_AT = "2026-09-17T12:00:00+08:00";
-    const initialJobs = [
-      {
-        id: "appier-data-analyst-intern",
-        title: "Data Analyst Intern",
-        company: "Appier",
-        location: "臺北，臺灣",
-        locationKey: "tw",
-        track: "industry",
-        score: 95,
-        priority: "優先投",
-        priorityType: "priority",
-        timing: "立即開始；每週 2–3 天，至少 6 個月；申請頁另註明 12 個月安排",
-        eligibility: "大四或研究生；SQL、統計、Excel、Python automation；英文溝通",
-        fit: "與產品 R&D 合作，做資料分析、監控與流程自動化；能直接推進 SQL／Python 與商業轉譯。",
-        risk: "先確認學期能否穩定排出每週 2–3 天，以及頁面中 6 個月與 12 個月敘述的實際承諾。",
-        source: "https://job-boards.greenhouse.io/appier/jobs/7495834",
-        checked: "2026-09-17",
-        skills: ["SQL", "Python", "產品分析", "統計"]
-      },
-      {
-        id: "simular-data-analyst-intern",
-        title: "Data Analyst Intern",
-        company: "Simular",
-        location: "新加坡",
-        locationKey: "sg",
-        track: "industry",
-        score: 93,
-        priority: "先查資格",
-        priorityType: "watch",
-        timing: "目前開放；on-site",
-        eligibility: "統計、CS、經濟等學士／碩士在學；SQL、Python 或 R；職缺未在頁面明示工作授權",
-        fit: "直接做 activation、retention、task success、實驗設計與 agent reliability，工作內容和 experimentation／product analytics 高度重合。",
-        risk: "工作授權、實習長度與是否能配合碩士課程皆需先確認。",
-        source: "https://jobs.ashbyhq.com/simular/7147a575-c7da-44d3-a6d6-2cdd4d24b94a",
-        checked: "2026-09-17",
-        skills: ["SQL", "Python/R", "實驗設計", "產品指標"]
-      },
-      {
-        id: "jpal-general-data-ra-2027",
-        title: "General Data Research Associate",
-        company: "J-PAL／合作研究機構",
-        location: "多地，依計畫配置",
-        locationKey: "global",
-        track: "research",
-        score: 91,
-        priority: "準備申請",
-        priorityType: "priority",
-        timing: "早鳥申請 2026-09-08 至 2026-10-09；預計 2027 夏季起",
-        eligibility: "經濟／社科／公共政策／數理相關學士或碩士；micro、econometrics、statistics；Stata 或同類工具與大型資料經驗",
-        fit: "資料清理分析、研究報告、IRB 與 field-data quality；對 applied micro、因果推論、推薦信和 PhD option value 很強。",
-        risk: "這是畢業前後的 RA／predoc 型機會，不是一般學期間實習；各地工作授權與到職時間需逐一確認。",
-        source: "https://www.povertyactionlab.org/careers/general-data-research-associate-job-105606",
-        checked: "2026-09-17",
-        skills: ["Stata/R", "因果推論", "研究設計", "Applied micro"]
-      },
-      {
-        id: "watsons-ai-data-science-intern",
-        title: "AI & Data Science Intern",
-        company: "台灣屈臣氏",
-        location: "臺北，臺灣",
-        locationKey: "tw",
-        track: "industry",
-        score: 86,
-        priority: "值得投",
-        priorityType: "priority",
-        timing: "目前刊登；每週 2–3 天（約 16–24 小時）",
-        eligibility: "職缺頁面主打銷售預測、商品分群與誤差分析；詳細資格需進入招募頁確認",
-        fit: "有完整問題定義、模型、誤差診斷到落地流程，能留下可描述的商業分析成果。",
-        risk: "偏 forecasting／data science，需確認實際 mentor、SQL／Python 使用比例與是否能形成可公開作品。",
-        source: "https://www.104.com.tw/jobs/search/?keyword=%E5%8F%B0%E7%81%A3%E5%B1%88%E8%87%A3%E6%B0%8F%20AI%20Data%20Science%20Intern",
-        checked: "2026-09-17",
-        skills: ["預測", "商品分群", "模型診斷", "零售資料"]
-      },
-      {
-        id: "nanshan-data-intern",
-        title: "數據分析實習",
-        company: "南山人壽",
-        location: "臺北，臺灣",
-        locationKey: "tw",
-        track: "finance",
-        score: 82,
-        priority: "列入組合",
-        priorityType: "watch",
-        timing: "下半年通常 10–12 月；總公司學期實習每週至少 2 日",
-        eligibility: "大專院校在學生，大三以上或碩士生尤佳；官方 FAQ 列出碩士學期實習時薪 NT$240",
-        fit: "數據洞察、使用者研究與數位專案，可測試金融資料／風控次線，同時維持分析主軸。",
-        risk: "官方頁是實習計畫總覽，不是單一職缺；投遞前需查當期部門、內容與截止日。",
-        source: "https://www.nanshanlife.com.tw/nanshanlife/nsintern-1/",
-        checked: "2026-09-17",
-        skills: ["金融資料", "數據洞察", "數位專案"]
-      },
-      {
-        id: "shopback-data-analyst-h1-2027",
-        title: "Data Analyst Intern (H1 2027)",
-        company: "ShopBack",
-        location: "新加坡",
-        locationKey: "sg",
-        track: "industry",
-        score: 80,
-        priority: "觀察",
-        priorityType: "risk",
-        timing: "2027 上半年；至少 6 個月 full-time、on-site",
-        eligibility: "SQL 必備，Python 加分；目前僅考慮人在新加坡的候選人",
-        fit: "metrics、data model、dashboard、AI data tools 與 stakeholder decision support 很貼近目標定位。",
-        risk: "六個月全職與目前碩士主線可能衝突；且地點限制明確，不應在未解決資格前投入大量申請時間。",
-        source: "https://jobs.lever.co/shopback-2/b216d68c-48b0-4fa5-8f1e-9e0375b993e1",
-        checked: "2026-09-17",
-        skills: ["SQL", "Python", "Dashboard", "數據模型"]
-      }
-    ];
+    // Only the centrally filtered published data is used; legacy browser scans are ignored.
 
     const els = {
       list: document.querySelector("#jobList"), search: document.querySelector("#search"),
@@ -365,20 +256,16 @@
       toast: document.querySelector("#toast"), meta: document.querySelector("#resultsMeta")
     };
     const state = {
-      jobs: mergeJobs(initialJobs, readJson("radar_fetched_jobs_v1", [])),
+      jobs: [],
       archiveJobs: [],
+      reviewJobs: [],
       actions: readJson("radar_actions_v1", {}),
-      lastScan: localStorage.getItem("radar_last_scan_v1") || VERIFIED_AT,
-      scanning: false
+      lastScan: null,
+      scanning: false, loaded: false, loadError: false, sourceErrors: 0
     };
 
     function readJson(key, fallback) {
       try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; }
-    }
-    function mergeJobs(base, extra) {
-      const map = new Map(base.map(job => [job.id, job]));
-      extra.forEach(job => map.set(job.id, { ...(map.get(job.id) || {}), ...job }));
-      return [...map.values()].sort((a, b) => b.score - a.score);
     }
     function escapeHtml(value = "") {
       return String(value).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
@@ -399,10 +286,12 @@
     function filteredJobs() {
       const query = els.search.value.trim().toLowerCase();
       const showingArchive = els.state.value === "archive";
-      const source = showingArchive ? state.archiveJobs : state.jobs;
+      const showingReview = els.state.value === "review";
+      const source = showingArchive ? state.archiveJobs : showingReview ? state.reviewJobs :
+        ["saved", "applied", "dismissed"].includes(els.state.value) ? [...state.jobs, ...state.reviewJobs] : state.jobs;
       return source.filter(job => {
         const action = getAction(job.id);
-        const stateMatch = showingArchive || els.state.value === "all" || (els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
+        const stateMatch = showingArchive || showingReview || els.state.value === "all" || (els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
         const haystack = [job.title, job.company, job.location, job.fit, job.eligibility, job.archiveReason, ...(job.skills || [])].join(" ").toLowerCase();
         return stateMatch && (els.track.value === "all" || job.track === els.track.value) && (els.location.value === "all" || job.locationKey === els.location.value) && (!query || haystack.includes(query));
       });
@@ -410,16 +299,20 @@
     function render() {
       const jobs = filteredJobs();
       const showingArchive = els.state.value === "archive";
-      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依最後出現日期` : `${jobs.length} 筆結果 · 按契合度排序`;
+      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依封存日期` : els.state.value === "review" ? `${jobs.length} 筆遠端待確認 · 尚未確認可從台灣工作` : `${jobs.length} 筆結果 · 先過地點門檻，再按契合度排序`;
       document.querySelector("#statTotal").textContent = jobs.length;
-      document.querySelector("#statPriority").textContent = showingArchive ? "—" : jobs.filter(j => j.score >= 90).length;
-      document.querySelector("#statTaiwan").textContent = jobs.filter(j => j.locationKey === "tw").length;
+      document.querySelector("#statPriority").textContent = showingArchive ? "—" : jobs.filter(j => j.score >= 90 && j.locationDisposition === "eligible").length;
+      document.querySelector("#statTaiwan").textContent = jobs.filter(j => j.locationKey === "taipei").length;
       document.querySelector("#statSaved").textContent = Object.values(state.actions).filter(v => v === "saved").length;
       document.querySelector("#statArchive").textContent = state.archiveJobs.length;
       if (!jobs.length) {
+        if (!state.loaded || state.loadError) {
+          els.list.innerHTML = `<div class="empty">${state.loadError ? "無法載入最新資料，請按「讀取最新資料」重試。" : "正在讀取台北與遠端機會…"}</div>`;
+          return;
+        }
         els.list.innerHTML = showingArchive
           ? '<div class="empty"><strong>Archive 目前沒有符合條件的紀錄。</strong><br>調整地點、方向或搜尋文字。</div>'
-          : '<div class="empty"><strong>這個篩選組合目前沒有機會。</strong><br>調整條件或回到「目前機會」。</div>';
+          : '<div class="empty"><strong>這個篩選組合目前沒有符合條件的機會。</strong><br>尚未找到不代表沒有機會；未確認可從台灣遠端的項目不會列入主清單。</div>';
         return;
       }
       els.list.innerHTML = jobs.map(job => {
@@ -430,7 +323,7 @@
               <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${job.id}" title="標記已申請" aria-label="標記已申請">✓</button>
               <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${job.id}" title="略過" aria-label="略過">×</button>
             </div>`;
-        const statusTag = archived ? '<span class="tag risk">已下架／歷史</span>' : `<span class="tag ${job.priorityType}">${escapeHtml(job.priority)}</span>`;
+        const statusTag = archived ? '<span class="tag risk">歷史紀錄</span>' : `<span class="tag ${job.priorityType}">${escapeHtml(job.priority)}</span>`;
         const details = archived ? `
               <div><h4>出現紀錄</h4><p>首次：${escapeHtml(job.firstSeen || job.checked || "未知")} · 最後：${escapeHtml(job.lastSeen || job.checked || "未知")}</p></div>
               <div><h4>封存</h4><p>${escapeHtml(job.archivedAt || "未知")} · ${escapeHtml(job.archiveReason || "已不在目前清單")}</p></div>
@@ -439,14 +332,15 @@
               <div><h4>時間</h4><p>${escapeHtml(job.timing)}</p></div>
               <div><h4>資格</h4><p>${escapeHtml(job.eligibility)}</p></div>
               <div><h4>申請前先確認</h4><p>${escapeHtml(job.risk)}</p></div>
-              <div><h4>查核</h4><p>${escapeHtml(job.checked)}${job.firstSeen ? ` · 首次看見 ${escapeHtml(job.firstSeen)}` : ""} · <a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>`;
+              <div><h4>工作位置判定</h4><p>${escapeHtml(job.locationReason)}<br>${(job.locationEvidence || []).map(escapeHtml).join("<br>")}</p></div>
+              <div><h4>${job.verificationMode === "manual" ? "人工查核（不隨掃描自動驗證）" : "來源查核"}</h4><p>${escapeHtml(job.checked)}${job.firstSeen ? ` · 首次看見 ${escapeHtml(job.firstSeen)}` : ""} · <a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>`;
         return `<article class="job-card ${archived ? "archived" : ""}">
           <div class="job-main">
             <div class="score"><div><b>${job.score}</b><small>FIT</small></div></div>
             <div>
               <div class="job-title"><h3>${escapeHtml(job.title)}</h3>${statusTag}</div>
               <div class="company">${escapeHtml(job.company)} · ${escapeHtml(job.location)}</div>
-              <div class="tags">${(job.skills || []).map(skill => `<span class="tag">${escapeHtml(skill)}</span>`).join("")}</div>
+              <div class="tags">${!archived ? `<span class="tag ${job.locationDisposition === "review" ? "watch" : "priority"}">${escapeHtml(({taipei:"台北",remote:"台灣／全球全遠端","remote-review":"遠端地區待確認"})[job.locationKey] || "歷史地點")}</span>` : ""}${(job.skills || []).map(skill => `<span class="tag">${escapeHtml(skill)}</span>`).join("")}</div>
               <p class="job-summary">${escapeHtml(job.fit)}</p>
             </div>
             ${actions}
@@ -461,95 +355,50 @@
       }).join("");
     }
     function updateFreshness() {
-      const time = new Date(state.lastScan).getTime();
+      const time = state.lastScan ? new Date(state.lastScan).getTime() : NaN;
       const age = Date.now() - time;
       const stale = !Number.isFinite(time) || age >= FIVE_DAYS;
       const date = Number.isFinite(time) ? new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short" }).format(new Date(time)) : "尚未掃描";
       els.freshText.textContent = `上次掃描：${date}`;
       els.freshDot.classList.toggle("stale", stale);
-      els.scanHeadline.textContent = stale ? "該更新了" : "資料是新的";
+      els.scanHeadline.textContent = state.loadError ? "資料載入失敗" : state.sourceErrors ? "部分來源待重試" : stale ? "等待背景更新" : "背景掃描已更新";
       els.scanNote.textContent = stale ? "已超過五天；GitHub 下一次背景作業會重新讀取官方職缺來源。" : "GitHub 每天檢查一次；距上次成功掃描滿五天時，才重新讀取官方職缺來源。";
       return stale;
     }
-    function inferTrack(text) {
-      if (/research|econom|predoc|associate/i.test(text)) return "research";
-      if (/risk|credit|finance/i.test(text)) return "finance";
-      return "industry";
-    }
-    function inferLocation(text) {
-      if (/taipei|taiwan/i.test(text)) return ["臺北，臺灣", "tw"];
-      if (/singapore/i.test(text)) return ["新加坡", "sg"];
-      return [text || "地點待確認", "global"];
-    }
-    function scoreText(text) {
-      let score = 62;
-      [[/data analyst|product analy/i,16],[/experiment|a\/b|causal/i,7],[/sql/i,5],[/python|stata|\br\b/i,4],[/research/i,5],[/intern/i,4],[/sales development|account executive/i,-24]].forEach(([rx,n]) => { if (rx.test(text)) score += n; });
-      return Math.max(35, Math.min(96, score));
-    }
-    async function scanSources(force = false) {
+    async function loadPublishedData(manual = false) {
       if (state.scanning) return;
-      if (!force && Date.now() - new Date(state.lastScan).getTime() < FIVE_DAYS) return;
       state.scanning = true;
       els.scan.disabled = true;
-      els.scan.textContent = "掃描中…";
-      const found = [];
-      const errors = [];
+      els.scan.textContent = "讀取中…";
       try {
-        const response = await fetch("https://boards-api.greenhouse.io/v1/boards/appier/jobs?content=true");
-        if (!response.ok) throw new Error("Appier source unavailable");
-        const data = await response.json();
-        (data.jobs || []).filter(j => /intern|research assistant|data analyst/i.test(j.title) && /taipei|taiwan|singapore|japan|tokyo/i.test(j.location?.name || "")).forEach(j => {
-          const plain = `${j.title} ${(j.content || "").replace(/<[^>]+>/g," ")}`;
-          const [location, locationKey] = inferLocation(j.location?.name || "");
-          found.push({ id: `gh-${j.id}`, title: j.title, company: "Appier", location, locationKey, track: inferTrack(plain), score: scoreText(plain), priority: "新掃描", priorityType: "watch", timing: "官方招募頁目前仍列出；精確起訖日請開啟原始職缺確認", eligibility: "由官方職缺系統擷取；投遞前請核對完整資格", fit: "符合資料、研究或實習關鍵字；請展開檢查工作內容與方法含量。", risk: "自動篩選只做初步排序，不取代資格、工作授權與時程人工查核。", source: j.absolute_url, checked: new Date().toISOString().slice(0,10), skills: ["官方新職缺"] });
-        });
-      } catch (error) { errors.push("Appier"); }
-      try {
-        const response = await fetch("https://api.lever.co/v0/postings/shopback-2?mode=json");
-        if (!response.ok) throw new Error("ShopBack source unavailable");
-        const data = await response.json();
-        data.filter(j => /intern/i.test(j.categories?.commitment || "") && /data|product|research|strategy|insight/i.test(`${j.text} ${j.categories?.team || ""}`)).forEach(j => {
-          const plain = `${j.text} ${j.descriptionPlain || ""} ${j.additionalPlain || ""}`;
-          const [location, locationKey] = inferLocation(j.categories?.location || "");
-          found.push({ id: `lever-${j.id}`, title: j.text, company: "ShopBack", location, locationKey, track: inferTrack(plain), score: scoreText(plain), priority: "新掃描", priorityType: "watch", timing: "官方招募頁目前仍列出；實習長度請開啟原始職缺確認", eligibility: "由官方職缺系統擷取；投遞前請核對完整資格與地點限制", fit: "符合資料、產品、研究或策略實習關鍵字；已加入待人工判讀清單。", risk: "新加坡職缺常有 full-time／在地資格限制，需在投入申請前確認。", source: j.hostedUrl, checked: new Date().toISOString().slice(0,10), skills: ["官方新職缺"] });
-        });
-      } catch (error) { errors.push("ShopBack"); }
-      state.jobs = mergeJobs(initialJobs, found);
-      state.lastScan = new Date().toISOString();
-      localStorage.setItem("radar_fetched_jobs_v1", JSON.stringify(found));
-      localStorage.setItem("radar_last_scan_v1", state.lastScan);
-      state.scanning = false;
-      els.scan.disabled = false;
-      els.scan.innerHTML = '<span aria-hidden="true">↻</span> 這台裝置立即查核';
-      updateFreshness();
-      render();
-      showToast(errors.length ? `完成即時查核；${errors.join("、")} 暫時無法連線，保留既有資料` : `即時查核完成，整理出 ${found.length} 筆官方職缺`);
-    }
-
-    async function loadPublishedData() {
-      try {
-        const [jobsResponse, metaResponse, archiveResponse] = await Promise.all([
-          fetch("./data/jobs.json", { cache: "no-store" }),
-          fetch("./data/scan-meta.json", { cache: "no-store" }),
-          fetch("./data/archive.json", { cache: "no-store" })
-        ]);
-        if (jobsResponse.ok) {
-          const jobs = await jobsResponse.json();
-          if (Array.isArray(jobs) && jobs.length) state.jobs = jobs.sort((a, b) => b.score - a.score);
-        }
-        if (metaResponse.ok) {
-          const meta = await metaResponse.json();
-          if (meta.last_successful_scan) state.lastScan = meta.last_successful_scan;
-        }
-        if (archiveResponse.ok) {
-          const archive = await archiveResponse.json();
-          if (Array.isArray(archive)) state.archiveJobs = archive;
-        }
+        const files = ["jobs", "scan-meta", "archive", "review"];
+        const payload = await Promise.all(files.map(async name => {
+          const response = await fetch(`./data/${name}.json`, { cache: "no-store" });
+          if (!response.ok) throw new Error(name);
+          return response.json();
+        }));
+        const [jobs, meta, archive, review] = payload;
+        if (meta.location_policy !== "taipei-taiwan-remote-v1" ||
+            !Array.isArray(jobs) || !Array.isArray(archive) || !Array.isArray(review)) throw new Error("schema");
+        state.jobs = jobs.filter(job => job.locationDisposition === "eligible" &&
+          ["taipei", "remote"].includes(job.locationKey)).sort((a,b) => b.score - a.score);
+        state.archiveJobs = archive;
+        state.reviewJobs = review.filter(job => job.locationDisposition === "review");
+        state.lastScan = meta.last_successful_scan || null;
+        state.loaded = true;
+        state.loadError = false;
+        state.sourceErrors = (meta.sources || []).filter(source => source.status === "error").length;
+        if (manual) showToast("已讀取網站最新資料；此按鈕不會啟動背景掃描");
       } catch (error) {
-        // The embedded snapshot remains usable when the published data file is unavailable.
+        state.loadError = true;
+        showToast("資料暫時無法載入，請稍後重試");
+      } finally {
+        state.scanning = false;
+        els.scan.disabled = false;
+        els.scan.textContent = "↻ 讀取最新資料";
+        updateFreshness();
+        render();
       }
-      updateFreshness();
-      render();
     }
 
     [els.search, els.track, els.location, els.state].forEach(el => el.addEventListener(el.tagName === "INPUT" ? "input" : "change", render));
@@ -557,11 +406,12 @@
       const button = event.target.closest("[data-action]");
       if (button) setAction(button.dataset.id, button.dataset.action);
     });
-    els.scan.addEventListener("click", () => scanSources(true));
+    els.scan.addEventListener("click", () => loadPublishedData(true));
     document.querySelectorAll("[data-quick]").forEach(button => button.addEventListener("click", () => {
       document.querySelectorAll("[data-quick]").forEach(item => item.classList.remove("active"));
       button.classList.add("active");
       els.state.value = button.dataset.quick;
+      els.location.value = "all";
       render();
       document.querySelector(".toolbar").scrollIntoView({ behavior: "smooth", block: "start" });
     }));

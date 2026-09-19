@@ -1,8 +1,10 @@
 {
-  "last_successful_scan": "2026-09-17T02:44:34.076799Z",
+  "last_successful_scan": "2026-09-19T07:30:26.405505Z",
   "interval_days": 5,
-  "job_count": 17,
-  "archive_count": 3,
+  "job_count": 3,
+  "archive_count": 17,
+  "review_count": 0,
+  "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
       "source": "Appier",
@@ -14,13 +16,13 @@
       "source": "Point72",
       "sourceKey": "greenhouse:point72",
       "status": "ok",
-      "matches": 2
+      "matches": 0
     },
     {
       "source": "WorldQuant",
       "sourceKey": "greenhouse:worldquant",
       "status": "ok",
-      "matches": 3
+      "matches": 0
     },
     {
       "source": "Agoda",
@@ -32,7 +34,7 @@
       "source": "Anthropic",
       "sourceKey": "greenhouse:anthropic",
       "status": "ok",
-      "matches": 2
+      "matches": 0
     },
     {
       "source": "Mercari",
@@ -44,7 +46,7 @@
       "source": "ShopBack",
       "sourceKey": "lever:shopback-2",
       "status": "ok",
-      "matches": 4
+      "matches": 0
     },
     {
       "source": "Ninja Van",

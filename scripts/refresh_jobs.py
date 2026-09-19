@@ -12,11 +12,13 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from location_rules import POLICY_VERSION, classify_location, classify_saved_job
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "dist" / "data"
 JOBS_PATH = DATA_DIR / "jobs.json"
 ARCHIVE_PATH = DATA_DIR / "archive.json"
+REVIEW_PATH = DATA_DIR / "review.json"
 META_PATH = DATA_DIR / "scan-meta.json"
 UTC = dt.timezone.utc
 
@@ -122,10 +124,6 @@ MANUAL_JOBS = [
     },
 ]
 
-ALLOWED_LOCATION = re.compile(
-    r"taipei|taiwan|singapore|japan|tokyo|asia|remote|multiple|beijing|shanghai|hanoi|ho chi minh|jakarta|kuala lumpur|bangkok|hong kong|london|ontario|united states",
-    re.I,
-)
 ROLE_KEYWORDS = re.compile(
     r"data|product|business|strategy|research|econom|decision|experiment|insight|analytics|risk|credit|quant|pricing|market access|rwe|heor|fellow",
     re.I,
@@ -142,7 +140,8 @@ def fetch_json(url: str) -> object:
 
 
 def clean_html(value: str) -> str:
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", value or ""))).strip()
+    value = html.unescape(value or "")
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", value)).strip()
 
 
 def slug(value: str) -> str:
@@ -203,10 +202,8 @@ def score_job(title: str, description: str, company: str, location: str) -> int:
             score += points
     if company == "Appier" and re.search(r"data analyst", title, re.I):
         score += 5
-    if re.search(r"taipei|taiwan", location, re.I):
+    if re.search(r"\btaipei\b|台北|臺北", location, re.I):
         score += 4
-    elif re.search(r"singapore|japan|tokyo", location, re.I):
-        score += 2
     return max(35, min(96, score))
 
 
@@ -241,20 +238,22 @@ def track_for(text: str) -> str:
     return "industry"
 
 
-def make_job(*, source_id: str, source_key: str, title: str, company: str, location_raw: str, description: str, source: str, checked: str) -> dict:
+def make_job(*, source_id: str, source_key: str, title: str, company: str, location_raw: str, description: str, source: str, checked: str, workplace: str = "") -> dict:
     score = score_job(title, description, company, location_raw)
     priority, priority_type = priority_for(score)
-    location, location_key = location_info(location_raw)
+    location = location_raw or "地點待確認"
+    location_policy = classify_location(location_raw, description, workplace)
+    location_key = location_policy["locationKey"]
     text = f"{title} {description}"
     track = track_for(text)
     if track == "research":
         fit = "符合 applied micro／研究分析關鍵字，可能累積方法、研究產出與 PhD option value。"
     else:
         fit = "符合資料、產品或實驗分析關鍵字，可進一步判斷是否能累積 SQL／Python 與決策成果。"
-    if location_key == "tw":
+    if location_key == "taipei":
         risk = "投遞前確認每週天數、實習長度、mentor 與實際分析工作比例。"
     else:
-        risk = "投遞前先確認工作授權、是否需在地就讀／居住，以及全職時程是否可行。"
+        risk = "確認可從台灣全程線上工作、聘僱／承攬資格、時區重疊、學籍與每週時數；remote 不等於免除地區限制。"
     job = {
         "id": source_id,
         "sourceKey": source_key,
@@ -273,6 +272,7 @@ def make_job(*, source_id: str, source_key: str, title: str, company: str, locat
         "source": source,
         "checked": checked,
         "skills": skills_for(text),
+        **location_policy,
     }
     if company == "Appier" and title.lower() == "data analyst intern":
         job.update({
@@ -305,7 +305,7 @@ def greenhouse_jobs(board: str, company: str, url: str, checked: str) -> list[di
     for raw in data.get("jobs", []):
         title = raw.get("title", "")
         location = (raw.get("location") or {}).get("name", "")
-        if not title_relevant(title) or not ALLOWED_LOCATION.search(location):
+        if not title_relevant(title):
             continue
         description = clean_html(raw.get("content", ""))
         job = make_job(
@@ -318,7 +318,7 @@ def greenhouse_jobs(board: str, company: str, url: str, checked: str) -> list[di
             source=raw.get("absolute_url", ""),
             checked=checked,
         )
-        if job["score"] >= 58:
+        if job["score"] >= 58 and job["locationDisposition"] != "excluded":
             result.append(job)
     return result
 
@@ -331,9 +331,10 @@ def lever_jobs(board: str, company: str, url: str, checked: str) -> list[dict]:
         categories = raw.get("categories") or {}
         location = categories.get("location", "")
         commitment = categories.get("commitment", "")
-        if not title_relevant(title, commitment) or not ALLOWED_LOCATION.search(location):
+        if not title_relevant(title, commitment):
             continue
-        description = " ".join([raw.get("descriptionPlain", ""), raw.get("additionalPlain", "")])
+        description = " ".join([raw.get("descriptionPlain", ""), raw.get("additionalPlain", "")] +
+                               [clean_html(item.get("content", "")) for item in raw.get("lists", [])])
         job = make_job(
             source_id=f"lever-{board}-{raw.get('id', slug(title))}",
             source_key=f"lever:{board}",
@@ -343,8 +344,9 @@ def lever_jobs(board: str, company: str, url: str, checked: str) -> list[dict]:
             description=description,
             source=raw.get("hostedUrl", ""),
             checked=checked,
+            workplace=raw.get("workplaceType", ""),
         )
-        if job["score"] >= 58:
+        if job["score"] >= 58 and job["locationDisposition"] != "excluded":
             result.append(job)
     return result
 
@@ -403,7 +405,12 @@ def active_manual_jobs(today: dt.date, checked: str) -> list[dict]:
             continue
         job = {key: value for key, value in raw.items() if key != "expires"}
         job["sourceKey"] = "manual"
-        job["checked"] = checked
+        # A scheduled run is not a fresh human verification of these curated entries.
+        job["checked"] = raw.get("checked", "2026-09-17")
+        job["verificationMode"] = "manual"
+        job.update(classify_saved_job(job))
+        if job["locationDisposition"] == "excluded":
+            continue
         result.append(job)
     return result
 
@@ -428,7 +435,7 @@ def main() -> int:
         return 0
 
     checked = now.date().isoformat()
-    previous_jobs = load_list(JOBS_PATH)
+    previous_jobs = load_list(JOBS_PATH) + load_list(REVIEW_PATH)
     previous_archive = load_list(ARCHIVE_PATH)
     jobs = active_manual_jobs(now.date(), checked)
     source_status = []
@@ -463,7 +470,9 @@ def main() -> int:
         if old_job.get("id") not in current_ids and key in failed_sources:
             preserved = dict(old_job)
             preserved["sourceKey"] = key
-            jobs.append(preserved)
+            preserved.update(classify_saved_job(preserved))
+            if preserved["locationDisposition"] != "excluded":
+                jobs.append(preserved)
 
     jobs = dedupe(jobs)
     current_ids = {job["id"] for job in jobs}
@@ -471,16 +480,19 @@ def main() -> int:
         old = previous_by_id.get(job["id"]) or archive_by_id.get(job["id"], {})
         job["sourceKey"] = source_key_for(job)
         job["firstSeen"] = old.get("firstSeen") or old.get("checked") or checked
-        job["lastSeen"] = checked if job["sourceKey"] in successful_sources else old.get("lastSeen", checked)
+        job["lastSeen"] = (job["checked"] if job.get("verificationMode") == "manual" else
+                           checked if job["sourceKey"] in successful_sources else
+                           old.get("lastSeen") or old.get("checked") or checked)
         job["status"] = "active"
         archive_by_id.pop(job["id"], None)
 
     for old_job in previous_jobs:
         identifier = old_job.get("id")
         key = source_key_for(old_job)
-        if not identifier or identifier in current_ids or key not in successful_sources:
-            continue
-        if key != "manual" and not title_relevant(old_job.get("title", "")):
+        old_location = classify_saved_job(old_job)
+        changed_policy = old_job.get("locationPolicy") != POLICY_VERSION
+        outside_scope = old_location["locationDisposition"] == "excluded"
+        if not identifier or identifier in current_ids or (key not in successful_sources and not outside_scope):
             continue
         archived = dict(old_job)
         archived.update({
@@ -490,7 +502,9 @@ def main() -> int:
             "firstSeen": old_job.get("firstSeen") or old_job.get("checked") or checked,
             "lastSeen": old_job.get("lastSeen") or old_job.get("checked") or checked,
             "archivedAt": checked,
-            "archiveReason": "人工追蹤日期已過或已移出清單" if key == "manual" else "本次成功掃描後未再出現在官方來源；可能已截止或下架",
+            "archiveReason": ("篩選準則調整：僅台北或可從台灣全遠端。" + old_location["locationReason"] + "；不表示職缺已下架")
+                if changed_policy and outside_scope else
+                ("人工追蹤日期已過或已移出清單" if key == "manual" else "本次掃描未再符合來源／篩選條件；可能下架或工作條件改變"),
         })
         archive_by_id[identifier] = archived
 
@@ -500,13 +514,18 @@ def main() -> int:
         reverse=True,
     )
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    review = [job for job in jobs if job["locationDisposition"] == "review"]
+    jobs = [job for job in jobs if job["locationDisposition"] == "eligible"]
     JOBS_PATH.write_text(json.dumps(jobs, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    REVIEW_PATH.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ARCHIVE_PATH.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     meta = {
         "last_successful_scan": now.isoformat().replace("+00:00", "Z"),
         "interval_days": args.if_due or 5,
         "job_count": len(jobs),
         "archive_count": len(archive),
+        "review_count": len(review),
+        "location_policy": POLICY_VERSION,
         "sources": source_status,
     }
     META_PATH.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
