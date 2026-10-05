@@ -1,5 +1,43 @@
 [
   {
+    "id": "gh-appier-7495834",
+    "sourceKey": "greenhouse:appier",
+    "title": "Data Analyst Intern",
+    "company": "Appier",
+    "location": "Taipei, Taiwan",
+    "locationKey": "taipei",
+    "track": "industry",
+    "score": 95,
+    "priority": "優先投",
+    "priorityType": "priority",
+    "timing": "官方頁目前列出；每週 2–3 天、至少 6 個月，申請欄另提及 12 個月安排",
+    "eligibility": "大四或研究生；SQL、統計、Excel、Python automation；英文溝通",
+    "fit": "與產品 R&D 合作，做資料分析、監控與流程自動化；能直接推進 SQL／Python 與商業轉譯。",
+    "risk": "先確認學期能否穩定排出每週 2–3 天，以及 6 個月與 12 個月敘述的實際承諾。",
+    "source": "https://job-boards.greenhouse.io/appier/jobs/7495834",
+    "checked": "2026-09-30",
+    "skills": [
+      "SQL",
+      "Python",
+      "產品分析",
+      "統計"
+    ],
+    "locationPolicy": "taipei-taiwan-remote-v1",
+    "locationDisposition": "eligible",
+    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
+    "locationEvidence": [
+      "招募地點：Taipei, Taiwan"
+    ],
+    "rawLocation": "Taipei, Taiwan",
+    "workplaceType": "",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-30",
+    "status": "archived",
+    "archived": true,
+    "archivedAt": "2026-10-05",
+    "archiveReason": "本次掃描未再符合來源／篩選條件；可能下架或工作條件改變"
+  },
+  {
     "id": "simular-data-analyst-intern",
     "title": "Data Analyst Intern",
     "company": "Simular",

@@ -1,8 +1,8 @@
 {
-  "last_successful_scan": "2026-09-30T05:39:47.178916Z",
+  "last_successful_scan": "2026-10-05T05:50:05.990603Z",
   "interval_days": 5,
-  "job_count": 3,
-  "archive_count": 17,
+  "job_count": 2,
+  "archive_count": 18,
   "review_count": 0,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
@@ -10,7 +10,7 @@
       "source": "Appier",
       "sourceKey": "greenhouse:appier",
       "status": "ok",
-      "matches": 1
+      "matches": 0
     },
     {
       "source": "Point72",
