@@ -1,5 +1,44 @@
 [
   {
+    "id": "watsons-ai-data-science-intern",
+    "title": "AI & Data Science Intern",
+    "company": "台灣屈臣氏",
+    "location": "臺北，臺灣",
+    "locationKey": "taipei",
+    "track": "industry",
+    "score": 86,
+    "priority": "值得投",
+    "priorityType": "priority",
+    "timing": "2026-09 查核時仍刊登；每週 2–3 天（約 16–24 小時）",
+    "eligibility": "職缺頁面主打銷售預測、商品分群與誤差分析；詳細資格需進入招募頁確認",
+    "fit": "有完整問題定義、模型、誤差診斷到落地流程，能留下可描述的商業分析成果。",
+    "risk": "偏 forecasting／data science，需確認實際 mentor、SQL／Python 使用比例與是否能形成可公開作品。",
+    "source": "https://www.104.com.tw/jobs/search/?keyword=%E5%8F%B0%E7%81%A3%E5%B1%88%E8%87%A3%E6%B0%8F%20AI%20Data%20Science%20Intern",
+    "skills": [
+      "預測",
+      "商品分群",
+      "模型診斷",
+      "零售資料"
+    ],
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "verificationMode": "manual",
+    "locationPolicy": "taipei-taiwan-remote-v1",
+    "locationDisposition": "eligible",
+    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
+    "locationEvidence": [
+      "招募地點：臺北，臺灣"
+    ],
+    "rawLocation": "臺北，臺灣",
+    "workplaceType": "",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "archived",
+    "archived": true,
+    "archivedAt": "2026-11-01",
+    "archiveReason": "人工追蹤日期已過或已移出清單"
+  },
+  {
     "id": "gh-appier-7495834",
     "sourceKey": "greenhouse:appier",
     "title": "Data Analyst Intern",
