@@ -1,22 +1,15 @@
 {
-  "last_scan_attempt": "2026-11-13T14:08:39.969303Z",
-  "last_successful_scan": "2026-11-13T14:08:39.969303Z",
+  "last_scan_attempt": "2026-11-13T14:27:32.271932Z",
+  "last_successful_scan": "2026-11-13T14:27:32.271932Z",
   "interval_days": 1,
   "scan_status": "ok",
-  "job_count": 47,
-  "review_count": 36,
+  "job_count": 48,
+  "review_count": 39,
   "archive_count": 21,
-  "records_examined": 4440,
-  "new_count": 8,
+  "records_examined": 4493,
+  "new_count": 1,
   "new_ids": [
-    "nccu-career-4345",
-    "nccu-career-4301",
-    "nccu-career-4342",
-    "nccu-career-4343",
-    "nccu-career-4344",
-    "nccu-career-3750",
-    "nccu-career-1570",
-    "nccu-career-2202"
+    "workday-pwc-772190WD"
   ],
   "recent_ids": [
     "ntu-econ-18559",
@@ -62,12 +55,13 @@
     "sc-1374647057",
     "nccu-career-3750",
     "capital-2027-winter-settlement",
+    "workday-pwc-772190WD",
     "sinica-12133",
     "line-3134",
     "nccu-career-1570",
     "nccu-career-2202"
   ],
-  "new_review_count": 10,
+  "new_review_count": 3,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
@@ -75,7 +69,7 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2336,
+      "examined": 2337,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -192,6 +186,39 @@
       "review": 0
     },
     {
+      "source": "星展銀行",
+      "sourceKey": "workday:dbs",
+      "url": "https://dbs.wd3.myworkdayjobs.com/DBS_Careers",
+      "status": "ok",
+      "examined": 40,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
+    },
+    {
+      "source": "資誠 PwC",
+      "sourceKey": "workday:pwc",
+      "url": "https://pwc.wd3.myworkdayjobs.com/Global_Campus_Careers",
+      "status": "ok",
+      "examined": 5,
+      "matches": 1,
+      "issues": [],
+      "active": 1,
+      "review": 0
+    },
+    {
+      "source": "Mastercard",
+      "sourceKey": "workday:mastercard",
+      "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
+      "status": "ok",
+      "examined": 7,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
+    },
+    {
       "source": "群益金鼎證券｜已核對簡章",
       "sourceKey": "reviewed:capital-winter-2027",
       "url": "https://career.ntu.edu.tw/board/detail/sn/4775",
@@ -201,6 +228,18 @@
       "issues": [],
       "active": 2,
       "review": 0
+    },
+    {
+      "source": "歷峯集團｜人工查核線索",
+      "sourceKey": "manual-leads:richemont-winter-2027",
+      "url": "https://www.104.com.tw/company/12wz0014",
+      "status": "ok",
+      "examined": 0,
+      "matches": 3,
+      "issues": [],
+      "manual": true,
+      "active": 0,
+      "review": 3
     },
     {
       "source": "Himalayas 遠端職缺",
@@ -316,6 +355,15 @@
   "winter_year": 2027,
   "history": [
     {
+      "id": "43442720609",
+      "event": "workflow_dispatch",
+      "finished": "2026-11-13T14:27:32.271932Z",
+      "scan_date": "2026-11-13",
+      "examined": 4493,
+      "new": 1,
+      "status": "ok"
+    },
+    {
       "id": "43439753741",
       "event": "workflow_dispatch",
       "finished": "2026-11-13T14:08:39.969303Z",
@@ -341,11 +389,12 @@
     }
   ],
   "run": {
-    "id": "43439753741",
+    "id": "43442720609",
     "event": "workflow_dispatch",
-    "finished": "2026-11-13T14:08:39.969303Z",
-    "examined": 4440,
-    "new": 8,
+    "finished": "2026-11-13T14:27:32.271932Z",
+    "scan_date": "2026-11-13",
+    "examined": 4493,
+    "new": 1,
     "status": "ok"
   },
   "last_schedule": null
