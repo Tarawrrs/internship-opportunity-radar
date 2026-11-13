@@ -1,12 +1,12 @@
 {
-  "last_scan_attempt": "2026-11-13T14:43:09.642232Z",
-  "last_successful_scan": "2026-11-13T14:43:09.642232Z",
+  "last_scan_attempt": "2026-11-13T16:29:03.171084Z",
+  "last_successful_scan": "2026-11-13T16:29:03.171084Z",
   "interval_days": 1,
-  "scan_status": "partial",
-  "job_count": 46,
-  "review_count": 41,
+  "scan_status": "ok",
+  "job_count": 47,
+  "review_count": 40,
   "archive_count": 21,
-  "records_examined": 4463,
+  "records_examined": 4491,
   "new_count": 0,
   "new_ids": [],
   "recent_ids": [
@@ -29,6 +29,7 @@
     "sinica-8604",
     "sinica-11438",
     "sinica-11887",
+    "nstc-43aaeb83-c9d4-401a-862a-2b70c255bfc0",
     "gh-appier-1068719",
     "gh-dcard-1562896",
     "line-3131",
@@ -119,14 +120,12 @@
       "source": "國科會求才公告",
       "sourceKey": "rss:nstc",
       "url": "https://www.nstc.gov.tw/folksonomy/list/ba3d22f3-96fd-4adf-a078-91a05b8f0166?l=ch",
-      "status": "error",
-      "examined": 0,
-      "matches": 0,
-      "issues": [
-        "TimeoutError"
-      ],
-      "active": 0,
-      "review": 1
+      "status": "ok",
+      "examined": 30,
+      "matches": 1,
+      "issues": [],
+      "active": 1,
+      "review": 0
     },
     {
       "source": "台大職涯中心｜實習公告",
@@ -299,7 +298,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 672,
+      "examined": 670,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -352,6 +351,18 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "43462967134",
+      "event": "repository_dispatch",
+      "finished": "2026-11-13T16:29:03.171084Z",
+      "scan_date": "2026-11-14",
+      "examined": 4491,
+      "new": 0,
+      "status": "ok",
+      "timer_run_id": "43462459200",
+      "academic_status": "ok",
+      "academic_examined": 968
+    },
     {
       "id": "43445237802",
       "event": "workflow_dispatch",
@@ -414,13 +425,27 @@
     }
   ],
   "run": {
-    "id": "43445237802",
-    "event": "workflow_dispatch",
-    "finished": "2026-11-13T14:43:09.642232Z",
-    "scan_date": "2026-11-13",
-    "examined": 4463,
+    "id": "43462967134",
+    "event": "repository_dispatch",
+    "finished": "2026-11-13T16:29:03.171084Z",
+    "scan_date": "2026-11-14",
+    "examined": 4491,
     "new": 0,
-    "status": "partial"
+    "status": "ok",
+    "timer_run_id": "43462459200",
+    "academic_status": "ok",
+    "academic_examined": 968
   },
-  "last_schedule": null
+  "last_schedule": {
+    "id": "43462967134",
+    "event": "repository_dispatch",
+    "finished": "2026-11-13T16:29:03.171084Z",
+    "scan_date": "2026-11-14",
+    "examined": 4491,
+    "new": 0,
+    "status": "ok",
+    "timer_run_id": "43462459200",
+    "academic_status": "ok",
+    "academic_examined": 968
+  }
 }

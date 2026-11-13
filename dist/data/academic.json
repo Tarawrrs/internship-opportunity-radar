@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "id": "4940460a2f8faad25400",
-      "title": "The Impacts of Negative Income Tax on Labor Supply and Household Expenditure: Evidence from a Large Scale Field Experiment",
-      "date": "2026-11-13",
-      "time": "12:10",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Seung-hun Lee",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8397",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "實驗／行為經濟",
-        "應用個經"
-      ]
-    },
-    {
       "id": "89f83a6909e113592000",
       "title": "語言環境對句法分佈的影響",
       "date": "2026-11-16",
@@ -2297,7 +2279,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 8,
+      "matches": 7,
       "issues": [],
       "status": "ok"
     },
@@ -2430,6 +2412,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-13T14:43:28.764432Z",
-  "run_id": "43445237802"
+  "last_scan_attempt": "2026-11-13T16:29:31.453265Z",
+  "run_id": "43462967134"
 }
