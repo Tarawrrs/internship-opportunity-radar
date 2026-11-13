@@ -230,9 +230,17 @@ def read_workday(source, today):
             location = detail.get("location") or row.get("locationsText") or ""
             url = public_url(detail["externalUrl"], urlsplit(source.url).hostname)
             content = clean_html(detail.get("jobDescription", ""))
+            note = ""
+            eligibility = ""
+            if source.board == "pwc" and detail["jobReqId"] == "772190WD":
+                if "工讀地點：台北所" in content:
+                    location = "台北所可選｜投遞時確認分派"
+                note = "服務中心協助例行審計作業。"
+                eligibility = "公告列大三升大四以上，初會與英文能力佳者優先。研究生需核對成績單要求。"
             result.postings.append(Posting(f"workday-{source.board}-{detail['jobReqId']}", title, source.name,
                                            url, location, content, "intern",
-                                           posted=date_value(detail.get("startDate")), deadline=date_value(detail.get("endDate"))))
+                                           posted=date_value(detail.get("startDate")), deadline=date_value(detail.get("endDate")),
+                                           note=note, eligibility=eligibility))
         except SOURCE_ERRORS as error:
             result.issues.append(f"{path.rsplit('/', 1)[-1]} · {type(error).__name__}")
     return result

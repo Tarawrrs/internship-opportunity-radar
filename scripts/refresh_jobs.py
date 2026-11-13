@@ -189,6 +189,14 @@ def make_job(post: Posting, source: Source, today: dt.date, now: dt.datetime | N
     winter_status, period = winter_details(post.title, post.description, today)
     if kind in {"full-time-ra", "predoc"}:
         winter_status = "other"
+    if post.id == "sinica-9577" and winter_status == "unknown" and deadline and deadline >= dt.date(winter_year(today) - 1, 12, 1):
+        # The public posting accepts current graduate students for its part-time
+        # track. It states no start date, so this is an option to ask about.
+        winter_status = "flexible"
+        period = "可申請兼任；公告未列起聘日或總工期"
+        eligibility = "兼任須為在學學生，具統計、數學、資訊背景或修過高等／數理統計等課程，熟悉 R 者佳。"
+        status = "pending"
+        reason = "公告有兼任名額。若希望寒假到職，請先詢問起聘時間與每週工時。"
     return {
         "id": safe_id(post.id), "sourceKey": source.key, "sourceName": source.name,
         "source": post.url, "title": post.title.strip(), "company": post.company.strip(),
@@ -307,6 +315,8 @@ def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.
         if expiry and (expiry < today or
                        (expiry == today and cutoff and now and now.strftime("%H:%M") >= cutoff)):
             reason = "公告截止日已過。"
+        elif source and source.kind == "manual-leads":
+            reason = "人工查核已逾七天，請參考原公告確認目前狀態。"
         elif key == "manual" or old.get("verificationMode") == "manual":
             reason = "原為人工追蹤；尚無近期可驗證的單一招募公告，已移出目前職缺。"
         elif source and source.kind == "himalayas" and duplicate_key(old) in official:
