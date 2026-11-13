@@ -1,6 +1,6 @@
 {
-  "last_scan_attempt": "2026-11-13T16:29:03.171084Z",
-  "last_successful_scan": "2026-11-13T16:29:03.171084Z",
+  "last_scan_attempt": "2026-11-13T16:39:01.160788Z",
+  "last_successful_scan": "2026-11-13T16:39:01.160788Z",
   "interval_days": 1,
   "scan_status": "ok",
   "job_count": 47,
@@ -352,6 +352,18 @@
   "winter_year": 2027,
   "history": [
     {
+      "id": "43464635925",
+      "event": "repository_dispatch",
+      "finished": "2026-11-13T16:39:01.160788Z",
+      "scan_date": "2026-11-14",
+      "examined": 4491,
+      "new": 0,
+      "status": "ok",
+      "timer_run_id": "43464102975",
+      "academic_status": "ok",
+      "academic_examined": 968
+    },
+    {
       "id": "43462967134",
       "event": "repository_dispatch",
       "finished": "2026-11-13T16:29:03.171084Z",
@@ -425,26 +437,26 @@
     }
   ],
   "run": {
-    "id": "43462967134",
+    "id": "43464635925",
     "event": "repository_dispatch",
-    "finished": "2026-11-13T16:29:03.171084Z",
+    "finished": "2026-11-13T16:39:01.160788Z",
     "scan_date": "2026-11-14",
     "examined": 4491,
     "new": 0,
     "status": "ok",
-    "timer_run_id": "43462459200",
+    "timer_run_id": "43464102975",
     "academic_status": "ok",
     "academic_examined": 968
   },
   "last_schedule": {
-    "id": "43462967134",
+    "id": "43464635925",
     "event": "repository_dispatch",
-    "finished": "2026-11-13T16:29:03.171084Z",
+    "finished": "2026-11-13T16:39:01.160788Z",
     "scan_date": "2026-11-14",
     "examined": 4491,
     "new": 0,
     "status": "ok",
-    "timer_run_id": "43462459200",
+    "timer_run_id": "43464102975",
     "academic_status": "ok",
     "academic_examined": 968
   }
