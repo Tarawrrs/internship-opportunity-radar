@@ -2282,6 +2282,16 @@
       "status": "ok"
     },
     {
+      "sourceKey": "ntu-gil",
+      "source": "台大語言所",
+      "url": "https://linguistics.ntu.edu.tw/announcement/events",
+      "group": "events",
+      "examined": 10,
+      "matches": 0,
+      "issues": [],
+      "status": "ok"
+    },
+    {
       "sourceKey": "sinica-econ-seminars",
       "source": "中研院經濟所",
       "url": "https://www.econ.sinica.edu.tw/pages/29",
@@ -2420,6 +2430,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-13T14:28:04.300720Z",
-  "run_id": "43442720609"
+  "last_scan_attempt": "2026-11-13T14:33:15.520711Z",
+  "run_id": "43443451011"
 }

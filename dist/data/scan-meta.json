@@ -1,16 +1,14 @@
 {
-  "last_scan_attempt": "2026-11-13T14:27:32.271932Z",
-  "last_successful_scan": "2026-11-13T14:27:32.271932Z",
+  "last_scan_attempt": "2026-11-13T14:32:05.434399Z",
+  "last_successful_scan": "2026-11-13T14:32:05.434399Z",
   "interval_days": 1,
   "scan_status": "ok",
   "job_count": 48,
   "review_count": 39,
   "archive_count": 21,
   "records_examined": 4493,
-  "new_count": 1,
-  "new_ids": [
-    "workday-pwc-772190WD"
-  ],
+  "new_count": 0,
+  "new_ids": [],
   "recent_ids": [
     "ntu-econ-18559",
     "sinica-12248",
@@ -61,7 +59,7 @@
     "nccu-career-1570",
     "nccu-career-2202"
   ],
-  "new_review_count": 3,
+  "new_review_count": 0,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
@@ -355,6 +353,15 @@
   "winter_year": 2027,
   "history": [
     {
+      "id": "43443451011",
+      "event": "workflow_dispatch",
+      "finished": "2026-11-13T14:32:05.434399Z",
+      "scan_date": "2026-11-13",
+      "examined": 4493,
+      "new": 0,
+      "status": "ok"
+    },
+    {
       "id": "43442720609",
       "event": "workflow_dispatch",
       "finished": "2026-11-13T14:27:32.271932Z",
@@ -389,12 +396,12 @@
     }
   ],
   "run": {
-    "id": "43442720609",
+    "id": "43443451011",
     "event": "workflow_dispatch",
-    "finished": "2026-11-13T14:27:32.271932Z",
+    "finished": "2026-11-13T14:32:05.434399Z",
     "scan_date": "2026-11-13",
     "examined": 4493,
-    "new": 1,
+    "new": 0,
     "status": "ok"
   },
   "last_schedule": null
