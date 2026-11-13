@@ -44,6 +44,7 @@ EVENT_SOURCES = (
     AcademicSource("sinica-econ-seminars", "中研院經濟所", "https://www.econ.sinica.edu.tw/pages/29", "sinica_econ", "中研院"),
     AcademicSource("sinica-ling-seminars", "中研院語言所", "https://www.ling.sinica.edu.tw/main/zh-tw", "sinica_ling", "中研院", (LING,)),
     AcademicSource("sinica-calendar", "中研院近期活動", "https://www.sinica.edu.tw/#Calendars", "sinica_calendar", "中研院"),
+    AcademicSource("sinica-iis", "中研院資訊所", "https://www.iis.sinica.edu.tw/zh/page/Events/seminar.html", "sinica_iis", "中研院"),
 )
 PAPER_SOURCES = (
     AcademicSource("nep-exp", "RePEc NEP · Experimental Economics", "https://nep.repec.org/nep-exp", "nep", topics=(EXPERIMENT,)),
@@ -54,6 +55,7 @@ PAPER_SOURCES = (
     AcademicSource("1945-7782", "AEJ · Applied Economics", "https://www.aeaweb.org/journals/applied-economics", "journal", topics=(APPLIED,)),
     AcademicSource("0022-2267", "Journal of Linguistics", "https://www.cambridge.org/core/journals/journal-of-linguistics", "journal", topics=(LING,)),
     AcademicSource("0097-8507", "Language", "https://www.cambridge.org/core/journals/language", "journal", topics=(LING,)),
+    AcademicSource("glossa", "Glossa · General Linguistics", "https://www.glossa-journal.org/", "journal_rss", topics=(LING,)),
 )
 
 
@@ -193,6 +195,37 @@ def sinica_calendar(source, today):
         except SOURCE_ERRORS as error:
             issues.append(f"{path.rsplit('/', 1)[-1]} · {type(error).__name__}")
     return results, len(links), issues
+
+
+def sinica_iis(source, today):
+    raw = fetch_text(source.url)
+    results = []
+    examined = 0
+    rows = re.split(r'<div\s+role="row" class="rtable__tr">', raw)
+    for row in rows[1:]:
+        title = re.search(r'<a href="(/zh/page/Events/data/[^"]+)"[^>]*>(.*?)</a>', row, re.S)
+        when = re.search(r"<p>(20\d\d-\d{2}-\d{2}[^<]*)</p>", row)
+        if not title or not when or not (day := date_value(when[1])):
+            continue
+        examined += 1
+        if day < today:
+            continue
+        content = clean_html(row.split("</section>", 1)[0])
+        subject = clean_html(title[2])
+        # The institute spans computing. Keep language-related events from this source.
+        if "語言學研究所" not in content and LING not in topics_for(subject):
+            continue
+        url = public_url(urljoin(source.url, title[1]), urlsplit(source.url).hostname)
+        start, _, end = when[1].partition("~")
+        venue = re.search(r'<p class="rtable__heading">\s*地點\s*</p>\s*<p[^>]*>(.*?)</p>', row, re.S)
+        speaker = re.search(r'<a[^>]*title="鏈結至講者網頁"[^>]*>(.*?)</a>', row, re.S)
+        if item := event(source, url, subject, day, clock_time(start), clock_time(end),
+                         clean_html(venue[1]) if venue else "", clean_html(speaker[1]) if speaker else "",
+                         tags=(LING,), key=title[1]):
+            results.append(item)
+    if not examined:
+        raise ValueError("No dated Academy computing seminars")
+    return results, examined, []
 
 
 def sinica_econ(source, today):
@@ -355,5 +388,22 @@ def journal(source, today):
     return results, len(entries), []
 
 
+def journal_rss(source, today):
+    root = parse_xml(fetch_text(urljoin(source.url, "rss/")))
+    if root.find("channel") is None:
+        raise ValueError("Expected the journal RSS channel")
+    entries = root.findall("./channel/item")
+    results = []
+    for row in entries:
+        title = clean_html(row.findtext("title", ""))
+        date = date_value(row.findtext("pubDate"))
+        if not title or not date or not 0 <= (today - date).days <= 90:
+            continue
+        url = public_url(row.findtext("link"), urlsplit(source.url).hostname)
+        results.append(paper(source, url, title, url, date, "出版日期", [], "期刊紀錄"))
+    return results, len(entries), []
+
+
 READERS = {"ntu_econ": ntu_econ, "creta": creta, "sinica_econ": sinica_econ, "sinica_ling": sinica_ling,
-           "sinica_calendar": sinica_calendar, "nep": nep, "journal": journal}
+           "sinica_calendar": sinica_calendar, "sinica_iis": sinica_iis, "nep": nep,
+           "journal": journal, "journal_rss": journal_rss}

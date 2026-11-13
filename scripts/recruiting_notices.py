@@ -32,6 +32,9 @@ def board_rows(board, body):
             if day and title:
                 rows.append((link, title[1], day[0]))
         return rows
+    if board == "nccu-career":
+        pattern = r'<a class="tt" href="([^"]*/job/view/\d+)">([^<]*(?:<(?!/a>)[^<]*)*)</a>\s*<span class="loc">([^<]+)</span>'
+        return re.findall(pattern, body, re.S)
     pattern = rf'<tr>\s*<td>\s*<div>\s*<a href="(/news/\d+/)">([^<]+)</a>(?:(?!</tr>).)*?({DATE})'
     return re.findall(pattern, body, re.S)
 
@@ -41,6 +44,7 @@ def campus_article(board, raw):
         "ntu-career": r'<article class="article">(.*?)</article>',
         "ncu-career": r'<div id="js-article-body"[^>]*>(.*?)<div id="article-sidebar"',
         "nycu-career": r'<h2 class="ui header">.*?</h2>(.*?)<footer',
+        "nccu-career": r'<h1[^>]*>.*?</h1>(.*?)<footer',
     }
     match = re.search(patterns[board], raw, re.S)
     if not match:
@@ -65,12 +69,19 @@ def notice_title(title):
     return re.sub(r"^(?:轉知\s*[:：]?\s*|【實習(?:機會)?】\s*|\[實習\]\s*)+", "", title).strip()
 
 
-def read_campus_post(source, link, title, published):
+def read_campus_post(source, link, title, published, listed_location=""):
     article = campus_article(source.board, fetch_text(link))
     body = clean_html(re.sub(r"<!--.*?-->", "", article, flags=re.S))
-    location = notice_location(body)
+    location = notice_location(body) or listed_location
     company_match = re.match(r"^[【\[]([^】\]]{2,24})[】\]]", title)
     company = company_match[1] if company_match else "企業／用人單位見公告"
+    if source.board == "nccu-career":
+        employer = re.search(r"任職機構名稱\s*[:：]\s*([^\n]+)", body)
+        published_at = re.search(r"刊登日期\s*[:：]\s*([^\n]+)", body)
+        published = date_value(published_at[1]) if published_at else None
+        company = employer[1] if employer else company
+        if re.search(r"政大限定|限政大|僅限政治大學", title + "\n" + body):
+            return []
     deadline = deadline_in(body, published)
     deadline_time = ""
     for line in body.splitlines():
@@ -118,6 +129,7 @@ def read_campus_post(source, link, title, published):
     mixed = bool(re.search(r"台北|臺北|\bTaipei\b", location, re.I) and re.search(
         r"新北|桃園|新竹|台中|臺中|台南|臺南|高雄|new taipei", location, re.I))
     return [Posting(f"{source.board}-{identifier}", title, company, link, location, body,
+                    commitment="intern" if source.board == "nccu-career" else "",
                     posted=published, deadline=deadline, rolling_open=rolling, deadline_time=deadline_time,
                     application_url=application_link(article, link), location_needs_check=mixed)]
 
@@ -140,19 +152,24 @@ def read_campus(source, today):
                         r'href="(https://career\.ntu\.edu\.tw/board/index/tab/2/page/[2-5])"', page
                     )))[:4]:
                         rows.extend(board_rows(source.board, fetch_text(page_url)))
-                for link, raw_title, raw_date in rows:
+                for link, raw_title, marker in rows:
                     link = public_url(urljoin(source.url, link), urlsplit(source.url).hostname)
-                    entries[link] = (notice_title(clean_html(raw_title)), date_value(raw_date))
+                    listed_location = clean_html(marker) if source.board == "nccu-career" else ""
+                    title = notice_title(clean_html(raw_title))
+                    if source.board == "nccu-career" and re.search(r"政大限定|限政大|僅限政治大學", html.unescape(raw_title)):
+                        continue
+                    entries[link] = (title, date_value(marker), listed_location)
             except SOURCE_ERRORS as error:
                 result.issues.append(f"公告列表第 {pages.index(url) + 1} 頁：{type(error).__name__}")
         result.examined = len(entries)
-        recent = [(link, title, published) for link, (title, published) in entries.items()
-                  if published and 0 <= (today - published).days <= 55 and INTERNSHIP_NOTICE.search(title)]
-        recent.sort(key=lambda row: row[2], reverse=True)
+        recent = [(link, title, published, location) for link, (title, published, location) in entries.items()
+                  if (published and 0 <= (today - published).days <= 55 and INTERNSHIP_NOTICE.search(title))
+                  or (source.board == "nccu-career" and re.search(r"台北|臺北|\bTaipei\b|遠端", location, re.I))]
+        recent.sort(key=lambda row: row[2] or today, reverse=True)
         if len(recent) > 30:
             result.issues.append(f"逐篇讀取最新 30／{len(recent)} 則實習公告")
-        requests = [(link, workers.submit(read_campus_post, source, link, title, day))
-                    for link, title, day in recent[:30]]
+        requests = [(link, workers.submit(read_campus_post, source, link, title, day, location))
+                    for link, title, day, location in recent[:30]]
         for link, request in requests:
             try:
                 result.postings.extend(request.result())

@@ -6,7 +6,6 @@ from dataclasses import dataclass, field
 import datetime as dt
 from email.utils import parsedate_to_datetime
 import html
-from http.client import RemoteDisconnected
 import json
 import re
 from time import sleep
@@ -80,6 +79,7 @@ NTU_CAREERS = "https://econ.ntu.edu.tw/archives/category/" + quote("實習與就
 NTU_BOARD = "https://career.ntu.edu.tw/board/index/tab/2"
 NCU_BOARD = "https://careercenter.ncu.edu.tw/internship"
 NYCU_BOARD = "https://openhouse.osa.nycu.edu.tw/recruit_news/"
+NCCU_BOARD = "https://cd.nccu.edu.tw/domestic_internship/job"
 SC_BOARD = "https://jobs.standardchartered.com/"
 SOURCES = (
     Source("taiwanjobs", "taipei", "台灣就業通（台北 12 區）", "https://data.gov.tw/dataset/44062",
@@ -94,6 +94,7 @@ SOURCES = (
     Source("campus", "ntu-career", "台大職涯中心｜實習公告", NTU_BOARD, NTU_BOARD, True),
     Source("campus", "ncu-career", "中央大學職涯中心｜實習公告", NCU_BOARD, NCU_BOARD, True),
     Source("campus", "nycu-career", "陽明交大職涯中心｜求才公告", NYCU_BOARD, NYCU_BOARD, True),
+    Source("campus", "nccu-career", "政大職涯平台｜國內實習職缺", NCCU_BOARD, NCCU_BOARD, True),
     Source("bank", "standard-chartered", "渣打銀行｜官方職缺", SC_BOARD,
            SC_BOARD + "services/rss/job/?locale=en_GB&keywords=Taiwan", True),
     Source("reviewed", "capital-winter-2027", "群益金鼎證券｜已核對簡章",
@@ -120,7 +121,7 @@ def fetch_payload(url: str) -> tuple[bytes, str]:
         except HTTPError as error:
             if attempt or error.code not in {408, 500, 502, 503, 504}:
                 raise
-        except (URLError, TimeoutError, RemoteDisconnected):
+        except (URLError, TimeoutError, ConnectionError):
             if attempt:
                 raise
         sleep(1)
@@ -181,7 +182,7 @@ def deadline_in(text: str, published: dt.date | None) -> dt.date | None:
     date = r"(?:20\d\d|1\d\d)\s*[-/.年]\s*\d{1,2}\s*[-/.月]\s*\d{1,2}(?:日)?"
     for pattern in (
         rf"(?:投遞|報名|申請|收件)(?:日期|期間|時間)\s*[:：｜|]?\s*(?:即日|即刻|現在)起\s*(?:至|到|[–~～])?\s*({date})",
-        rf"(?:截止|收件(?:至|到)|報名(?:至|到)|deadline)\s*(?:日期|時間|日)?\s*[:：為至\s]*({date})",
+        rf"(?:截止|收件(?:至|到)|報名(?:至|到)|deadline)\s*(?:日期|時間|日)?\s*[:：｜|為至\s]*({date})",
         rf"({date})\s*(?:\d{{1,2}}[:：]\d{{2}}\s*)?(?:\([^)]{{1,6}}\)|（[^）]{{1,6}}）)?\s*(?:前\s*(?:寄|送|繳|將|完成|投遞|來信|報名)|截止)",
     ):
         if found := re.search(pattern, text, re.I):

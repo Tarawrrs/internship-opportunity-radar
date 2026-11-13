@@ -7,6 +7,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+from urllib.error import HTTPError
 
 from academic_sources import EVENT_SOURCES, PAPER_SOURCES, READERS, TOPICS
 from job_sources import SOURCE_ERRORS, TAIPEI
@@ -23,7 +24,8 @@ def scan(source, today):
         status.update(status="partial" if issues else "ok", examined=examined, matches=len(items), issues=issues[:6])
         return status, items
     except SOURCE_ERRORS as error:
-        status.update(status="error", issues=[type(error).__name__])
+        issue = f"HTTP {error.code}" if isinstance(error, HTTPError) else type(error).__name__
+        status.update(status="error", issues=[issue])
         return status, []
 
 
@@ -82,8 +84,14 @@ def main():
     path = args.output_dir / "academic.json"
     previous = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     today = dt.datetime.now(TAIPEI).date()
+    sources = EVENT_SOURCES + PAPER_SOURCES
+    crossref = [source for source in sources if source.reader == "journal"]
     with ThreadPoolExecutor(max_workers=5) as workers:
-        results = list(workers.map(lambda source: scan(source, today), EVENT_SOURCES + PAPER_SOURCES))
+        requests = {source.key: workers.submit(scan, source, today) for source in sources if source not in crossref}
+        # Crossref's public pool accepts one concurrent request per client.
+        crossref_results = {source.key: scan(source, today) for source in crossref}
+        results = [crossref_results[source.key] if source.key in crossref_results else requests[source.key].result()
+                   for source in sources]
     events, papers = academic_snapshot(results, previous, today)
     summaries = [info for info, _ in results]
     finished = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
