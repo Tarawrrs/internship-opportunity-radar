@@ -2,9 +2,11 @@ name: Refresh internship radar
 
 on:
   schedule:
-    # 21:57 Taipei, with a 22:47 backup if the earlier run misses its slot.
+    # Taipei local time. Later slots retry only when a complete scan is missing.
     - cron: "57 13 * * *"
     - cron: "47 14 * * *"
+    - cron: "17 23 * * *"
+      timezone: "Asia/Taipei"
   workflow_dispatch:
 
 permissions:

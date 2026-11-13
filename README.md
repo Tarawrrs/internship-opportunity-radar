@@ -18,7 +18,7 @@
 
 ## 更新與驗證
 
-GitHub Actions 每天在台北時間 21:57 排程執行 `Refresh internship radar`，22:47 備援會檢查當天是否已有成功的排程掃描。實際開始時間由 GitHub 決定。每輪搜尋會重新讀取公開來源，再由 Pages 發布資料。程式不需要 AI 或 API 金鑰。網站「來源與掃描紀錄」可查看觸發方式、讀取筆數、首次找到與來源錯誤。「讀取已發布的資料」會重新下載 Pages 上的結果。
+GitHub Actions 每天在台北時間 21:57 排程執行 `Refresh internship radar`，22:47 和 23:17 會檢查當天是否已有成功的排程掃描。實際開始時間由 GitHub 決定。每輪搜尋會重新讀取公開來源，再由 Pages 發布資料。程式不需要 AI 或 API 金鑰。網站「來源與掃描紀錄」可查看觸發方式、讀取筆數、首次找到與來源錯誤。「讀取已發布的資料」會重新下載 Pages 上的結果。
 
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py' -v
