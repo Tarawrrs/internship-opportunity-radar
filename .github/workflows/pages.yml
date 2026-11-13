@@ -2,11 +2,8 @@ name: Publish GitHub Pages
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - Refresh internship radar
-    types:
-      - completed
+  repository_dispatch:
+    types: [radar-data-refreshed]
   push:
     branches:
       - main
@@ -25,7 +22,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -33,6 +30,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          ref: refs/heads/main
       - name: Configure Pages
         uses: actions/configure-pages@v6
       - name: Upload site

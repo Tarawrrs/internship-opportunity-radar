@@ -40,16 +40,21 @@ jobs:
       - name: Trigger the daily scan
         env:
           GH_TOKEN: ${{ github.token }}
+          INITIAL_CHECK: ${{ github.event_name == 'workflow_dispatch' && inputs.delay == 'start' }}
         run: |
           gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" \
             -f event_type=radar-daily-timer \
-            -f "client_payload[timer_run_id]=$GITHUB_RUN_ID"
+            -f "client_payload[timer_run_id]=$GITHUB_RUN_ID" \
+            -f "client_payload[initial_check]=$INITIAL_CHECK"
           echo "Triggered a fresh search via the cloud timer."
 
   recover:
     if: github.ref == 'refs/heads/main' && github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      actions: read
+      contents: write
     steps:
       - name: Restore the timer if no timer is pending
         env:

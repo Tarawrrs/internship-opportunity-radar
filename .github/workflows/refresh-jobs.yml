@@ -31,6 +31,7 @@ jobs:
         id: schedule
         env:
           REFRESH_EVENT: ${{ github.event_name }}
+          INITIAL_CHECK: ${{ github.event.client_payload.initial_check }}
         run: |
           python3 - <<'PY'
           from datetime import datetime
@@ -47,7 +48,7 @@ jobs:
           run_id = previous.get("id")
           same_day = previous.get("scan_date") == datetime.now(local).date().isoformat()
           automatic = os.environ["REFRESH_EVENT"] in {"schedule", "repository_dispatch"}
-          already_checked = automatic and same_day and (
+          already_checked = automatic and same_day and os.environ["INITIAL_CHECK"] != "true" and (
               previous.get("status") == "ok" and previous.get("academic_status") == "ok"
               and run_id and run_id == academic.get("run_id")
           )
@@ -111,3 +112,9 @@ jobs:
           git add dist/data
           git commit -m "chore: refresh academic and career data"
           git push
+
+      - name: Request GitHub Pages publication
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" -f event_type=radar-data-refreshed

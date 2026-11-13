@@ -20,9 +20,9 @@
 
 GitHub Cron 每天在台北時間 08:23 排入 `Refresh internship radar`。另有 `Daily radar timer` 使用 Actions 環境的等待計時器，每 24 小時排下一輪並發送 `radar-daily-timer` 事件。當天已有完整的自動掃描時，工作流程會跳過重複查詢。
 
-每輪搜尋會重新讀取公開來源，再由 Pages 發布資料。程式使用 Python 和公開資料來源。網站「來源與掃描紀錄」顯示 GitHub Cron、雲端計時器或手動觸發，以及讀取筆數、首次找到與來源錯誤。「讀取已發布的資料」會重新下載 Pages 上的結果。
+每輪搜尋會重新讀取公開來源。掃描完成後，工作流程發送 `radar-data-refreshed` 事件，讓 Pages 發布最新資料。程式使用 Python 和公開資料來源。網站「來源與掃描紀錄」顯示 GitHub Cron、雲端計時器或手動觸發，以及讀取筆數、首次找到與來源錯誤。「讀取已發布的資料」會重新下載 Pages 上的結果。
 
-雲端計時器需要 `radar-timer-daily` 環境的 1,440 分鐘等待規則。GitHub Cron 在台北時間 09:53 檢查是否有下一輪等候中。需要重啟時，可在 Actions 的 `Daily radar timer` 選 `daily` 等待 24 小時，或選 `start` 使用 `radar-timer-start` 環境的 3 分鐘等待規則。
+雲端計時器需要 `radar-timer-daily` 環境的 1,440 分鐘等待規則。GitHub Cron 在台北時間 09:53 檢查是否有下一輪等候中。需要重啟時，可在 Actions 的 `Daily radar timer` 選 `daily` 等待 24 小時，或選 `start` 使用 `radar-timer-start` 環境的 3 分鐘等待規則，重新查詢來源並發布。
 
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py' -v
