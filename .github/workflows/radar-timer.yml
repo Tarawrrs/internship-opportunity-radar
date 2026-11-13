@@ -1,0 +1,64 @@
+name: Daily radar timer
+
+on:
+  workflow_dispatch:
+    inputs:
+      delay:
+        description: "Start the timer or queue the next daily interval"
+        type: choice
+        options: [daily, start]
+        default: daily
+  repository_dispatch:
+    types: [radar-next-timer]
+  schedule:
+    - cron: "53 9 * * *"
+      timezone: "Asia/Taipei"
+
+run-name: ${{ github.event_name == 'schedule' && 'Radar timer · recovery check' || inputs.delay == 'start' && 'Radar timer · first check' || 'Radar timer · next daily check' }}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-timer-${{ github.event_name == 'schedule' && 'recovery' || 'wait' }}
+  cancel-in-progress: false
+
+jobs:
+  wait:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: ${{ github.event_name == 'workflow_dispatch' && inputs.delay == 'start' && 'radar-timer-start' || 'radar-timer-daily' }}
+    steps:
+      - name: Queue the next daily timer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" -f event_type=radar-next-timer
+          echo "Queued the next 24-hour timer."
+
+      - name: Trigger the daily scan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" \
+            -f event_type=radar-daily-timer \
+            -f "client_payload[timer_run_id]=$GITHUB_RUN_ID"
+          echo "Triggered a fresh search via the cloud timer."
+
+  recover:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Restore the timer if no timer is pending
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          pending=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/radar-timer.yml/runs?branch=main&per_page=20" \
+            --jq '[.workflow_runs[] | select(.status != "completed" and .event != "schedule")] | length')
+          if [ "$pending" -eq 0 ]; then
+            gh api --method POST "repos/$GITHUB_REPOSITORY/dispatches" -f event_type=radar-next-timer
+            echo "Restored the 24-hour timer."
+          fi

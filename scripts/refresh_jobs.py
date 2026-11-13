@@ -383,6 +383,8 @@ def main() -> int:
     run = {"id": os.environ.get("GITHUB_RUN_ID", ""), "event": os.environ.get("GITHUB_EVENT_NAME", "local"),
            "finished": finished, "scan_date": iso(today), "examined": examined,
            "new": len(new_ids), "status": scan_status}
+    if run["event"] == "repository_dispatch" and (timer_id := os.environ.get("RADAR_TIMER_RUN_ID", "")).isdigit():
+        run["timer_run_id"] = timer_id
     history = [run, *(entry for entry in prior_meta.get("history", [])
                       if not run["id"] or entry.get("id") != run["id"])][:12]
     meta = {
@@ -395,7 +397,7 @@ def main() -> int:
         "new_review_count": new_review_count, "location_policy": POLICY_VERSION, "sources": sources,
         "winter_year": winter_year(today),
         "history": history, "run": run,
-        "last_schedule": run if run["event"] == "schedule" else prior_meta.get("last_schedule"),
+        "last_schedule": prior_meta.get("last_schedule"),
     }
     output.mkdir(parents=True, exist_ok=True)
     for name, value in (("jobs", jobs), ("review", review), ("archive", archive), ("scan-meta", meta)):

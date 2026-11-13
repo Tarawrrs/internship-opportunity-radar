@@ -2,12 +2,13 @@ name: Refresh internship radar
 
 on:
   schedule:
-    # Taipei local time. Later slots retry only when a complete scan is missing.
-    - cron: "57 13 * * *"
-    - cron: "47 14 * * *"
-    - cron: "17 23 * * *"
+    - cron: "23 8 * * *"
       timezone: "Asia/Taipei"
   workflow_dispatch:
+  repository_dispatch:
+    types: [radar-daily-timer]
+
+run-name: ${{ github.event_name == 'schedule' && 'Daily scan (GitHub cron)' || github.event_name == 'repository_dispatch' && 'Daily scan (cloud timer)' || 'Manual scan' }}
 
 permissions:
   contents: write
@@ -45,10 +46,10 @@ jobs:
           previous = career.get("last_schedule") or {}
           run_id = previous.get("id")
           same_day = previous.get("scan_date") == datetime.now(local).date().isoformat()
-          academic_run = academic.get("run_id")
-          academic_ok = bool(academic.get("sources")) and all(s["status"] == "ok" for s in academic["sources"])
-          already_checked = os.environ["REFRESH_EVENT"] == "schedule" and same_day and (
-              previous.get("status") == "ok" and run_id and run_id == academic_run and academic_ok
+          automatic = os.environ["REFRESH_EVENT"] in {"schedule", "repository_dispatch"}
+          already_checked = automatic and same_day and (
+              previous.get("status") == "ok" and previous.get("academic_status") == "ok"
+              and run_id and run_id == academic.get("run_id")
           )
           with open(os.environ["GITHUB_OUTPUT"], "a") as output:
               print(f"needed={str(not already_checked).lower()}", file=output)
@@ -62,11 +63,41 @@ jobs:
 
       - name: Search public recruiting sources
         if: steps.schedule.outputs.needed == 'true'
+        env:
+          RADAR_TIMER_RUN_ID: ${{ github.event.client_payload.timer_run_id }}
         run: python3 scripts/refresh_jobs.py
 
       - name: Read academic event and research sources
         if: steps.schedule.outputs.needed == 'true'
         run: python3 scripts/refresh_academic.py
+
+      - name: Record combined scan outcome
+        if: steps.schedule.outputs.needed == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          data = Path("dist/data")
+          career_file = data / "scan-meta.json"
+          career = json.loads(career_file.read_text())
+          academic = json.loads((data / "academic.json").read_text())
+          run = career["run"]
+          if run["id"] != os.environ["GITHUB_RUN_ID"] or run["id"] != academic["run_id"]:
+              raise ValueError("Scan results have different run IDs")
+          states = [s["status"] for s in academic["sources"]]
+          run["academic_status"] = (
+              "ok" if states and all(s == "ok" for s in states)
+              else "partial" if any(s != "error" for s in states)
+              else "error"
+          )
+          run["academic_examined"] = sum(s["examined"] for s in academic["sources"])
+          career["history"][0] = run
+          if run["event"] in {"schedule", "repository_dispatch"}:
+              career["last_schedule"] = run
+          career_file.write_text(json.dumps(career, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
 
       - name: Commit refreshed data when changed
         if: steps.schedule.outputs.needed == 'true'

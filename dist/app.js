@@ -89,8 +89,9 @@ function runLink(run) {
   return /^\d+$/.test(run?.id ?? "") ? link(`${repo}/actions/runs/${run.id}`, "GitHub 執行紀錄 ↗") : "";
 }
 
-function eventLabel(event) {
-  return { schedule: "排程觸發", workflow_dispatch: "手動觸發", local: "本機預掃描" }[event] || "觸發方式未提供";
+function eventLabel(run) {
+  return { schedule: "GitHub Cron", repository_dispatch: "雲端計時器",
+    workflow_dispatch: "手動觸發", local: "本機預掃描" }[run?.event] || "觸發方式未提供";
 }
 
 function eventRow(item, compact = false) {
@@ -311,20 +312,22 @@ function renderSources() {
   const pending = !career || !academic;
   header.classList.toggle("ok", !pending && schedule && !overdue && !scheduleOverdue && sourceIssues === 0);
   header.classList.toggle("warn", !pending && (overdue || scheduleOverdue || sourceIssues > 0 || !schedule));
-  const trigger = career?.run?.event === "schedule" ? "排程掃描" : "最近掃描";
+  const trigger = career?.run?.id === schedule?.id ? "排程掃描" : "最近掃描";
   $("scan-label").textContent = !timestamp ? "掃描紀錄" :
     overdue ? "資料逾時 · 查看紀錄" : scheduleOverdue ? "排程逾時 · 查看紀錄" :
     sourceIssues ? `${sourceIssues} 個來源異常` : !schedule ? "排程待驗證" : `${trigger} ${scanTime(timestamp)}`;
   $("job-sources").innerHTML = careerSources.map(sourceRow).join("") || empty("尚無職涯來源紀錄。");
   $("academic-sources").innerHTML = academicSources.map(sourceRow).join("") || empty("尚無學術來源紀錄。");
   const history = (career?.history || []).map(run => `<tr>
-    <td>${escapeHtml(scanTime(run.finished))}</td><td>${eventLabel(run.event)}</td>
+    <td>${escapeHtml(scanTime(run.finished))}</td><td>${eventLabel(run)}</td>
     <td>${Number(run.examined).toLocaleString("zh-TW")}</td><td>${Number(run.new)}</td><td>${runLink(run)}</td></tr>`).join("");
   $("source-scan-summary").innerHTML = `
-    <p><strong>最近職涯掃描</strong> ${escapeHtml(scanTime(career?.last_scan_attempt))} · ${eventLabel(career?.run?.event)}
+    <p><strong>最近職涯掃描</strong> ${escapeHtml(scanTime(career?.last_scan_attempt))} · ${eventLabel(career?.run)}
       ${career ? ` · 讀取 ${Number(career.records_examined).toLocaleString("zh-TW")} 筆 · 首次找到 ${Number(career.new_count)} 筆` : ""}
       ${runLink(career?.run)}</p>
-    <p><strong>最近排程觸發</strong> ${schedule ? `${escapeHtml(scanTime(schedule.finished))} ${runLink(schedule)}` : "等待此版本的第一次排程掃描"}</p>
+    <p><strong>最近排程掃描</strong> ${schedule ? `${escapeHtml(scanTime(schedule.finished))} · ${eventLabel(schedule)}
+      ${runLink(schedule)} ${/^\d+$/.test(schedule.timer_run_id || "") ?
+        link(`${repo}/actions/runs/${schedule.timer_run_id}`, "計時器紀錄 ↗") : ""}` : "等待第一次排程掃描"}</p>
     <p><strong>最近學術掃描</strong> ${escapeHtml(scanTime(academic?.last_scan_attempt))}
       ${academic ? ` · ${upcoming().length} 場活動 · ${academic.papers.length} 筆研究` : ""}</p>
     ${history ? `<details><summary>最近掃描明細</summary><table><thead><tr>
