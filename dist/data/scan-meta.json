@@ -1,32 +1,14 @@
 {
-  "last_scan_attempt": "2026-11-13T03:52:26.415562Z",
-  "last_successful_scan": "2026-11-13T03:52:26.415562Z",
+  "last_scan_attempt": "2026-11-13T03:55:00.756294Z",
+  "last_successful_scan": "2026-11-13T03:55:00.756294Z",
   "interval_days": 1,
   "scan_status": "ok",
   "job_count": 17,
   "review_count": 6,
   "archive_count": 20,
   "records_examined": 4243,
-  "new_count": 17,
-  "new_ids": [
-    "ntu-econ-18559",
-    "sinica-12248",
-    "sinica-12179",
-    "line-3133",
-    "gh-dcard-4513091",
-    "line-3130",
-    "sinica-11289",
-    "sinica-8604",
-    "sinica-11887",
-    "nstc-43aaeb83-c9d4-401a-862a-2b70c255bfc0",
-    "sinica-12186",
-    "gh-dcard-1562896",
-    "sinica-12127",
-    "sinica-12093",
-    "sinica-10241",
-    "sinica-9577",
-    "sinica-12133"
-  ],
+  "new_count": 0,
+  "new_ids": [],
   "recent_ids": [
     "ntu-econ-18559",
     "sinica-12248",
@@ -46,7 +28,7 @@
     "sinica-9577",
     "sinica-12133"
   ],
-  "new_review_count": 6,
+  "new_review_count": 0,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
