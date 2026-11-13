@@ -1,10 +1,10 @@
 {
-  "last_scan_attempt": "2026-11-13T14:41:08.752142Z",
-  "last_successful_scan": "2026-11-13T14:41:08.752142Z",
+  "last_scan_attempt": "2026-11-13T14:43:09.642232Z",
+  "last_successful_scan": "2026-11-13T14:43:09.642232Z",
   "interval_days": 1,
   "scan_status": "partial",
-  "job_count": 47,
-  "review_count": 40,
+  "job_count": 46,
+  "review_count": 41,
   "archive_count": 21,
   "records_examined": 4463,
   "new_count": 0,
@@ -43,7 +43,6 @@
     "gh-appier-7431293",
     "gh-appier-8382372",
     "line-3137",
-    "sinica-9577",
     "ntu-career-4789",
     "vw-63355",
     "nccu-career-4342",
@@ -102,8 +101,8 @@
       "examined": 116,
       "matches": 12,
       "issues": [],
-      "active": 12,
-      "review": 0
+      "active": 11,
+      "review": 1
     },
     {
       "source": "台大經濟系實習與就業公告",
@@ -354,6 +353,15 @@
   "winter_year": 2027,
   "history": [
     {
+      "id": "43445237802",
+      "event": "workflow_dispatch",
+      "finished": "2026-11-13T14:43:09.642232Z",
+      "scan_date": "2026-11-13",
+      "examined": 4463,
+      "new": 0,
+      "status": "partial"
+    },
+    {
       "id": "43444857478",
       "event": "workflow_dispatch",
       "finished": "2026-11-13T14:41:08.752142Z",
@@ -406,9 +414,9 @@
     }
   ],
   "run": {
-    "id": "43444857478",
+    "id": "43445237802",
     "event": "workflow_dispatch",
-    "finished": "2026-11-13T14:41:08.752142Z",
+    "finished": "2026-11-13T14:43:09.642232Z",
     "scan_date": "2026-11-13",
     "examined": 4463,
     "new": 0,
