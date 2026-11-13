@@ -313,6 +313,23 @@
       ]
     },
     {
+      "id": "6b04d7d01503d1cce4a3",
+      "title": "TIGP (SNHCC) -- Applications of AI in Text Analysis: Capabilities and Limitations through Research Cases",
+      "date": "2026-11-30",
+      "time": "14:00",
+      "endTime": "16:00",
+      "venue": "資訊所新館106演講廳",
+      "speaker": "張瑜芸 教授",
+      "url": "https://www.iis.sinica.edu.tw/zh/page/Events/data/DJ260051.html",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-iis",
+      "sourceName": "中研院資訊所",
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
       "id": "ac6df17683cb4161c16d",
       "title": "Perfect, already, and the case against iamitives",
       "date": "2026-12-03",
@@ -956,6 +973,73 @@
       ]
     },
     {
+      "id": "6ce471b31faa43dae99c",
+      "title": "Left periphery and microparametric word order change in OV languages: Evidence from Japanese",
+      "date": "2026-11-05",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/25426/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "6d3de26ee4a03a0464f9",
+      "title": "Form with no substance: Substance-Free Phonology and amodal grammars",
+      "date": "2026-11-05",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/27783/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "69286f82765de68df23a",
+      "title": "Case as a lower copy: scrambling in Japanese based on a Form Copy and labeling framework",
+      "date": "2026-11-05",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/23860/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "490b0857b6accbaacc24",
+      "title": "Non-canonical agreement in predicational copular clauses: Evidence from Polish",
+      "date": "2026-11-03",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101388",
+      "type": "期刊紀錄",
+      "authors": [
+        "Sebastian Zawada",
+        "Adam Przepiórkowski"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
       "id": "2a4c1cdbdcd2290bfe8c",
       "title": "Strategic Complementarity and Persistence in Linear-Quadratic Mean Field Games",
       "date": "2026-11-02",
@@ -1228,6 +1312,54 @@
       ]
     },
     {
+      "id": "8045859145ef5020e8a9",
+      "title": "The role of vagueness in distributive marking: Evidence from Albanian nga",
+      "date": "2026-10-29",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/23233/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "8312987cf05f2994e56c",
+      "title": "The position of the definite article in Romance vocatives",
+      "date": "2026-10-29",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/17649/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "709a530c03a8d7308d42",
+      "title": "(Everyone) Everywhere All at Once: A relational account of quantified impersonal -where in English",
+      "date": "2026-10-29",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/29715/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
       "id": "3fdcb2989a33bd028423",
       "title": "Understanding Migration Responses to Local Shocks",
       "date": "2026-10-26",
@@ -1485,8 +1617,7 @@
       ],
       "topics": [
         "語言學"
-      ],
-      "stale": true
+      ]
     },
     {
       "id": "1f683daf951cc03f77ca",
@@ -1527,6 +1658,106 @@
       ],
       "topics": [
         "應用個經"
+      ]
+    },
+    {
+      "id": "09236c7d741b93bac594",
+      "title": "Stefana Garello, 2024, The Enigma of Metaphor: Philosophy, Pragmatics, Cognitive Science. Cham, Switzerland: Springer, pp. xiii + 172.",
+      "date": "2026-10-23",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101376",
+      "type": "期刊紀錄",
+      "authors": [
+        "Parsa Bamshadi"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "a4d2262dd53379392a4d",
+      "title": "Something borrowed, something new, something unexpectedly deverbal?: Latinate nominalisations in BCMS",
+      "date": "2026-10-21",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/29483/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "aa588cbf0f3f6f1f9020",
+      "title": "Islands satiate without change in backgroundedness",
+      "date": "2026-10-21",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/29677/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "c6835e88bdb49aebe467",
+      "title": "Assigning attributive properties without adnominal modification in Lakota",
+      "date": "2026-10-21",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/26297/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "c2bb5ce79cd04852030a",
+      "title": "Clausal nominalization in Ka(g)wahíva",
+      "date": "2026-10-15",
+      "dateLabel": "出版日期",
+      "url": "https://www.glossa-journal.org/article/id/27769/",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Glossa · General Linguistics",
+      "sourceKeys": [
+        "glossa"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "cc0771de8a3945eb8ab9",
+      "title": "One linker, many relations: unifying Mandarin de via qualia, events and crosslinguistic insights",
+      "date": "2026-10-08",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s002222672610139x",
+      "type": "期刊紀錄",
+      "authors": [
+        "Jo-Wang Lin"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
       ]
     },
     {
@@ -1970,6 +2201,63 @@
       "topics": [
         "應用個經"
       ]
+    },
+    {
+      "id": "aa8f82d64caa5002325b",
+      "title": "Teun A. Van Dijk. Discourse and Ideologies of the Radical Right. Cambridge: Cambridge University Press, 2024. 94 pp.",
+      "date": "2026-09-25",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101352",
+      "type": "期刊紀錄",
+      "authors": [
+        "Siyi Zhou",
+        "Lei Li",
+        "Yumei Liu"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "a010718e12058732bb36",
+      "title": "Control of clitics in Greek tough -constructions",
+      "date": "2026-09-24",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101315",
+      "type": "期刊紀錄",
+      "authors": [
+        "Leonardo Russo Cardona",
+        "Ioanna Sitaridou"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "19e05f07d0de012dea61",
+      "title": "Anastasia Giannakidou and Alda Mari, Modal sentences (Key Topics in Semantics and Pragmatics). Cambridge: Cambridge University Press, 2026. Pp. xiv + 332.",
+      "date": "2026-09-23",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101364",
+      "type": "期刊紀錄",
+      "authors": [
+        "Qijun Xiang"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
     }
   ],
   "sources": [
@@ -2020,6 +2308,16 @@
       "group": "events",
       "examined": 12,
       "matches": 2,
+      "issues": [],
+      "status": "ok"
+    },
+    {
+      "sourceKey": "sinica-iis",
+      "source": "中研院資訊所",
+      "url": "https://www.iis.sinica.edu.tw/zh/page/Events/seminar.html",
+      "group": "events",
+      "examined": 60,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -2088,24 +2386,30 @@
       "source": "Journal of Linguistics",
       "url": "https://www.cambridge.org/core/journals/journal-of-linguistics",
       "group": "papers",
-      "examined": 0,
-      "matches": 0,
-      "issues": [
-        "HTTPError"
-      ],
-      "status": "error"
+      "examined": 6,
+      "matches": 6,
+      "issues": [],
+      "status": "ok"
     },
     {
       "sourceKey": "0097-8507",
       "source": "Language",
       "url": "https://www.cambridge.org/core/journals/language",
       "group": "papers",
-      "examined": 0,
-      "matches": 0,
-      "issues": [
-        "HTTPError"
-      ],
-      "status": "error"
+      "examined": 1,
+      "matches": 1,
+      "issues": [],
+      "status": "ok"
+    },
+    {
+      "sourceKey": "glossa",
+      "source": "Glossa · General Linguistics",
+      "url": "https://www.glossa-journal.org/",
+      "group": "papers",
+      "examined": 10,
+      "matches": 10,
+      "issues": [],
+      "status": "ok"
     }
   ],
   "topics": [
@@ -2116,6 +2420,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-13T13:55:48.366035Z",
-  "run_id": "43437690819"
+  "last_scan_attempt": "2026-11-13T14:09:04.855225Z",
+  "run_id": "43439753741"
 }
