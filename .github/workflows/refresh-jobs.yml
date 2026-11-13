@@ -2,8 +2,8 @@ name: Refresh internship radar
 
 on:
   schedule:
-    # 08:23 Taipei; GitHub may queue the run later.
-    - cron: "23 0 * * *"
+    # 21:57 Taipei; GitHub may queue the run later.
+    - cron: "57 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,9 @@ jobs:
       - name: Search public recruiting sources
         run: python3 scripts/refresh_jobs.py
 
+      - name: Read academic event and research sources
+        run: python3 scripts/refresh_academic.py
+
       - name: Commit refreshed data when changed
         run: |
           if git diff --quiet -- dist/data; then
@@ -36,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add dist/data
-          git commit -m "chore: refresh internship radar data"
+          git commit -m "chore: refresh academic and career data"
           git push

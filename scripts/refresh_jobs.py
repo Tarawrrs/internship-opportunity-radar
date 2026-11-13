@@ -15,6 +15,7 @@ import sys
 
 from job_sources import SOURCES, SOURCE_ERRORS, TAIPEI, Posting, Source, deadline_in, read_source
 from location_rules import POLICY_VERSION, classify_location
+from winter_rules import winter_details, winter_year
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "dist" / "data"
@@ -23,7 +24,7 @@ NOTICE_WINDOW_DAYS = 35
 PENDING_GRACE_DAYS = 10
 RECENT_DISCOVERY_DAYS = 7
 
-INTERNSHIP = re.compile(r"\bintern(?:ship)?\b|實習|研究工讀|學習型獎助生", re.I)
+INTERNSHIP = re.compile(r"\bintern(?:ship)?\b|實習|寒假.{0,12}工讀|研究工讀|學習型獎助生", re.I)
 RESEARCH_ROLE = re.compile(r"\bresearch (?:assistant|associate)\b|\bpre[- ]?doc(?:toral)?\b|研究助理|研究工讀", re.I)
 PROJECT_ASSISTANT = re.compile(r"(?:專任|兼任|專案|計[畫劃]).{0,9}(?:助理|助理專員)|research intern", re.I)
 TARGET_TITLE = re.compile(
@@ -40,8 +41,8 @@ METHOD = re.compile(
     r"統計(?:分析|方法|模型|推論|歸因)|實證|因果推論|計量|實驗設計|神經經濟|賽局理論|"
     r"機器學習|問卷調查|調查資料|使用者行為|成效報表|人口社經|資料科學|[Ss]tata|[Ss][Qq][Ll]", re.I)
 RESEARCH_DOMAIN = re.compile(
-    r"經濟|社會科學|社會學|心理學|行為科學|社會調查|公共政策|政治學|人口|教育政策|統計|資料科學|"
-    r"economic|social science|sociology|psychology|public policy|political science|behavioral|demograph|statistics", re.I)
+    r"經濟|社會科學|社會學|心理學|行為科學|社會調查|公共政策|政治學|人口|教育政策|統計|資料科學|語言學|"
+    r"economic|social science|sociology|psychology|public policy|political science|behavioral|demograph|statistics|linguistics", re.I)
 UNRELATED_TITLE = re.compile(
     r"助理教授|副教授|專任師資|院長|所長|系主任|行政助理|行政工讀|純行政|餐飲|護理|"
     r"儲備店長|才藝|幼兒|人才招募實習|人資實習|樣本前處理|觀測採樣|網站與資訊系統開發|"
@@ -58,11 +59,11 @@ def role_kind(post: Posting) -> str | None:
     internship = INTERNSHIP.search(f"{title} {post.commitment}")
     ra = RESEARCH_ROLE.search(title)
     if internship and not ra:
-        if TARGET_TITLE.search(title) or (
-            METHOD.search(body) and re.search(r"實習|data|analysis|research|applied ai|product", title, re.I)
-        ):
-            return "intern"
-        return None
+        if LAB_ONLY.search(title) or re.search(r"(?:實習|internship).{0,12}(?:說明會|講座)$", title, re.I):
+            return None
+        if re.search(r"研究實習|\bresearch intern\b", title, re.I) and RESEARCH_DOMAIN.search(f"{title}\n{body}"):
+            return "research-intern"
+        return "intern"
     if not (ra or PROJECT_ASSISTANT.search(title)):
         return None
     substantive = bool(METHOD.search(f"{title}\n{body}"))
@@ -82,7 +83,8 @@ def role_kind(post: Posting) -> str | None:
 
 def fit_score(post: Posting, kind: str) -> tuple[int, list[str]]:
     text = post.title + "\n" + post.description
-    score = {"intern": 59, "part-time-ra": 65, "predoc": 64, "full-time-ra": 52, "research": 55}[kind]
+    score = {"intern": 59, "research-intern": 62, "part-time-ra": 65, "predoc": 64,
+             "full-time-ra": 52, "research": 55}[kind]
     skills = []
     for pattern, points, label in [
         (r"econometric|applied micro|causal inference|empirical economics|因果|計量|實證|經濟史", 15, "實證／因果"),
@@ -120,14 +122,16 @@ def iso(value: dt.date | None) -> str | None:
     return value.isoformat() if value else None
 
 
-def make_job(post: Posting, source: Source, today: dt.date) -> dict | None:
+def make_job(post: Posting, source: Source, today: dt.date, now: dt.datetime | None = None) -> dict | None:
     kind = role_kind(post)
     if not kind or (post.posted and post.posted > today):
         return None
     deadline = deadline_in(post.description, post.posted or post.updated)
     if post.deadline:
         deadline = min(deadline, post.deadline) if deadline else post.deadline
-    if deadline and deadline < today:
+    cutoff = post.deadline_time if deadline and deadline == post.deadline else ""
+    if deadline and (deadline < today or
+                     (deadline == today and cutoff and now and now.strftime("%H:%M") >= cutoff)):
         return None
     if source.kind == "rss" and not deadline and (
         not post.posted or (today - post.posted).days > NOTICE_WINDOW_DAYS
@@ -142,9 +146,12 @@ def make_job(post: Posting, source: Source, today: dt.date) -> dict | None:
     # Publish the job-location and work-mode fields, not prose or contact details from the source.
     location["locationEvidence"] = location["locationEvidence"][:1 + bool(post.workplace)]
     score, skills = fit_score(post, kind)
-    if score < 58 and not re.search(r"經濟研究所|經濟系|economics", f"{post.company} {post.title}", re.I):
+    if kind not in {"intern", "research-intern"} and score < 58 and not re.search(
+        r"經濟研究所|經濟系|economics|語言學|linguistics", f"{post.company} {post.title}", re.I
+    ):
         return None
-    job_type = {"intern": "實習", "part-time-ra": "兼任研究助理", "full-time-ra": "全職研究助理",
+    job_type = {"intern": "工讀" if "工讀" in post.title else "實習", "research-intern": "研究實習",
+                "part-time-ra": "兼任研究助理", "full-time-ra": "全職研究助理",
                 "predoc": "Predoc", "research": "研究職缺"}[kind]
     status = "confirmed"
     reason = ""
@@ -154,7 +161,10 @@ def make_job(post: Posting, source: Source, today: dt.date) -> dict | None:
     elif location["locationDisposition"] == "review":
         status = "pending"
         reason = location["locationReason"]
-    elif source.kind == "rss" and not (deadline or post.rolling_open):
+    elif post.location_needs_check:
+        status = "pending"
+        reason = "公告同時列出外縣市，請在投遞前核對所選職缺的實際辦公地點。"
+    elif source.kind in {"rss", "campus"} and not (deadline or post.rolling_open):
         status = "pending"
         reason = "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。"
 
@@ -167,18 +177,24 @@ def make_job(post: Posting, source: Source, today: dt.date) -> dict | None:
     else:
         timing = "本輪仍列於招募清單，來源未提供明確截止日。"
 
-    eligibility = "請在原公告核對學籍、所需技能與每週工時。"
-    if re.search(r"臺大在學學生|台大在學學生|currently enrolled NTU student", post.description, re.I):
+    eligibility = post.eligibility or "請在原公告核對學籍、所需技能與每週工時。"
+    if not post.eligibility and re.search(r"臺大在學學生|台大在學學生|currently enrolled NTU student", post.description, re.I):
         eligibility = "限台大在學學生（大學部或研究所）；其他條件見原公告。"
     elif kind == "full-time-ra":
         eligibility = "全職職缺，需核對到職日、學位要求與能否配合目前課業。"
 
+    winter_status, period = winter_details(post.title, post.description, today)
+    if kind in {"full-time-ra", "predoc"}:
+        winter_status = "other"
     return {
         "id": safe_id(post.id), "sourceKey": source.key, "sourceName": source.name,
         "source": post.url, "title": post.title.strip(), "company": post.company.strip(),
         "location": post.location, **location, "jobType": job_type,
-        "track": ("research" if kind != "intern" or RESEARCH_ROLE.search(post.title) else
-                  "finance" if re.search(r"risk|credit|compliance|風控|風險", post.title, re.I) else "industry"),
+        "track": ("research" if kind != "intern" else
+                  "finance" if re.search(r"risk|credit|compliance|bank|finance|風控|風險|金融|證券|銀行",
+                                          f"{post.company} {post.title}", re.I) else "industry"),
+        "winterStatus": post.winter_status or winter_status, "winterYear": winter_year(today),
+        "period": post.period or period, "note": post.note, "applicationUrl": post.application_url,
         "score": score,
         "priority": "待查核" if status == "pending" else "優先查核" if score >= 88 else "值得看看" if score >= 72 else "備選",
         "priorityType": "watch" if status == "pending" else "priority" if score >= 88 else "watch",
@@ -187,7 +203,7 @@ def make_job(post: Posting, source: Source, today: dt.date) -> dict | None:
         "risk": ("從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。"
                  if location["locationKey"] != "taipei" else "請核對每週工時、到班要求和實際分析／研究工作比重。"),
         "checked": iso(today), "postedAt": iso(post.posted), "sourceUpdatedAt": iso(post.updated),
-        "deadline": iso(deadline), "verificationStatus": status, "verificationNote": reason,
+        "deadline": iso(deadline), "deadlineTime": cutoff, "verificationStatus": status, "verificationNote": reason,
     }
 
 
@@ -213,10 +229,22 @@ def duplicate_key(job: dict) -> tuple[str, str]:
     return normalize(job["company"]), normalize(job["title"])
 
 
-def refresh_source(source: Source, today: dt.date):
+def campus_identity(job: dict):
+    title = job["title"]
+    if "勤業眾信" in title and "ESG" in title:
+        unit = re.search(r"諮詢組|確信組", title)
+        if unit:
+            return ("Deloitte ESG", unit[0], job.get("deadline"))
+    link = job.get("applicationUrl", "")
+    if link and "/company/" not in link:
+        return link.rstrip("/")
+    return duplicate_key(job)
+
+
+def refresh_source(source: Source, today: dt.date, now: dt.datetime | None = None):
     try:
         result = read_source(source, today)
-        candidates = [job for post in result.postings if (job := make_job(post, source, today))]
+        candidates = [job for post in result.postings if (job := make_job(post, source, today, now))]
         status = "partial" if result.issues else "ok"
         summary = {"source": source.name, "sourceKey": source.key, "url": source.url, "status": status,
                    "examined": result.examined, "matches": len(candidates), "issues": result.issues[:12]}
@@ -229,7 +257,7 @@ def refresh_source(source: Source, today: dt.date):
                         "issues": [type(error).__name__]}, [], set()
 
 
-def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.date):
+def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.date, now: dt.datetime | None = None):
     """Keep only current confirmations active; carry old uncertain posts to review, then history."""
     previous_by_id = {job["id"]: job for job in previous}
     archived = {job["id"]: job for job in history}
@@ -237,6 +265,7 @@ def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.
     current = {}
     summaries = {}
     source_lookup = {}
+    campus_keys = set()
     official = set().union(*(identities for src, _, _, identities in scans if src.kind != "himalayas"))
     for src, summary, candidates, _ in scans:
         summaries[src.key] = summary
@@ -244,6 +273,11 @@ def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.
         for job in candidates:
             if src.kind == "himalayas" and duplicate_key(job) in official:
                 continue
+            if src.kind == "campus":
+                key = campus_identity(job)
+                if key in campus_keys:
+                    continue
+                campus_keys.add(key)
             old = previous_by_id.get(job["id"]) or archived.get(job["id"], {})
             job["firstSeen"] = old.get("firstSeen") or old.get("checked") or iso(today)
             job["lastSeen"] = iso(today)
@@ -262,12 +296,16 @@ def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.
         checked = date_field(old, "lastSeen") or date_field(old, "checked")
         recently_seen = checked and (today - checked).days <= PENDING_GRACE_DAYS
 
-        if expiry and expiry < today:
+        cutoff = old.get("deadlineTime")
+        if expiry and (expiry < today or
+                       (expiry == today and cutoff and now and now.strftime("%H:%M") >= cutoff)):
             reason = "公告截止日已過。"
         elif key == "manual" or old.get("verificationMode") == "manual":
             reason = "原為人工追蹤；尚無近期可驗證的單一招募公告，已移出目前職缺。"
         elif source and source.kind == "himalayas" and duplicate_key(old) in official:
             reason = "已找到雇主的對應公告；是否接受台灣，以雇主公告為準。"
+        elif source and source.kind == "campus" and campus_identity(old) in campus_keys:
+            reason = "已找到同一招募公告，保留一筆於目前清單。"
         elif source and (summary["status"] != "ok" or source.rolling) and recently_seen:
             note = ("本輪來源未能完整讀取，保留前次結果供確認。"
                     if summary["status"] != "ok" else "已不在本輪近期公告範圍內，是否仍收件請見原公告。")
@@ -311,11 +349,12 @@ def main() -> int:
     previous = load_records(paths["jobs"]) + load_records(paths["review"])
     archive = load_records(paths["archive"])
     prior_meta = json.loads(paths["scan-meta"].read_text(encoding="utf-8")) if paths["scan-meta"].exists() else {}
-    today = dt.datetime.now(TAIPEI).date()
+    now = dt.datetime.now(TAIPEI)
+    today = now.date()
 
     with ThreadPoolExecutor(max_workers=5) as workers:
-        scans = list(workers.map(lambda source: refresh_source(source, today), SOURCES))
-    jobs, review, archive, new_ids, new_review_count, sources = reconcile(previous, archive, scans, today)
+        scans = list(workers.map(lambda source: refresh_source(source, today, now), SOURCES))
+    jobs, review, archive, new_ids, new_review_count, sources = reconcile(previous, archive, scans, today, now)
     recent_ids = [job["id"] for job in jobs if (seen := date_field(job, "firstSeen")) and
                   0 <= (today - seen).days < RECENT_DISCOVERY_DAYS]
     finished = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
@@ -323,6 +362,10 @@ def main() -> int:
     errors = sum(source["status"] == "error" for source in sources)
     examined = sum(source["examined"] for source in sources)
     scan_status = "error" if errors == len(sources) else "ok" if ok == len(sources) else "partial"
+    run = {"id": os.environ.get("GITHUB_RUN_ID", ""), "event": os.environ.get("GITHUB_EVENT_NAME", "local"),
+           "finished": finished, "examined": examined, "new": len(new_ids), "status": scan_status}
+    history = [run, *(entry for entry in prior_meta.get("history", [])
+                      if not run["id"] or entry.get("id") != run["id"])][:12]
     meta = {
         "last_scan_attempt": finished,
         "last_successful_scan": finished if scan_status != "error" else prior_meta.get("last_successful_scan"),
@@ -331,6 +374,9 @@ def main() -> int:
         "records_examined": examined, "new_count": len(new_ids), "new_ids": new_ids,
         "recent_ids": recent_ids,
         "new_review_count": new_review_count, "location_policy": POLICY_VERSION, "sources": sources,
+        "winter_year": winter_year(today),
+        "history": history, "run": run,
+        "last_schedule": run if run["event"] == "schedule" else prior_meta.get("last_schedule"),
     }
     output.mkdir(parents=True, exist_ok=True)
     for name, value in (("jobs", jobs), ("review", review), ("archive", archive), ("scan-meta", meta)):

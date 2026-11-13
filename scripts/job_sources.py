@@ -6,8 +6,11 @@ from dataclasses import dataclass, field
 import datetime as dt
 from email.utils import parsedate_to_datetime
 import html
+from http.client import RemoteDisconnected
 import json
 import re
+from time import sleep
+from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, quote, urlencode, urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
@@ -46,6 +49,13 @@ class Posting:
     deadline: dt.date | None = None
     rolling_open: bool = False
     third_party: bool = False
+    winter_status: str = ""
+    period: str = ""
+    eligibility: str = ""
+    note: str = ""
+    application_url: str = ""
+    deadline_time: str = ""
+    location_needs_check: bool = False
 
 
 @dataclass
@@ -67,6 +77,10 @@ def lever(board: str, name: str) -> Source:
 
 SINICA_LIST = "https://www.sinica.edu.tw/recruitment/53?Datas_Query.workType=3"
 NTU_CAREERS = "https://econ.ntu.edu.tw/archives/category/" + quote("實習與就業")
+NTU_BOARD = "https://career.ntu.edu.tw/board/index/tab/2"
+NCU_BOARD = "https://careercenter.ncu.edu.tw/internship"
+NYCU_BOARD = "https://openhouse.osa.nycu.edu.tw/recruit_news/"
+SC_BOARD = "https://jobs.standardchartered.com/"
 SOURCES = (
     Source("taiwanjobs", "taipei", "台灣就業通（台北 12 區）", "https://data.gov.tw/dataset/44062",
            "https://free.taiwanjobs.gov.tw/webservice_taipei/Webservice.ashx"),
@@ -77,6 +91,13 @@ SOURCES = (
     Source("rss", "ntu-econ", "台大經濟系實習與就業公告", NTU_CAREERS, NTU_CAREERS + "/feed", True),
     Source("rss", "nstc", "國科會求才公告", "https://www.nstc.gov.tw/folksonomy/list/ba3d22f3-96fd-4adf-a078-91a05b8f0166?l=ch",
            "https://www.nstc.gov.tw/nstc/rss/hr", True),
+    Source("campus", "ntu-career", "台大職涯中心｜實習公告", NTU_BOARD, NTU_BOARD, True),
+    Source("campus", "ncu-career", "中央大學職涯中心｜實習公告", NCU_BOARD, NCU_BOARD, True),
+    Source("campus", "nycu-career", "陽明交大職涯中心｜求才公告", NYCU_BOARD, NYCU_BOARD, True),
+    Source("bank", "standard-chartered", "渣打銀行｜官方職缺", SC_BOARD,
+           SC_BOARD + "services/rss/job/?locale=en_GB&keywords=Taiwan", True),
+    Source("reviewed", "capital-winter-2027", "群益金鼎證券｜已核對簡章",
+           "https://career.ntu.edu.tw/board/detail/sn/4775", "https://career.ntu.edu.tw/board/download/sn/1784"),
     Source("himalayas", "tw", "Himalayas 遠端職缺", "https://himalayas.app/",
            "https://himalayas.app/jobs/api/search", True),
     greenhouse("appier", "Appier"), greenhouse("point72", "Point72"),
@@ -86,14 +107,28 @@ SOURCES = (
 )
 
 
-def fetch_text(url: str) -> str:
+def fetch_payload(url: str) -> tuple[bytes, str]:
     request = Request(url, headers={"User-Agent": "InternshipRadar/2.0 (+https://github.com/Tarawrrs/internship-opportunity-radar)"})
-    with urlopen(request, timeout=20) as response:
-        limit = 24_000_000
-        payload = response.read(limit + 1)
-        if len(payload) > limit:
-            raise ValueError("Source response exceeds the size limit")
-        return payload.decode(response.headers.get_content_charset() or "utf-8-sig")
+    for attempt in range(2):
+        try:
+            with urlopen(request, timeout=20) as response:
+                limit = 24_000_000
+                payload = response.read(limit + 1)
+                if len(payload) > limit:
+                    raise ValueError("Source response exceeds the size limit")
+                return payload, response.headers.get_content_charset() or "utf-8-sig"
+        except HTTPError as error:
+            if attempt or error.code not in {408, 500, 502, 503, 504}:
+                raise
+        except (URLError, TimeoutError, RemoteDisconnected):
+            if attempt:
+                raise
+        sleep(1)
+
+
+def fetch_text(url: str) -> str:
+    payload, encoding = fetch_payload(url)
+    return payload.decode(encoding)
 
 
 def fetch_json(url: str):
@@ -145,6 +180,7 @@ def deadline_in(text: str, published: dt.date | None) -> dt.date | None:
     """Read dates near application/deadline language, not dates like the start of work."""
     date = r"(?:20\d\d|1\d\d)\s*[-/.年]\s*\d{1,2}\s*[-/.月]\s*\d{1,2}(?:日)?"
     for pattern in (
+        rf"(?:投遞|報名|申請|收件)(?:日期|期間|時間)\s*[:：｜|]?\s*(?:即日|即刻|現在)起\s*(?:至|到|[–~～])?\s*({date})",
         rf"(?:截止|收件(?:至|到)|報名(?:至|到)|deadline)\s*(?:日期|時間|日)?\s*[:：為至\s]*({date})",
         rf"({date})\s*(?:\d{{1,2}}[:：]\d{{2}}\s*)?(?:\([^)]{{1,6}}\)|（[^）]{{1,6}}）)?\s*(?:前\s*(?:寄|送|繳|將|完成|投遞|來信|報名)|截止)",
     ):
@@ -171,7 +207,7 @@ def campus_location(value: str) -> str:
 
 
 def notice_location(text: str) -> str:
-    labels = re.findall(r"(?:工作地點|工作地址|工作地區|工作場所|實習地點|工作模式|work location|work mode)\s*[】\]〗）)]?\s*[:：\s]+([^\n]{2,220})", text, re.I)
+    labels = re.findall(r"(?:工作地點|工作地址|工作地區|工作場所|上班地點|實習地點|實習地址|工作模式|work location|work mode)[ \t]*[】\]〗）)]?[ \t]*[:：｜| \t\n]+([^\n]{2,220})", text, re.I)
     if labels:
         return campus_location(" / ".join(dict.fromkeys(labels))[:220])
     return ""
@@ -405,4 +441,7 @@ READERS = {"greenhouse": read_greenhouse, "lever": read_lever, "taiwanjobs": rea
 
 
 def read_source(source: Source, today: dt.date) -> Batch:
+    if source.kind in {"campus", "bank", "reviewed"}:
+        from recruiting_notices import NOTICE_READERS
+        return NOTICE_READERS[source.kind](source, today)
     return READERS[source.kind](source, today)

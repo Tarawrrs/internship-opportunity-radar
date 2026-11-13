@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from dataclasses import replace
 from html import escape
 import unittest
@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 from job_sources import SOURCES, Posting, deadline_in, parse_taiwanjobs, read_rss, sinica_fields
 from refresh_jobs import make_job, reconcile, refresh_source
+from winter_rules import winter_details
 
 TODAY = date(2026, 11, 13)
 NTU = next(s for s in SOURCES if s.board == "ntu-econ")
@@ -80,6 +81,22 @@ class DiscoveryTest(unittest.TestCase):
           <COMPNAME（公司名稱）>Example</COMPNAME（公司名稱）></Data></DataList>"""
         self.assertEqual(parse_taiwanjobs(xml)[0]["CITYNAME"], "台北市信義區")
         self.assertEqual(sinica_fields("<span>&#x5DE5;&#x4F5C;&#x5730;&#x9EDE;</span> <p>台北市南港區</p>"), {"工作地點": "台北市南港區"})
+
+    def test_winter_uses_work_dates_instead_of_application_dates(self):
+        title = "2027 銀行實習"
+        self.assertEqual(winter_details(title, "申請截止：2027/1/1\nStart Date: June 2027", TODAY)[0], "other")
+        self.assertEqual(winter_details(title, "實習期間：2026/12/28–2027/2/19", TODAY)[0], "winter-only")
+        self.assertEqual(winter_details(title, "實習期間：2027/1/4–2027/2/25", TODAY)[0], "extends")
+        self.assertEqual(winter_details(title, "申請截止：2027/1/1", TODAY)[0], "unknown")
+
+    def test_business_internship_needs_no_research_keywords_and_honors_cutoff(self):
+        deadline = date(2026, 11, 23)
+        post = Posting("bank-intern", "企業金融實習生", "Test Bank", APP.url, "台北",
+                       "實習期間：2027/1/4–2027/6/21", deadline=deadline, deadline_time="12:00")
+        before = datetime(2026, 11, 23, 11, 59)
+        job = make_job(post, APP, deadline, before)
+        self.assertEqual((job["track"], job["winterStatus"]), ("finance", "extends"))
+        self.assertIsNone(make_job(post, APP, deadline, before + timedelta(minutes=1)))
 
 
 if __name__ == "__main__":

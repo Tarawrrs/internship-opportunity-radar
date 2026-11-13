@@ -1,440 +1,134 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant-TW">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="依研究、資料與產品分析方向整理的個人化實習機會雷達。" />
-  <meta name="color-scheme" content="light" />
-  <title>實習機會雷達</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1830'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%238cf2c6' stroke-width='4'/%3E%3Cpath d='M32 32 46 20' stroke='%23ffca6b' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23fff'/%3E%3C/svg%3E" />
-  <style>
-    :root {
-      --ink: #0b1830;
-      --ink-2: #22324f;
-      --muted: #667085;
-      --line: #dce2ea;
-      --paper: #f7f9fc;
-      --card: #ffffff;
-      --mint: #8cf2c6;
-      --mint-deep: #057a55;
-      --amber: #ffca6b;
-      --amber-deep: #8a4c00;
-      --red: #d95852;
-      --blue: #4d77ff;
-      --shadow: 0 14px 36px rgba(11, 24, 48, .08);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font-size: 16px; line-height: 1.55; }
-    button, input, select { font: inherit; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    a { color: inherit; }
-    .shell { min-height: 100vh; }
-    .topbar { background: var(--ink); color: #fff; border-bottom: 1px solid rgba(255,255,255,.14); }
-    .topbar-inner { max-width: 1240px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .brand { display: flex; gap: 12px; align-items: center; font-weight: 780; letter-spacing: .02em; }
-    .brand-mark { width: 32px; height: 32px; border: 2px solid var(--mint); border-radius: 50%; position: relative; flex: 0 0 auto; }
-    .brand-mark::before { content: ""; position: absolute; width: 13px; height: 3px; background: var(--amber); transform: rotate(-38deg); right: 2px; top: 8px; border-radius: 9px; transform-origin: left center; }
-    .brand-mark::after { content: ""; position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%; left: 11px; top: 11px; }
-    .freshness { display: flex; align-items: center; gap: 10px; color: #d9e2f2; font-size: .875rem; }
-    .fresh-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(140,242,198,.12); }
-    .fresh-dot.stale { background: var(--amber); box-shadow: 0 0 0 4px rgba(255,202,107,.14); }
-    .layout { max-width: 1240px; margin: 0 auto; padding: 30px 24px 56px; display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 28px; }
-    .intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(250px, .8fr); gap: 18px; margin-bottom: 24px; }
-    .headline { background: var(--ink); color: white; padding: 30px; border-radius: 22px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
-    .headline::after { content: ""; position: absolute; width: 210px; height: 210px; border: 24px solid rgba(140,242,198,.12); border-radius: 50%; right: -74px; top: -96px; }
-    .eyebrow { margin: 0 0 7px; font-size: .78rem; text-transform: uppercase; letter-spacing: .13em; color: var(--mint); font-weight: 800; }
-    h1 { margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.04; letter-spacing: -.045em; max-width: 660px; }
-    .headline p { margin: 16px 0 0; max-width: 670px; color: #cdd7e9; font-size: 1rem; }
-    .scan-card { background: var(--mint); padding: 24px; border-radius: 22px; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px; box-shadow: var(--shadow); }
-    .scan-card .label { font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #164c3b; }
-    .scan-card strong { display: block; font-size: 1.8rem; line-height: 1.1; margin: 10px 0; }
-    .scan-card p { margin: 0 0 18px; color: #205d4b; font-size: .9rem; }
-    .primary-btn { border: 0; background: var(--ink); color: #fff; padding: 12px 15px; border-radius: 12px; font-weight: 750; cursor: pointer; display: inline-flex; justify-content: center; align-items: center; gap: 8px; }
-    .primary-btn:hover { background: #16294a; }
-    .primary-btn:focus-visible, .icon-btn:focus-visible, .filter:focus-visible, .search:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
-    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 0 0 22px; }
-    .stat { background: var(--card); border: 1px solid var(--line); border-radius: 15px; padding: 15px 17px; }
-    .stat b { display: block; font-size: 1.45rem; line-height: 1.1; }
-    .stat span { color: var(--muted); font-size: .8rem; }
-    .toolbar { background: var(--card); border: 1px solid var(--line); border-radius: 17px; padding: 14px; display: grid; grid-template-columns: minmax(190px, 1.4fr) repeat(3, minmax(120px, .7fr)); gap: 10px; position: sticky; top: 10px; z-index: 5; box-shadow: 0 9px 30px rgba(11,24,48,.07); }
-    .search, .filter { width: 100%; border: 1px solid #cfd6e1; border-radius: 10px; padding: 10px 12px; background: #fff; color: var(--ink); min-height: 44px; }
-    .results-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin: 24px 2px 12px; }
-    h2 { margin: 0; font-size: 1.28rem; letter-spacing: -.02em; }
-    .results-head span { color: var(--muted); font-size: .86rem; }
-    .job-list { display: grid; gap: 13px; }
-    .job-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
-    .job-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #bdc9d8; }
-    .job-card.archived { border-style: dashed; }
-    .job-card.archived .score { background: #536176; }
-    .job-main { padding: 20px; display: grid; grid-template-columns: 74px minmax(0,1fr) auto; gap: 18px; align-items: start; }
-    .score { width: 68px; height: 68px; border-radius: 18px; background: var(--ink); color: white; display: grid; place-items: center; text-align: center; }
-    .score b { font-size: 1.45rem; display: block; line-height: 1; }
-    .score small { color: #b9c6dc; font-size: .66rem; letter-spacing: .05em; }
-    .job-title { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .job-title h3 { margin: 0; font-size: 1.08rem; letter-spacing: -.015em; }
-    .company { color: var(--muted); margin: 2px 0 10px; font-size: .91rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tag { border-radius: 999px; background: #eef2f7; color: #3f4d63; font-size: .72rem; padding: 4px 8px; font-weight: 680; }
-    .tag.priority { background: #d9faec; color: var(--mint-deep); }
-    .tag.watch { background: #fff1cf; color: var(--amber-deep); }
-    .tag.risk { background: #ffe7e5; color: #8d2f2a; }
-    .job-summary { margin: 13px 0 0; color: var(--ink-2); font-size: .91rem; }
-    .actions { display: flex; gap: 7px; }
-    .icon-btn { width: 40px; height: 40px; border: 1px solid var(--line); background: white; border-radius: 11px; cursor: pointer; color: var(--ink); display: grid; place-items: center; font-weight: 800; }
-    .icon-btn.active { background: var(--ink); color: white; border-color: var(--ink); }
-    details { border-top: 1px solid var(--line); }
-    summary { cursor: pointer; padding: 12px 20px; font-weight: 720; color: #41506a; font-size: .84rem; list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; float: right; font-size: 1.05rem; }
-    details[open] summary::after { content: "−"; }
-    .detail-grid { padding: 0 20px 20px 112px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
-    .detail-grid h4 { margin: 0 0 5px; font-size: .76rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    .detail-grid p { margin: 0; font-size: .89rem; }
-    .source-link { display: inline-flex; margin-top: 4px; color: #315dcc; font-weight: 750; text-decoration: none; }
-    .source-link:hover { text-decoration: underline; }
-    .empty { padding: 46px 24px; text-align: center; background: #fff; border: 1px dashed #bdc8d7; border-radius: 18px; color: var(--muted); }
-    .side { display: grid; align-content: start; gap: 15px; }
-    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 19px; }
-    .panel.dark { background: var(--ink); color: white; border-color: var(--ink); }
-    .panel h2 { font-size: 1rem; margin-bottom: 13px; }
-    .criteria { display: grid; gap: 11px; }
-    .criterion { display: grid; grid-template-columns: 25px 1fr; gap: 9px; font-size: .86rem; color: #d5ddec; }
-    .criterion b { width: 24px; height: 24px; border-radius: 8px; background: rgba(140,242,198,.14); color: var(--mint); display: grid; place-items: center; font-size: .75rem; }
-    .source-list { display: grid; gap: 8px; }
-    .source-item { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: .84rem; text-decoration: none; }
-    .source-item:last-child { border-bottom: 0; }
-    .source-item span:last-child { color: var(--muted); }
-    .source-item span:first-child { min-width: 0; overflow-wrap: anywhere; }
-    .source-item span:last-child { text-align: right; flex: 0 0 auto; }
-    .job-dates { margin: 8px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
-    .notice { color: #41506a; font-size: .84rem; margin: 0; }
-    .status-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
-    .mini-btn { border: 1px solid #cfd6e1; background: #fff; border-radius: 9px; padding: 7px 9px; font-size: .76rem; font-weight: 700; cursor: pointer; }
-    .mini-btn.active { background: var(--ink); border-color: var(--ink); color: #fff; }
-    .toast { position: fixed; right: 22px; bottom: 22px; background: var(--ink); color: white; border-radius: 12px; padding: 12px 15px; box-shadow: var(--shadow); opacity: 0; transform: translateY(12px); pointer-events: none; transition: .2s ease; font-size: .88rem; z-index: 20; max-width: min(360px, calc(100vw - 44px)); }
-    .toast.show { opacity: 1; transform: translateY(0); }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-    @media (max-width: 980px) {
-      .layout { grid-template-columns: 1fr; }
-      .side { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .panel.dark { grid-row: span 2; }
-    }
-    @media (max-width: 760px) {
-      .topbar-inner { padding: 12px 16px; }
-      .freshness span { display: none; }
-      .layout { padding: 18px 14px 42px; }
-      .intro { grid-template-columns: 1fr; }
-      .headline { padding: 24px; }
-      .scan-card { min-height: auto; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .toolbar { grid-template-columns: 1fr 1fr; position: static; }
-      .toolbar .search-wrap { grid-column: 1 / -1; }
-      .job-main { grid-template-columns: 56px minmax(0, 1fr); gap: 13px; }
-      .score { width: 54px; height: 54px; border-radius: 14px; }
-      .score b { font-size: 1.18rem; }
-      .actions { grid-column: 2; }
-      .detail-grid { padding-left: 20px; grid-template-columns: 1fr; }
-      .side { grid-template-columns: 1fr; }
-      .panel.dark { grid-row: auto; }
-    }
-    @media (max-width: 470px) {
-      .stats { grid-template-columns: 1fr 1fr; }
-      .toolbar { grid-template-columns: 1fr; }
-      .toolbar .search-wrap { grid-column: auto; }
-      .job-main { padding: 16px; }
-      .job-summary { font-size: .87rem; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f8">
+  <meta name="description" content="台大與中研院學術活動、經濟與語言學新研究、台北和台灣可遠端的實習及研究機會。">
+  <title>學術與職涯資訊中心</title>
+  <link rel="stylesheet" href="./style.css?v=1">
+  <script src="./app.js?v=1" defer></script>
 </head>
 <body>
-  <div class="shell">
-    <header class="topbar">
-      <div class="topbar-inner">
-        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>實習機會雷達</span></div>
-        <div class="freshness" aria-live="polite"><span id="freshDot" class="fresh-dot"></span><span id="freshText">載入查核狀態…</span></div>
+  <a class="skip" href="#main">跳至主要內容</a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a href="#overview" class="brand">學術與職涯<span>資訊中心</span></a>
+      <nav class="nav" aria-label="主選單">
+        <a href="#overview" data-nav="overview">總覽</a>
+        <a href="#events" data-nav="academic">學術</a>
+        <a href="#career" data-nav="career">職涯</a>
+      </nav>
+      <a href="#sources" class="scan-link" id="scan-link"><span class="dot" aria-hidden="true"></span><span id="scan-label">讀取掃描紀錄</span></a>
+    </div>
+  </header>
+
+  <main class="shell main" id="main">
+    <noscript><p class="notice">開啟 JavaScript 即可瀏覽最新活動、論文與職缺。</p></noscript>
+    <p id="load-error" class="notice warn" role="status" hidden></p>
+    <section id="view-overview" data-view="overview" aria-labelledby="overview-heading">
+      <div class="page-heading">
+        <div><h1 id="overview-heading" tabindex="-1">總覽</h1><p id="today-label"></p></div>
       </div>
-    </header>
-
-    <main class="layout">
-      <section>
-        <div class="intro">
-          <div class="headline">
-            <p class="eyebrow">Personal opportunity desk · 2026–2028</p>
-            <h1>留在台北，也能接軌國際。</h1>
-            <p>只看台北實體／混合辦公，或明示台灣、全球可申請的全遠端機會。研究、因果推論與產品／資料分析仍是主軸；海外工作須能全程線上。</p>
-          </div>
-          <div class="scan-card">
-            <div>
-              <span class="label">每日搜尋</span>
-              <strong id="scanHeadline">讀取搜尋紀錄</strong>
-              <p id="scanNote">查看這輪搜尋的刊登筆數、首次找到的機會和來源狀態。</p>
-            </div>
-            <button id="scanBtn" class="primary-btn" type="button"><span aria-hidden="true">↻</span> 讀取最新資料</button>
-          </div>
-        </div>
-
-        <div class="stats" aria-label="機會摘要">
-          <div class="stat"><b id="statTotal">0</b><span>目前顯示</span></div>
-          <div class="stat"><b id="statNew">0</b><span>近七天新發現</span></div>
-          <div class="stat"><b id="statTaiwan">0</b><span>台北機會</span></div>
-          <div class="stat"><b id="statSaved">0</b><span>已收藏</span></div>
-          <div class="stat"><b id="statArchive">0</b><span>Archive</span></div>
-        </div>
-
-        <div class="toolbar" aria-label="篩選機會">
-          <label class="search-wrap"><span class="sr-only">搜尋</span><input id="search" class="search" type="search" placeholder="搜尋職稱、公司或技能…" /></label>
-          <label><span class="sr-only">方向</span><select id="trackFilter" class="filter"><option value="all">所有方向</option><option value="industry">產品／資料</option><option value="research">研究／predoc</option><option value="finance">風控／金融資料</option></select></label>
-          <label><span class="sr-only">工作位置</span><select id="locationFilter" class="filter"><option value="all">所有工作位置</option><option value="taipei">台北實體／混合</option><option value="remote">可從台灣遠端</option><option value="remote-review">遠端地區待確認</option></select></label>
-          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="new">近七天新發現</option><option value="review">待查核（含國際遠端）</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／歷史紀錄</option></select></label>
-        </div>
-
-        <div class="results-head"><h2>機會清單</h2><span id="resultsMeta">按個人契合度排序</span></div>
-        <div id="jobList" class="job-list"></div>
-      </section>
-
-      <aside class="side">
-        <section class="panel dark">
-          <h2>排序原則</h2>
-          <div class="criteria">
-            <div class="criterion"><b>1</b><span>先過地點門檻：台北，或可從台灣全遠端；不把新北或僅寫「台灣」當成台北</span></div>
-            <div class="criterion"><b>2</b><span>applied micro、experimentation、labor 與 causal fit</span></div>
-            <div class="criterion"><b>3</b><span>SQL／Python／Stata 可累積為作品的程度</span></div>
-            <div class="criterion"><b>4</b><span>國際遠端須確認招募地區、時區、聘僱資格；限定美國等地或必須海外到場者排除</span></div>
-            <div class="criterion"><b>5</b><span>mentor、推薦信與 PhD option value</span></div>
-            <div class="criterion"><b>6</b><span>避開陌生開發、強銷售與純行政工作</span></div>
-          </div>
-        </section>
-
+      <div class="dashboard">
         <section class="panel">
-          <h2>本輪搜尋來源</h2>
-          <div id="sourceList" class="source-list"><p class="notice">載入來源狀態…</p></div>
-        </section>
-
-        <section class="panel">
-          <h2>更新怎麼運作</h2>
-          <p class="notice">GitHub 每天搜尋一次，不必開著網站。「讀取最新資料」會載入已發布的結果。主清單顯示本輪在公開招募來源查到的職缺；遠端平台線索、來源讀取不完整及收件狀態不明的公告放在「待查核」。</p>
-        </section>
-
-        <section class="panel">
-          <h2>你的處理狀態</h2>
-          <p class="notice">收藏、略過與已申請只存於這台裝置。Archive 跨裝置保存；因地點偏好調整而移出的機會也保留，並不代表原職缺已截止。查看 Archive 時可選「所有工作位置」回顧海外紀錄。</p>
-          <div class="status-row">
-            <button class="mini-btn active" data-quick="active" type="button">目前</button>
-            <button class="mini-btn" data-quick="saved" type="button">收藏</button>
-            <button class="mini-btn" data-quick="applied" type="button">已申請</button>
-            <button class="mini-btn" data-quick="archive" type="button">Archive</button>
-            <button class="mini-btn" data-quick="review" type="button">待查核</button>
+          <div class="panel-heading">
+            <div><h2>近期學術活動</h2><p>台大與中研院</p></div>
+            <a class="section-link" href="#events">全部活動 <span aria-hidden="true">→</span></a>
           </div>
+          <div id="overview-events" class="rows"></div>
         </section>
-      </aside>
-    </main>
-  </div>
-
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <script>
-    const STALE_AFTER = 48 * 60 * 60 * 1000;
-
-    const els = {
-      list: document.querySelector("#jobList"), search: document.querySelector("#search"),
-      track: document.querySelector("#trackFilter"), location: document.querySelector("#locationFilter"),
-      state: document.querySelector("#stateFilter"), scan: document.querySelector("#scanBtn"),
-      freshText: document.querySelector("#freshText"), freshDot: document.querySelector("#freshDot"),
-      scanHeadline: document.querySelector("#scanHeadline"), scanNote: document.querySelector("#scanNote"),
-      toast: document.querySelector("#toast"), meta: document.querySelector("#resultsMeta"),
-      sources: document.querySelector("#sourceList")
-    };
-    const state = {
-      jobs: [],
-      archiveJobs: [],
-      reviewJobs: [],
-      actions: readJson("radar_actions_v1", {}),
-      scanMeta: null, newIds: new Set(),
-      scanning: false, loaded: false, loadError: false
-    };
-
-    function readJson(key, fallback) {
-      try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; }
-    }
-    function escapeHtml(value = "") {
-      return String(value).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
-    }
-    function safeLink(value) {
-      try { const url = new URL(value); return url.protocol === "https:" ? escapeHtml(url.href) : "#"; } catch { return "#"; }
-    }
-    function getAction(id) { return state.actions[id] || "active"; }
-    function setAction(id, action) {
-      state.actions[id] = getAction(id) === action ? "active" : action;
-      localStorage.setItem("radar_actions_v1", JSON.stringify(state.actions));
-      render();
-      showToast(action === "saved" ? "已加入收藏" : action === "applied" ? "已標記為申請" : action === "dismissed" ? "已移到略過" : "已恢復到目前清單");
-    }
-    function showToast(message) {
-      els.toast.textContent = message;
-      els.toast.classList.add("show");
-      clearTimeout(showToast.timer);
-      showToast.timer = setTimeout(() => els.toast.classList.remove("show"), 2300);
-    }
-    function filteredJobs() {
-      const query = els.search.value.trim().toLowerCase();
-      const showingArchive = els.state.value === "archive";
-      const showingReview = els.state.value === "review";
-      const source = showingArchive ? state.archiveJobs : showingReview ? state.reviewJobs :
-        ["saved", "applied", "dismissed"].includes(els.state.value) ? [...state.jobs, ...state.reviewJobs] : state.jobs;
-      return source.filter(job => {
-        const action = getAction(job.id);
-        const stateMatch = showingArchive || showingReview || els.state.value === "all" ||
-          (els.state.value === "new" ? state.newIds.has(job.id) : els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
-        const haystack = [job.title, job.company, job.location, job.jobType, job.sourceName, job.fit, job.eligibility, job.archiveReason, ...(job.skills || [])].join(" ").toLowerCase();
-        return stateMatch && (els.track.value === "all" || job.track === els.track.value) && (els.location.value === "all" || job.locationKey === els.location.value) && (!query || haystack.includes(query));
-      });
-    }
-    function render() {
-      const jobs = filteredJobs();
-      const showingArchive = els.state.value === "archive";
-      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依封存日期` : els.state.value === "review" ? `${jobs.length} 筆待查核 · 請先核對雇主公告` : `${jobs.length} 筆結果 · 依契合度排序`;
-      document.querySelector("#statTotal").textContent = jobs.length;
-      document.querySelector("#statNew").textContent = state.newIds.size;
-      document.querySelector("#statTaiwan").textContent = jobs.filter(j => j.locationKey === "taipei").length;
-      document.querySelector("#statSaved").textContent = Object.values(state.actions).filter(v => v === "saved").length;
-      document.querySelector("#statArchive").textContent = state.archiveJobs.length;
-      if (!jobs.length) {
-        if (!state.loaded || state.loadError) {
-          els.list.innerHTML = `<div class="empty">${state.loadError ? "無法載入最新資料，請按「讀取最新資料」重試。" : "正在讀取台北與遠端機會…"}</div>`;
-          return;
-        }
-        els.list.innerHTML = showingArchive
-          ? '<div class="empty"><strong>Archive 目前沒有符合條件的紀錄。</strong><br>調整地點、方向或搜尋文字。</div>'
-          : els.state.value === "new" && !state.newIds.size
-            ? '<div class="empty"><strong>近七天沒有首次找到且仍列出的職缺。</strong><br>切回「目前機會」查看其餘結果。</div>'
-            : '<div class="empty"><strong>這個篩選組合沒有符合條件的機會。</strong><br>調整篩選，或到「待查核」查看還需確認的線索。</div>';
-        return;
-      }
-      els.list.innerHTML = jobs.map(job => {
-        const action = getAction(job.id);
-        const archived = showingArchive || job.status === "archived";
-        const actions = archived ? "" : `<div class="actions" aria-label="處理 ${escapeHtml(job.title)}">
-              <button class="icon-btn ${action === "saved" ? "active" : ""}" type="button" data-action="saved" data-id="${escapeHtml(job.id)}" title="收藏" aria-label="收藏">★</button>
-              <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${escapeHtml(job.id)}" title="標記已申請" aria-label="標記已申請">✓</button>
-              <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${escapeHtml(job.id)}" title="略過" aria-label="略過">×</button>
-            </div>`;
-        const statusTag = archived ? '<span class="tag risk">歷史紀錄</span>' : `<span class="tag ${job.priorityType === "priority" ? "priority" : "watch"}">${escapeHtml(job.priority)}</span>`;
-        const dates = [job.postedAt ? `刊登 ${job.postedAt}` : null,
-          job.sourceUpdatedAt ? `來源更新 ${job.sourceUpdatedAt}` : null,
-          job.deadline ? `${job.sourceKey === "himalayas:tw" ? "平台到期" : "截止"} ${job.deadline}` : null,
-          `最近查到 ${job.lastSeen || job.checked || "未知"}`].filter(Boolean).join(" · ");
-        const sourceLink = `<a class="source-link" href="${safeLink(job.source)}" target="_blank" rel="noreferrer">${escapeHtml(job.sourceName || "查看原始來源")} ↗</a>`;
-        const details = archived ? `
-              <div><h4>出現紀錄</h4><p>首次：${escapeHtml(job.firstSeen || job.checked || "未知")} · 最後：${escapeHtml(job.lastSeen || job.checked || "未知")}</p></div>
-              <div><h4>封存</h4><p>${escapeHtml(job.archivedAt || "未知")} · ${escapeHtml(job.archiveReason || "已不在目前清單")}</p></div>
-              <div><h4>當時資訊</h4><p>${escapeHtml(job.timing || "未記錄")}</p></div>
-              <div><h4>原始來源</h4><p>${sourceLink}</p></div>` : `
-              <div><h4>時間</h4><p>${escapeHtml(job.timing)}</p></div>
-              <div><h4>資格</h4><p>${escapeHtml(job.eligibility)}</p></div>
-              <div><h4>申請前先確認</h4><p>${escapeHtml(job.risk)}</p></div>
-              <div><h4>工作位置判定</h4><p>${escapeHtml(job.locationReason)}<br>${(job.locationEvidence || []).map(escapeHtml).join("<br>")}</p></div>
-              <div><h4>來源與發現紀錄</h4><p>首次找到 ${escapeHtml(job.firstSeen || "未知")} · ${sourceLink}</p></div>`;
-        return `<article class="job-card ${archived ? "archived" : ""}">
-          <div class="job-main">
-            <div class="score"><div><b>${escapeHtml(job.score)}</b><small>FIT</small></div></div>
-            <div>
-              <div class="job-title"><h3>${escapeHtml(job.title)}</h3>${statusTag}${!archived && state.newIds.has(job.id) ? '<span class="tag priority">近期新發現</span>' : ''}</div>
-              <div class="company">${escapeHtml(job.company)} · ${escapeHtml(job.location)}</div>
-              <div class="tags">${!archived ? `<span class="tag ${job.locationDisposition === "review" ? "watch" : "priority"}">${escapeHtml(({taipei:"台北",remote:"台灣／全球全遠端","remote-review":"遠端地區待確認"})[job.locationKey] || "歷史地點")}</span>` : ""}${(job.skills || []).map(skill => `<span class="tag">${escapeHtml(skill)}</span>`).join("")}</div>
-              <p class="job-summary">${escapeHtml(job.verificationNote && !archived ? job.verificationNote : job.fit)}</p>
-              ${archived ? "" : `<p class="job-dates">${escapeHtml(dates)}</p>${sourceLink}`}
-            </div>
-            ${actions}
+        <section class="panel">
+          <div class="panel-heading">
+            <div><h2>寒假機會與截止日</h2><p id="winter-overview"></p></div>
+            <a class="section-link" href="#career">全部寒假機會 <span aria-hidden="true">→</span></a>
           </div>
-          <details>
-            <summary>${archived ? "出現紀錄與原始來源" : "資格、風險與來源"}</summary>
-            <div class="detail-grid">
-              ${details}
-            </div>
-          </details>
-        </article>`;
-      }).join("");
-    }
-    function updateFreshness() {
-      const meta = state.scanMeta;
-      if (!meta) {
-        els.scanHeadline.textContent = state.loadError ? "資料載入失敗" : "讀取搜尋紀錄";
-        return;
-      }
-      const time = Date.parse(meta.last_scan_attempt || meta.last_successful_scan || "");
-      const stale = !Number.isFinite(time) || Date.now() - time >= STALE_AFTER;
-      const date = Number.isFinite(time) ? new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Taipei" }).format(time) : "尚無紀錄";
-      const sources = meta.sources || [];
-      const total = meta.records_examined || 0;
-      const checked = sources.filter(s => s.status === "ok").length;
-      els.freshText.textContent = `上次搜尋：${date}（台北時間）`;
-      els.freshDot.classList.toggle("stale", stale || meta.scan_status !== "ok");
-      els.scanHeadline.textContent = state.loadError ? "未能讀取最新資料" : stale ? "超過兩天未更新" :
-        meta.scan_status === "error" ? "本輪來源無法讀取" : meta.scan_status === "partial" ? "部分來源未完成" :
-        meta.new_count ? `首次找到 ${meta.new_count} 筆` : "本輪無新符合職缺";
-      els.scanNote.textContent = `${checked}/${sources.length} 個來源完整讀取 · 檢查 ${total.toLocaleString("zh-TW")} 筆刊登 · 本輪首次找到 ${meta.new_count || 0} 筆 · ${meta.job_count} 筆目前機會 · ${meta.review_count} 筆待查核。`;
-      els.sources.innerHTML = sources.map(source => {
-        const label = source.status === "ok" ? `${source.examined || 0} 筆 · ${source.active || 0} 符合` :
-          source.status === "partial" ? "部分未讀取" : "讀取失敗";
-        return `<a class="source-item" href="${safeLink(source.url)}" target="_blank" rel="noreferrer" title="${escapeHtml((source.issues || []).join("；"))}"><span>${escapeHtml(source.source)}</span><span>${escapeHtml(label)}</span></a>`;
-      }).join("");
-    }
-    async function loadPublishedData(manual = false) {
-      if (state.scanning) return;
-      state.scanning = true;
-      els.scan.disabled = true;
-      els.scan.textContent = "讀取中…";
-      try {
-        const files = ["jobs", "scan-meta", "archive", "review"];
-        const payload = await Promise.all(files.map(async name => {
-          const response = await fetch(`./data/${name}.json`, { cache: "no-store" });
-          if (!response.ok) throw new Error(name);
-          return response.json();
-        }));
-        const [jobs, meta, archive, review] = payload;
-        if (meta.location_policy !== "taipei-taiwan-remote-v1" ||
-            !Array.isArray(jobs) || !Array.isArray(archive) || !Array.isArray(review)) throw new Error("schema");
-        state.jobs = jobs.filter(job => job.verificationStatus === "confirmed" && job.locationDisposition === "eligible" &&
-          ["taipei", "remote"].includes(job.locationKey)).sort((a,b) => b.score - a.score);
-        state.archiveJobs = archive;
-        state.reviewJobs = review.filter(job => job.verificationStatus === "pending");
-        state.scanMeta = meta;
-        state.newIds = new Set(meta.recent_ids || meta.new_ids || []);
-        state.loaded = true;
-        state.loadError = false;
-        if (manual) showToast("已讀取網站最新資料；此按鈕不會啟動背景掃描");
-      } catch (error) {
-        state.loadError = true;
-        showToast("資料暫時無法載入，請稍後重試");
-      } finally {
-        state.scanning = false;
-        els.scan.disabled = false;
-        els.scan.textContent = "↻ 讀取最新資料";
-        updateFreshness();
-        render();
-      }
-    }
+          <div id="overview-jobs" class="rows"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-heading">
+            <div><h2>新研究</h2><p>期刊與工作論文</p></div>
+            <a class="section-link" href="#papers">全部研究 <span aria-hidden="true">→</span></a>
+          </div>
+          <div id="overview-papers" class="rows"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-heading">
+            <div><h2>最近發現的職缺</h2><p>雷達首次找到的日期</p></div>
+            <a class="section-link" href="#career-new">近七天 <span aria-hidden="true">→</span></a>
+          </div>
+          <div id="overview-new" class="rows"></div>
+        </section>
+      </div>
+    </section>
 
-    [els.search, els.track, els.location, els.state].forEach(el => el.addEventListener(el.tagName === "INPUT" ? "input" : "change", render));
-    els.list.addEventListener("click", event => {
-      const button = event.target.closest("[data-action]");
-      if (button) setAction(button.dataset.id, button.dataset.action);
-    });
-    els.scan.addEventListener("click", () => loadPublishedData(true));
-    document.querySelectorAll("[data-quick]").forEach(button => button.addEventListener("click", () => {
-      document.querySelectorAll("[data-quick]").forEach(item => item.classList.remove("active"));
-      button.classList.add("active");
-      els.state.value = button.dataset.quick;
-      els.location.value = "all";
-      render();
-      document.querySelector(".toolbar").scrollIntoView({ behavior: "smooth", block: "start" });
-    }));
+    <section id="view-academic" data-view="academic" aria-labelledby="academic-heading" hidden>
+      <div class="page-heading">
+        <div><h1 id="academic-heading" tabindex="-1">學術</h1><p>台大與中研院活動 · 經濟與語言學研究</p></div>
+      </div>
+      <nav class="subnav" aria-label="學術分類">
+        <a href="#events" data-academic="events">活動與演講</a>
+        <a href="#papers" data-academic="papers">新研究</a>
+      </nav>
+      <div class="filters" role="search" aria-label="篩選學術資訊">
+        <label class="search"><span>搜尋</span><input type="search" id="academic-query" placeholder="標題、講者、作者或主題"></label>
+        <label><span>主題</span><select id="academic-topic"><option value="">全部主題</option></select></label>
+        <label id="institution-filter"><span>機構</span><select id="academic-institution"><option value="">全部機構</option><option>台大</option><option>中研院</option></select></label>
+        <label id="paper-type-filter" hidden><span>出版類型</span><select id="academic-paper-type"><option value="">全部類型</option><option>工作論文</option><option>期刊紀錄</option></select></label>
+      </div>
+      <div class="results-head"><h2 id="academic-list-heading">近期活動</h2><span id="academic-count" aria-live="polite"></span></div>
+      <div id="academic-list" class="panel rows"></div>
+      <button id="more-papers" type="button" class="button more" hidden>顯示更多研究</button>
+    </section>
 
-    render();
-    updateFreshness();
-    loadPublishedData();
-  </script>
+    <section id="view-career" data-view="career" aria-labelledby="career-heading" hidden>
+      <div class="page-heading">
+        <div><h1 id="career-heading" tabindex="-1">職涯</h1><p>台北實體／混合辦公，或可從台灣全遠端</p></div>
+      </div>
+      <div class="filters career-filters" role="search" aria-label="篩選職缺">
+        <label class="search"><span>搜尋</span><input type="search" id="job-query" placeholder="職稱、雇主或技能"></label>
+        <label><span>職務類型</span><select id="job-track"><option value="">全部類型</option><option value="research">研究型</option><option value="business">商業型</option></select></label>
+        <label><span>實習期間</span><select id="job-season">
+          <option value="winter">寒假機會</option><option value="winter-only">寒假限定</option>
+          <option value="extends">寒假開始、延續到學期</option><option value="flexible">起聘或結束日待確認</option>
+          <option value="all">所有期間</option>
+        </select></label>
+        <label><span>工作位置</span><select id="job-location"><option value="">全部位置</option><option value="taipei">台北</option><option value="remote">台灣可全遠端</option></select></label>
+        <label><span>清單</span><select id="job-state">
+          <option value="active">目前機會</option><option value="new">近七天新發現</option><option value="review">待查核</option>
+          <option value="saved">收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option>
+          <option value="archive">Archive／歷史紀錄</option>
+        </select></label>
+        <label><span>排序</span><select id="job-sort"><option value="deadline">截止日優先</option><option value="new">新發現優先</option><option value="fit">契合度優先</option></select></label>
+      </div>
+      <p class="filter-note" id="career-note"></p>
+      <div class="results-head"><h2 id="job-list-heading">目前機會</h2><span id="job-count" aria-live="polite"></span></div>
+      <div id="job-list" class="job-list"></div>
+    </section>
+
+    <section id="view-sources" data-view="sources" aria-labelledby="sources-heading" hidden>
+      <div class="page-heading">
+        <div><h1 id="sources-heading" tabindex="-1">來源與掃描紀錄</h1><p>GitHub Actions 每天排程一次（台北時間 21:57）。</p></div>
+        <button class="button" id="reload" type="button">讀取已發布的資料</button>
+      </div>
+      <div id="source-scan-summary" class="panel scan-summary"></div>
+      <div class="dashboard sources-grid">
+        <section class="panel">
+          <div class="panel-heading"><h2>職涯來源</h2></div>
+          <div id="job-sources" class="rows"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><h2>學術來源</h2></div>
+          <div id="academic-sources" class="rows"></div>
+        </section>
+      </div>
+    </section>
+    <p id="feedback" class="feedback" role="status" hidden></p>
+  </main>
+  <footer class="shell footer">
+    <a href="#sources">來源與掃描紀錄</a>
+    <a href="https://github.com/Tarawrrs/internship-opportunity-radar">GitHub</a>
+    <span>時間以台北時區顯示</span>
+  </footer>
 </body>
 </html>
