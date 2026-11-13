@@ -1,39 +1,16 @@
 {
-  "last_scan_attempt": "2026-11-13T13:50:43.085400Z",
-  "last_successful_scan": "2026-11-13T13:50:43.085400Z",
+  "last_scan_attempt": "2026-11-13T13:55:02.977527Z",
+  "last_successful_scan": "2026-11-13T13:55:02.977527Z",
   "interval_days": 1,
   "scan_status": "partial",
-  "job_count": 38,
-  "review_count": 27,
+  "job_count": 39,
+  "review_count": 26,
   "archive_count": 21,
-  "records_examined": 4411,
-  "new_count": 23,
-  "new_ids": [
-    "vw-6t41k",
-    "ntu-career-4778",
-    "capital-2027-winter-trading",
-    "feib-96qkj",
-    "feib-96qk5",
-    "gh-appier-5001910",
-    "line-3132",
-    "sinica-11438",
-    "gh-appier-1068719",
-    "line-3131",
-    "lever-shopback-2-345e1f49-ca8c-432f-b402-a91452f78116",
-    "sinica-11823",
-    "gh-appier-6820898",
-    "line-3135",
-    "line-3136",
-    "gh-appier-7431293",
-    "gh-appier-8382372",
-    "line-3137",
-    "ntu-career-4789",
-    "vw-63355",
-    "sc-1374647057",
-    "capital-2027-winter-settlement",
-    "line-3134"
-  ],
+  "records_examined": 4117,
+  "new_count": 0,
+  "new_ids": [],
   "recent_ids": [
+    "ntu-econ-18559",
     "sinica-12248",
     "sinica-12179",
     "line-3133",
@@ -73,17 +50,19 @@
     "sinica-12133",
     "line-3134"
   ],
-  "new_review_count": 20,
+  "new_review_count": 0,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
       "source": "台灣就業通（台北 12 區）",
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
-      "status": "ok",
-      "examined": 2336,
+      "status": "partial",
+      "examined": 2032,
       "matches": 0,
-      "issues": [],
+      "issues": [
+        "104 區：ConnectionResetError"
+      ],
       "active": 0,
       "review": 0
     },
@@ -124,14 +103,12 @@
       "source": "台大經濟系實習與就業公告",
       "sourceKey": "rss:ntu-econ",
       "url": "https://econ.ntu.edu.tw/archives/category/%E5%AF%A6%E7%BF%92%E8%88%87%E5%B0%B1%E6%A5%AD",
-      "status": "error",
-      "examined": 0,
-      "matches": 0,
-      "issues": [
-        "RemoteDisconnected"
-      ],
-      "active": 0,
-      "review": 1
+      "status": "ok",
+      "examined": 10,
+      "matches": 1,
+      "issues": [],
+      "active": 1,
+      "review": 0
     },
     {
       "source": "國科會求才公告",
@@ -313,6 +290,14 @@
   "winter_year": 2027,
   "history": [
     {
+      "id": "43437690819",
+      "event": "workflow_dispatch",
+      "finished": "2026-11-13T13:55:02.977527Z",
+      "examined": 4117,
+      "new": 0,
+      "status": "partial"
+    },
+    {
       "id": "",
       "event": "local",
       "finished": "2026-11-13T13:50:43.085400Z",
@@ -322,11 +307,11 @@
     }
   ],
   "run": {
-    "id": "",
-    "event": "local",
-    "finished": "2026-11-13T13:50:43.085400Z",
-    "examined": 4411,
-    "new": 23,
+    "id": "43437690819",
+    "event": "workflow_dispatch",
+    "finished": "2026-11-13T13:55:02.977527Z",
+    "examined": 4117,
+    "new": 0,
     "status": "partial"
   },
   "last_schedule": null

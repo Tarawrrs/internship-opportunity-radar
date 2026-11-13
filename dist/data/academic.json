@@ -1485,7 +1485,8 @@
       ],
       "topics": [
         "語言學"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "1f683daf951cc03f77ca",
@@ -2099,10 +2100,12 @@
       "source": "Language",
       "url": "https://www.cambridge.org/core/journals/language",
       "group": "papers",
-      "examined": 1,
-      "matches": 1,
-      "issues": [],
-      "status": "ok"
+      "examined": 0,
+      "matches": 0,
+      "issues": [
+        "HTTPError"
+      ],
+      "status": "error"
     }
   ],
   "topics": [
@@ -2113,6 +2116,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-13T13:50:42.388992Z",
-  "run_id": ""
+  "last_scan_attempt": "2026-11-13T13:55:48.366035Z",
+  "run_id": "43437690819"
 }
