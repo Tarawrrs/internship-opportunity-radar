@@ -254,8 +254,8 @@ def read_capital_flyer(source, today):
                 description="文件掃描、協助開戶與臨櫃服務。", winter_status="winter-only",
                 period="寒假約 2 個月 · 起迄日請洽用人單位", note="投遞時選台北市據點；簡章同時列有其他縣市。",
                 eligibility="簡章的結算部欄未列特定科系或年級，請核對分行與排班。", **common),
-        Posting("capital-2027-winter-trading", "證券自營／期貨自營實習", location="台北市大安區",
-                description="自營交易、金融市場觀察、統計分析、量化研究與資料分析。",
+        Posting("capital-2027-winter-trading", "證券自營／期貨自營工讀", location="台北市", commitment="intern",
+                description="自營交易、金融市場觀察、統計分析、量化研究與資料分析。熟悉 Python、R、SQL 等工具尤佳。",
                 winter_status="flexible", period="約 3 個月 · 每週 2–4 天 · 起聘日請洽各組",
                 note="同一簡章有證券與期貨自營兩組，可分別核對工作內容與條件。", **common),
     ], examined=1)

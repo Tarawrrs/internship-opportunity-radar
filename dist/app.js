@@ -144,9 +144,12 @@ function renderOverview() {
     empty(state.academic ? "目前沒有新研究紀錄。" : "讀取研究紀錄中。");
   const jobs = (state.career?.jobs || []).filter(job => isOpen(job, today) && state.actions[job.id] !== "dismissed");
   const winter = jobs.filter(isWinter).sort(compareDeadlines);
+  const winterReview = (state.career?.review || []).filter(job => isOpen(job, today) && isWinter(job) && state.actions[job.id] !== "dismissed");
   const firstSeen = jobs.filter(job => wasRecentlyFound(job, today)).sort(compareDiscovery);
   const year = state.career?.meta.winter_year;
   $("winter-overview").textContent = year ? `${year} 寒假 · ${winter.length} 筆目前機會` : "";
+  $("winter-review-link").hidden = winterReview.length === 0;
+  $("winter-review-link").textContent = ` · ${winterReview.length} 筆待查核`;
   $("overview-jobs").innerHTML = winter.slice(0, 4).map(job => jobRow(job, "deadline")).join("") ||
     empty(state.career ? "目前沒有符合地點和期間的寒假機會。" : "讀取寒假機會中。");
   $("overview-new").innerHTML = firstSeen.slice(0, 3).map(job => jobRow(job, "firstSeen")).join("") ||
@@ -332,25 +335,20 @@ function renderSources() {
 function route() {
   const fragment = location.hash.slice(1);
   if (fragment === "main") return;
-  const valid = ["overview", "events", "papers", "career", "career-new", "archive", "sources"];
+  const careerRoutes = { career: ["active", "winter"], "career-new": ["new", "all"],
+    archive: ["archive", "all"], "winter-review": ["review", "winter"] };
+  const valid = ["overview", "events", "papers", "sources", ...Object.keys(careerRoutes)];
   const next = valid.includes(fragment) ? fragment : "overview";
-  if (next === state.route) {
-    if (fragment === "career" && $("job-state").value !== "active") {
-      $("job-state").value = "active";
-      $("job-season").value = "winter";
-      renderCareer();
-    }
-    return;
-  }
+  if (next === state.route) return;
   const old = state.route;
   state.route = next;
-  const page = ["events", "papers"].includes(next) ? "academic" :
-    ["career", "career-new", "archive"].includes(next) ? "career" : next;
+  const page = ["events", "papers"].includes(next) ? "academic" : careerRoutes[next] ? "career" : next;
   for (const view of document.querySelectorAll("[data-view]")) view.hidden = view.dataset.view !== page;
   setCurrent("[data-nav]", "nav", page);
   if (page === "career") {
-    $("job-state").value = { career: "active", "career-new": "new", archive: "archive" }[next];
-    $("job-season").value = next === "career" ? "winter" : "all";
+    const [list, season] = careerRoutes[next];
+    $("job-state").value = list;
+    $("job-season").value = season;
   }
   render();
   if (old) {
@@ -363,7 +361,7 @@ function render() {
   renderSources();
   if (state.route === "overview") renderOverview();
   else if (["events", "papers"].includes(state.route)) renderAcademic();
-  else if (["career", "career-new", "archive"].includes(state.route)) renderCareer();
+  else if (["career", "career-new", "archive", "winter-review"].includes(state.route)) renderCareer();
 }
 
 async function readData(file) {
@@ -458,6 +456,11 @@ document.addEventListener("click", event => {
   if (target === "#main") return;
   event.preventDefault();
   if (location.hash !== target) history.pushState(null, "", target);
+  if (target === "#career" && state.route === "career") {
+    $("job-state").value = "active";
+    $("job-season").value = "winter";
+    renderCareer();
+  }
   route();
 });
 route();

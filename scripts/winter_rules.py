@@ -5,8 +5,8 @@ import re
 
 from job_sources import date_value
 
-DATE = r"(?:20\d\d|1\d\d)\s*[-/.年]\s*\d{1,2}\s*[-/.月]\s*\d{1,2}\s*(?:日)?"
-MONTH = r"(?:20\d\d|1\d\d)\s*年\s*\d{1,2}\s*月"
+DATE = r"(?:20\d\d|1\d\d)\s*[-/.年]\s*\d{1,2}\s*[-/.月]\s*\d{1,2}(?!\d)\s*(?:日)?"
+MONTH = r"(?:20\d\d|1\d\d)(?:\s*年\s*\d{1,2}\s*月|\s*[-/.]\s*\d{1,2}(?!\d))"
 WORK_PERIOD = r"(?:(?:實習|工讀)(?:期間|時程|期程|時間|日期|起迄|起訖)|起始日期|到職日(?:期)?|起聘日(?:期)?|工作期間|start date|(?:internship|working) (?:dates|period|duration))"
 WINTER = re.compile(r"寒假|冬季實習|\bwinter (?:internship|intern|program(?:me)?|break)\b", re.I)
 # NTU academic calendar for 115–2. For unpublished calendars use January–February.
@@ -18,8 +18,9 @@ def winter_year(today: dt.date) -> int:
 
 
 def period_date(value: str) -> dt.date | None:
-    if re.fullmatch(MONTH, value.strip()):
-        return date_value(value.strip() + "1日")
+    value = value.strip()
+    if re.fullmatch(MONTH, value):
+        return date_value(value + ("1日" if value.endswith("月") else "/01"))
     return date_value(value)
 
 

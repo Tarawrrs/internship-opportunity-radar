@@ -87,6 +87,8 @@ class DiscoveryTest(unittest.TestCase):
         self.assertEqual(winter_details(title, "申請截止：2027/1/1\nStart Date: June 2027", TODAY)[0], "other")
         self.assertEqual(winter_details(title, "實習期間：2026/12/28–2027/2/19", TODAY)[0], "winter-only")
         self.assertEqual(winter_details(title, "實習期間：2027/1/4–2027/2/25", TODAY)[0], "extends")
+        self.assertEqual(winter_details(title, "Working Period: 2027/01-2027/06", TODAY)[0], "extends")
+        self.assertEqual(winter_details(title, "Working Period: 2027/03-2028/02", TODAY)[0], "other")
         self.assertEqual(winter_details(title, "申請截止：2027/1/1", TODAY)[0], "unknown")
 
     def test_business_internship_needs_no_research_keywords_and_honors_cutoff(self):
