@@ -4,7 +4,9 @@ from concurrent.futures import ThreadPoolExecutor
 import datetime as dt
 import hashlib
 import html
+import json
 import re
+from urllib.request import Request, urlopen
 from urllib.parse import urljoin, urlsplit
 
 from job_sources import (
@@ -199,6 +201,43 @@ def read_bank(source, today):
     return result
 
 
+def read_workday(source, today):
+    result = Batch()
+    rows = []
+    for offset in range(0, 240, 20):
+        data = json.dumps({"searchText": "Taipei", "appliedFacets": {}, "limit": 20, "offset": offset}).encode()
+        request = Request(source.endpoint + "/jobs", data, headers={"Content-Type": "application/json", "Accept": "application/json"})
+        with urlopen(request, timeout=16) as response:
+            page = json.load(response)
+        rows.extend(page["jobPostings"])
+        if len(rows) >= page["total"] or not page["jobPostings"]:
+            break
+    result.examined = len(rows)
+    if len(rows) < page["total"]:
+        result.issues.append("已達台北搜尋單次上限")
+    for row in rows:
+        title = row["title"]
+        if not re.search(r"實習|工讀|\bintern(?:ship)?\b", title, re.I):
+            continue
+        path = row["externalPath"]
+        if not re.fullmatch(r"/job/[a-zA-Z0-9_./%~-]+", path) or ".." in path:
+            continue
+        try:
+            detail = json.loads(fetch_text(source.endpoint + path))["jobPostingInfo"]
+            if detail.get("canApply") is not True:
+                continue
+            # Workday's startDate denotes publication of the posting.
+            location = detail.get("location") or row.get("locationsText") or ""
+            url = public_url(detail["externalUrl"], urlsplit(source.url).hostname)
+            content = clean_html(detail.get("jobDescription", ""))
+            result.postings.append(Posting(f"workday-{source.board}-{detail['jobReqId']}", title, source.name,
+                                           url, location, content, "intern",
+                                           posted=date_value(detail.get("startDate")), deadline=date_value(detail.get("endDate"))))
+        except SOURCE_ERRORS as error:
+            result.issues.append(f"{path.rsplit('/', 1)[-1]} · {type(error).__name__}")
+    return result
+
+
 CAPITAL_DEADLINE = dt.date(2026, 11, 30)
 CAPITAL_DIGEST = "ecb7144af55531cce92e461e11a4bb52d7ec5f205973558d0cf3733a53f52635"
 
@@ -222,4 +261,30 @@ def read_capital_flyer(source, today):
     ], examined=1)
 
 
-NOTICE_READERS = {"campus": read_campus, "bank": read_bank, "reviewed": read_capital_flyer}
+def read_richemont_leads(source, today):
+    # The employer's listings were individually checked on this date. The sites
+    # return a JavaScript shell or block the runner, so only retain recent leads.
+    checked = dt.date(2026, 11, 13)
+    if not 0 <= (today - checked).days < 7:
+        return Batch()
+    roles = (
+        ("968pa", "Vacheron Constantin CRM Intern", "CRM 報表、資料品質檢查與客群分析。", "學期每週 2–3 天",
+         "https://tanji.104.com.tw/job/7234be6c-b5d7-4719-baf6-13e0034a3aa5"),
+        ("96obx", "Cartier Marketing Insight & Client Data Intern", "行銷 ROI、顧客資料及市場洞察報表。", "學期每週至少 3 天",
+         "https://www.104.com.tw/job/96obx"),
+        ("968mw", "Roger Dubuis Brand Intern", "品牌零售營運、合作通路和活動成效報表。", "學期每週至少 3 天",
+         "https://tanji.104.com.tw/job/dad13170-e358-46cb-8bf1-a88f2db40321"),
+    )
+    return Batch([
+        Posting(f"richemont-{key}", title, "歷峯集團 Richemont", url, "台北市松山區",
+                "Internship Period: 2027/01/04–2027/03/30\n" + note, updated=checked,
+                period=f"2027/01/04–03/30 · 寒假每週 5 天，{hours}",
+                note=note, eligibility="時薪 NT$220。資格、名額與投遞狀態見職缺原文。",
+                application_url=f"https://www.104.com.tw/job/{key}",
+                verification_note="11/13 人工核對職缺內容，請點原公告確認仍收件。")
+        for key, title, note, hours, url in roles
+    ])
+
+
+NOTICE_READERS = {"campus": read_campus, "bank": read_bank, "reviewed": read_capital_flyer,
+                  "manual-leads": read_richemont_leads, "workday": read_workday}

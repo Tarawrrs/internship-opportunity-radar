@@ -7,7 +7,7 @@ from job_sources import date_value
 
 DATE = r"(?:20\d\d|1\d\d)\s*[-/.年]\s*\d{1,2}\s*[-/.月]\s*\d{1,2}\s*(?:日)?"
 MONTH = r"(?:20\d\d|1\d\d)\s*年\s*\d{1,2}\s*月"
-WORK_PERIOD = r"(?:實習(?:期間|時程|期程|時間|日期|起迄|起訖)|起始日期|到職日(?:期)?|起聘日(?:期)?|工作期間|start date|internship (?:dates|period|duration))"
+WORK_PERIOD = r"(?:(?:實習|工讀)(?:期間|時程|期程|時間|日期|起迄|起訖)|起始日期|到職日(?:期)?|起聘日(?:期)?|工作期間|start date|(?:internship|working) (?:dates|period|duration))"
 WINTER = re.compile(r"寒假|冬季實習|\bwinter (?:internship|intern|program(?:me)?|break)\b", re.I)
 # NTU academic calendar for 115–2. For unpublished calendars use January–February.
 NTU_WINTERS = {2027: (dt.date(2026, 12, 28), dt.date(2027, 2, 19))}

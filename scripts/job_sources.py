@@ -55,6 +55,7 @@ class Posting:
     application_url: str = ""
     deadline_time: str = ""
     location_needs_check: bool = False
+    verification_note: str = ""
 
 
 @dataclass
@@ -72,6 +73,11 @@ def greenhouse(board: str, name: str) -> Source:
 def lever(board: str, name: str) -> Source:
     return Source("lever", board, name, f"https://jobs.lever.co/{board}",
                   f"https://api.lever.co/v0/postings/{board}?mode=json")
+
+
+def workday(tenant: str, board: str, host: str, name: str) -> Source:
+    base = f"https://{tenant}.{host}.myworkdayjobs.com"
+    return Source("workday", tenant, name, f"{base}/{board}", f"{base}/wday/cxs/{tenant}/{board}")
 
 
 SINICA_LIST = "https://www.sinica.edu.tw/recruitment/53?Datas_Query.workType=3"
@@ -97,8 +103,13 @@ SOURCES = (
     Source("campus", "nccu-career", "政大職涯平台｜國內實習職缺", NCCU_BOARD, NCCU_BOARD, True),
     Source("bank", "standard-chartered", "渣打銀行｜官方職缺", SC_BOARD,
            SC_BOARD + "services/rss/job/?locale=en_GB&keywords=Taiwan", True),
+    workday("dbs", "DBS_Careers", "wd3", "星展銀行"),
+    workday("pwc", "Global_Campus_Careers", "wd3", "資誠 PwC"),
+    workday("mastercard", "CorporateCareers", "wd1", "Mastercard"),
     Source("reviewed", "capital-winter-2027", "群益金鼎證券｜已核對簡章",
            "https://career.ntu.edu.tw/board/detail/sn/4775", "https://career.ntu.edu.tw/board/download/sn/1784"),
+    Source("manual-leads", "richemont-winter-2027", "歷峯集團｜人工查核線索",
+           "https://www.104.com.tw/company/12wz0014", ""),
     Source("himalayas", "tw", "Himalayas 遠端職缺", "https://himalayas.app/",
            "https://himalayas.app/jobs/api/search", True),
     greenhouse("appier", "Appier"), greenhouse("point72", "Point72"),
@@ -442,7 +453,7 @@ READERS = {"greenhouse": read_greenhouse, "lever": read_lever, "taiwanjobs": rea
 
 
 def read_source(source: Source, today: dt.date) -> Batch:
-    if source.kind in {"campus", "bank", "reviewed"}:
+    if source.kind in {"campus", "bank", "reviewed", "manual-leads", "workday"}:
         from recruiting_notices import NOTICE_READERS
         return NOTICE_READERS[source.kind](source, today)
     return READERS[source.kind](source, today)

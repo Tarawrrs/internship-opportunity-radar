@@ -204,7 +204,8 @@ function jobCard(job, archived, showActions) {
   </div>`;
   const dates = [
     job.postedAt && `刊登 ${job.postedAt}`, job.firstSeen && `首次找到 ${job.firstSeen}`,
-    job.lastSeen && `最後查到 ${job.lastSeen}`, job.sourceUpdatedAt && `來源更新 ${job.sourceUpdatedAt}`,
+    job.sourceKey?.startsWith("manual-leads:") ? job.checked && `人工查核 ${job.checked}` : job.lastSeen && `最後查到 ${job.lastSeen}`,
+    job.sourceUpdatedAt && !job.sourceKey?.startsWith("manual-leads:") && `來源更新 ${job.sourceUpdatedAt}`,
   ];
   const tags = [
     tag(job.track === "research" ? "研究型" : "商業型"),
@@ -283,9 +284,9 @@ function renderCareer() {
 }
 
 function sourceRow(source) {
-  const status = { ok: "已讀取", partial: "部分讀取", error: "讀取失敗" }[source.status] || "無狀態";
+  const status = source.manual ? "人工查核" : { ok: "已讀取", partial: "部分讀取", error: "讀取失敗" }[source.status] || "無狀態";
   const found = source.group ? source.matches : (source.active || 0);
-  const count = source.status === "error" ? "" : `讀取 ${source.examined || 0} 筆 · 收錄 ${found || 0} 筆`;
+  const count = source.manual ? `待查核 ${source.review || 0} 筆` : source.status === "error" ? "" : `讀取 ${source.examined || 0} 筆 · 收錄 ${found || 0} 筆`;
   const issues = (source.issues || []).join("；");
   return `<div class="row source-row">
     <div class="row-main">${link(source.url, source.source, "row-title")}<p class="meta">${meta([count, issues])}</p></div>
@@ -330,7 +331,14 @@ function route() {
   if (fragment === "main") return;
   const valid = ["overview", "events", "papers", "career", "career-new", "archive", "sources"];
   const next = valid.includes(fragment) ? fragment : "overview";
-  if (next === state.route) return;
+  if (next === state.route) {
+    if (fragment === "career" && $("job-state").value !== "active") {
+      $("job-state").value = "active";
+      $("job-season").value = "winter";
+      renderCareer();
+    }
+    return;
+  }
   const old = state.route;
   state.route = next;
   const page = ["events", "papers"].includes(next) ? "academic" :
@@ -440,5 +448,14 @@ $("job-list").addEventListener("click", event => {
   (replacement || $("job-state")).focus({ preventScroll: true });
 });
 window.addEventListener("hashchange", route);
+document.addEventListener("click", event => {
+  const navigation = event.target.closest('a[href^="#"]');
+  if (!navigation || event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const target = navigation.getAttribute("href");
+  if (target === "#main") return;
+  event.preventDefault();
+  if (location.hash !== target) history.pushState(null, "", target);
+  route();
+});
 route();
 load();

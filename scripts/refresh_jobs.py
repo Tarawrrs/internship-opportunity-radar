@@ -155,7 +155,10 @@ def make_job(post: Posting, source: Source, today: dt.date, now: dt.datetime | N
                 "predoc": "Predoc", "research": "研究職缺"}[kind]
     status = "confirmed"
     reason = ""
-    if post.third_party:
+    if post.verification_note:
+        status = "pending"
+        reason = post.verification_note
+    elif post.third_party:
         status = "pending"
         reason = "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。"
     elif location["locationDisposition"] == "review":
@@ -248,6 +251,10 @@ def refresh_source(source: Source, today: dt.date, now: dt.datetime | None = Non
         status = "partial" if result.issues else "ok"
         summary = {"source": source.name, "sourceKey": source.key, "url": source.url, "status": status,
                    "examined": result.examined, "matches": len(candidates), "issues": result.issues[:12]}
+        if source.kind == "manual-leads":
+            summary["manual"] = True
+            for job in candidates:
+                job["checked"] = job["sourceUpdatedAt"]
         # Use employer listings to block duplicate/disagreeing third-party cards.
         identities = {duplicate_key({"company": p.company, "title": p.title}) for p in result.postings}
         return source, summary, candidates, identities
@@ -280,7 +287,7 @@ def reconcile(previous: list[dict], history: list[dict], scans: list, today: dt.
                 campus_keys.add(key)
             old = previous_by_id.get(job["id"]) or archived.get(job["id"], {})
             job["firstSeen"] = old.get("firstSeen") or old.get("checked") or iso(today)
-            job["lastSeen"] = iso(today)
+            job["lastSeen"] = job["checked"] if src.kind == "manual-leads" else iso(today)
             job["status"] = "active" if job["verificationStatus"] == "confirmed" else "review"
             current[job["id"]] = job
             archived.pop(job["id"], None)
@@ -358,12 +365,14 @@ def main() -> int:
     recent_ids = [job["id"] for job in jobs if (seen := date_field(job, "firstSeen")) and
                   0 <= (today - seen).days < RECENT_DISCOVERY_DAYS]
     finished = dt.datetime.now(dt.timezone.utc).isoformat().replace("+00:00", "Z")
-    ok = sum(source["status"] == "ok" for source in sources)
-    errors = sum(source["status"] == "error" for source in sources)
-    examined = sum(source["examined"] for source in sources)
-    scan_status = "error" if errors == len(sources) else "ok" if ok == len(sources) else "partial"
+    automatic = [source for source in sources if not source.get("manual")]
+    ok = sum(source["status"] == "ok" for source in automatic)
+    errors = sum(source["status"] == "error" for source in automatic)
+    examined = sum(source["examined"] for source in automatic)
+    scan_status = "error" if errors == len(automatic) else "ok" if ok == len(automatic) else "partial"
     run = {"id": os.environ.get("GITHUB_RUN_ID", ""), "event": os.environ.get("GITHUB_EVENT_NAME", "local"),
-           "finished": finished, "examined": examined, "new": len(new_ids), "status": scan_status}
+           "finished": finished, "scan_date": iso(today), "examined": examined,
+           "new": len(new_ids), "status": scan_status}
     history = [run, *(entry for entry in prior_meta.get("history", [])
                       if not run["id"] or entry.get("id") != run["id"])][:12]
     meta = {
@@ -381,7 +390,7 @@ def main() -> int:
     output.mkdir(parents=True, exist_ok=True)
     for name, value in (("jobs", jobs), ("review", review), ("archive", archive), ("scan-meta", meta)):
         write_json(paths[name], value)
-    summary = (f"Scanned {examined} postings across {len(sources)} sources ({ok} complete, {errors} failed). "
+    summary = (f"Scanned {examined} postings across {len(automatic)} sources ({ok} complete, {errors} failed). "
                f"Current: {len(jobs)} ({len(new_ids)} first discovered); review: {len(review)}; archive: {len(archive)}.")
     print(summary)
     for source in sources:

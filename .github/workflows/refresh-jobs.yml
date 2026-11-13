@@ -2,8 +2,9 @@ name: Refresh internship radar
 
 on:
   schedule:
-    # 21:57 Taipei; GitHub may queue the run later.
+    # 21:57 Taipei, with a 22:47 backup if the earlier run misses its slot.
     - cron: "57 13 * * *"
+    - cron: "47 14 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,17 +21,53 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Check whether today's scheduled scan is already complete
+        id: schedule
+        env:
+          REFRESH_EVENT: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime
+          import json
+          import os
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          local = ZoneInfo("Asia/Taipei")
+          data = Path("dist/data")
+          career = json.loads((data / "scan-meta.json").read_text())
+          academic = json.loads((data / "academic.json").read_text())
+          previous = career.get("last_schedule") or {}
+          run_id = previous.get("id")
+          same_day = previous.get("scan_date") == datetime.now(local).date().isoformat()
+          academic_run = academic.get("run_id")
+          academic_ok = bool(academic.get("sources")) and all(s["status"] == "ok" for s in academic["sources"])
+          already_checked = os.environ["REFRESH_EVENT"] == "schedule" and same_day and (
+              previous.get("status") == "ok" and run_id and run_id == academic_run and academic_ok
+          )
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              print(f"needed={str(not already_checked).lower()}", file=output)
+          if already_checked:
+              print(f"Today's scheduled search completed in run {run_id}.")
+          PY
 
       - name: Check discovery, location and archive rules
+        if: steps.schedule.outputs.needed == 'true'
         run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
 
       - name: Search public recruiting sources
+        if: steps.schedule.outputs.needed == 'true'
         run: python3 scripts/refresh_jobs.py
 
       - name: Read academic event and research sources
+        if: steps.schedule.outputs.needed == 'true'
         run: python3 scripts/refresh_academic.py
 
       - name: Commit refreshed data when changed
+        if: steps.schedule.outputs.needed == 'true'
         run: |
           if git diff --quiet -- dist/data; then
             echo "No published data change."
