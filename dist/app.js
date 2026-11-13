@@ -302,15 +302,18 @@ function renderSources() {
   const sourceIssues = [...careerSources, ...academicSources].filter(source => source.status !== "ok").length;
   const timestamp = career?.last_scan_attempt || academic?.last_scan_attempt;
   const overdue = !timestamp || Date.now() - Date.parse(timestamp) >= 40 * 3600 * 1000;
+  const schedule = career?.last_schedule;
+  const scheduleOverdue = schedule && Date.now() - Date.parse(schedule.finished) >= 32 * 3600 * 1000;
   const header = $("scan-link");
   const pending = !career || !academic;
-  header.classList.toggle("ok", !pending && !overdue && sourceIssues === 0);
-  header.classList.toggle("warn", !pending && (overdue || sourceIssues > 0));
+  header.classList.toggle("ok", !pending && schedule && !overdue && !scheduleOverdue && sourceIssues === 0);
+  header.classList.toggle("warn", !pending && (overdue || scheduleOverdue || sourceIssues > 0 || !schedule));
+  const trigger = career?.run?.event === "schedule" ? "排程掃描" : "最近掃描";
   $("scan-label").textContent = !timestamp ? "掃描紀錄" :
-    overdue ? "掃描逾時 · 查看紀錄" : sourceIssues ? `${sourceIssues} 個來源異常` : `掃描 ${scanTime(timestamp)}`;
+    overdue ? "資料逾時 · 查看紀錄" : scheduleOverdue ? "排程逾時 · 查看紀錄" :
+    sourceIssues ? `${sourceIssues} 個來源異常` : !schedule ? "排程待驗證" : `${trigger} ${scanTime(timestamp)}`;
   $("job-sources").innerHTML = careerSources.map(sourceRow).join("") || empty("尚無職涯來源紀錄。");
   $("academic-sources").innerHTML = academicSources.map(sourceRow).join("") || empty("尚無學術來源紀錄。");
-  const schedule = career?.last_schedule;
   const history = (career?.history || []).map(run => `<tr>
     <td>${escapeHtml(scanTime(run.finished))}</td><td>${eventLabel(run.event)}</td>
     <td>${Number(run.examined).toLocaleString("zh-TW")}</td><td>${Number(run.new)}</td><td>${runLink(run)}</td></tr>`).join("");

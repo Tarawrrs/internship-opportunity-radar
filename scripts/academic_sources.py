@@ -5,8 +5,10 @@ from dataclasses import dataclass
 import datetime as dt
 import hashlib
 import html
+import json
 import re
 from urllib.parse import parse_qs, urlencode, urljoin, urlsplit
+from urllib.request import Request, urlopen
 
 from job_sources import SOURCE_ERRORS, clean_html, date_value, fetch_json, fetch_text, parse_xml, public_url
 
@@ -41,6 +43,7 @@ class AcademicSource:
 EVENT_SOURCES = (
     AcademicSource("ntu-econ-seminars", "台大經濟系", "https://econ.ntu.edu.tw/", "ntu_econ", "台大"),
     AcademicSource("ntu-creta", "台大 CRETA", "https://www.creta.org.tw/", "creta", "台大", (APPLIED,)),
+    AcademicSource("ntu-gil", "台大語言所", "https://linguistics.ntu.edu.tw/announcement/events", "ntu_ling", "台大", (LING,)),
     AcademicSource("sinica-econ-seminars", "中研院經濟所", "https://www.econ.sinica.edu.tw/pages/29", "sinica_econ", "中研院"),
     AcademicSource("sinica-ling-seminars", "中研院語言所", "https://www.ling.sinica.edu.tw/main/zh-tw", "sinica_ling", "中研院", (LING,)),
     AcademicSource("sinica-calendar", "中研院近期活動", "https://www.sinica.edu.tw/#Calendars", "sinica_calendar", "中研院"),
@@ -163,6 +166,39 @@ def creta(source, today):
     if not examined:
         raise ValueError("No dated CRETA announcement titles")
     return list(results.values()), examined, issues
+
+
+def ntu_ling(source, today):
+    query = """{
+      eventsPosts(sort: "start_date:desc") {
+        documentId start_date end_date time title_zh_tw title_en
+        location_zh_tw location_en speaker_zh_tw speaker_en
+      }
+    }"""
+    request = Request("https://api.linguistics.ntu.edu.tw/graphql", json.dumps({"query": query}).encode(),
+                      headers={"Content-Type": "application/json", "Accept": "application/json"})
+    with urlopen(request, timeout=16) as response:
+        rows = json.load(response)["data"]["eventsPosts"]
+    if not isinstance(rows, list):
+        raise ValueError("Expected public linguistics events")
+    results = []
+    for row in rows:
+        day = date_value(row.get("start_date"))
+        end_day = date_value(row.get("end_date")) or day
+        key = row.get("documentId", "")
+        if not day or end_day < today or not re.fullmatch(r"[a-z0-9]+", key):
+            continue
+        title = clean_html(row.get("title_zh_tw") or row.get("title_en"))
+        venue = clean_html(row.get("location_zh_tw") or row.get("location_en"))
+        speaker = clean_html(row.get("speaker_zh_tw") or row.get("speaker_en"))
+        times = re.findall(r"\b\d{1,2}:\d{2}\b", row.get("time") or "")
+        start, end = (times + ["", ""])[:2]
+        if item := event(source, f"{source.url}#{key}", title, day, clock_time(start), clock_time(end),
+                         venue, speaker, key=key):
+            if end_day != day:
+                item["endDate"] = end_day.isoformat()
+            results.append(item)
+    return results, len(rows), []
 
 
 def sinica_calendar(source, today):
@@ -404,6 +440,7 @@ def journal_rss(source, today):
     return results, len(entries), []
 
 
-READERS = {"ntu_econ": ntu_econ, "creta": creta, "sinica_econ": sinica_econ, "sinica_ling": sinica_ling,
+READERS = {"ntu_econ": ntu_econ, "creta": creta, "ntu_ling": ntu_ling,
+           "sinica_econ": sinica_econ, "sinica_ling": sinica_ling,
            "sinica_calendar": sinica_calendar, "sinica_iis": sinica_iis, "nep": nep,
            "journal": journal, "journal_rss": journal_rss}

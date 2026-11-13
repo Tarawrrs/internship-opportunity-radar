@@ -45,7 +45,7 @@ def academic_snapshot(scans, previous, today):
         for item in previous.get(kind, []):
             if item["id"] in index:
                 continue
-            day = dt.date.fromisoformat(item["date"])
+            day = dt.date.fromisoformat(item.get("endDate", item["date"]))
             if kind == "events":
                 retain = day >= today and sources.get(item["sourceKey"], {}).get("status") in ("error", "partial")
             else:
