@@ -30,7 +30,7 @@ def classify_location(location, description="", workplace=""):
                 "locationEvidence": evidence, "rawLocation": location,
                 "workplaceType": workplace}
 
-    if taipei:
+    if taipei and (not remote or hybrid or negative):
         return result("eligible", "taipei", "招募地點明列台北；實體或混合辦公皆納入")
     if not remote or negative or hybrid:
         return result("excluded", "outside", "非台北實體／混合辦公，且未明示可全遠端工作")
@@ -63,10 +63,12 @@ def classify_location(location, description="", workplace=""):
     worldwide = bool(match(r"worldwide|anywhere|global|全球", location) or match(
         r"work from anywhere|(?:role|position|job) is (?:fully )?globally remote|"
         r"(?:role|position|job).{0,35}remote.{0,25}worldwide", description))
-    taiwan = bool(match(r"taiwan|台灣|臺灣", location) or match(
+    taiwan = taipei or bool(match(r"taiwan|台灣|臺灣", location) or match(
         r"remote.{0,30}(?:from|in) taiwan|可.{0,10}(?:台灣|臺灣).{0,10}遠端", description))
     # 'Remote - Singapore', 'US/Canada Remote', 'EMEA' etc are not worldwide.
     generic = re.sub(r"remote|home[- ]based|apac|asia[- ]pacific|asia|全球|遠端|[\s,;/()\-–]+", "", location, flags=re.I)
+    if not taiwan and match(r"(?:^|[^a-z])(?:us|usa|u\.s\.|united states|united kingdom|uk|canada|emea|europe|singapore)\b", location):
+        return result("excluded", "outside", "遠端地點列出其他地區，未明示接受台灣工作者")
     if not worldwide and not taiwan and generic:
         return result("excluded", "outside", "遠端地點限定其他地區，未明示接受台灣工作者")
     if worldwide or taiwan:

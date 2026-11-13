@@ -2,15 +2,9 @@ name: Refresh internship radar
 
 on:
   schedule:
-    - cron: "23 8 * * *"
-      timezone: "Asia/Taipei"
+    # 08:23 Taipei; GitHub may queue the run later.
+    - cron: "23 0 * * *"
   workflow_dispatch:
-    inputs:
-      force_refresh:
-        description: "Ignore the five-day guard and refresh now"
-        required: false
-        default: true
-        type: boolean
 
 permissions:
   contents: write
@@ -22,20 +16,16 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
 
-      - name: Check location and archive rules
+      - name: Check discovery, location and archive rules
         run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
 
-      - name: Refresh official job feeds
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_refresh }}" = "true" ]; then
-            python3 scripts/refresh_jobs.py --force
-          else
-            python3 scripts/refresh_jobs.py --if-due 5
-          fi
+      - name: Search public recruiting sources
+        run: python3 scripts/refresh_jobs.py
 
       - name: Commit refreshed data when changed
         run: |

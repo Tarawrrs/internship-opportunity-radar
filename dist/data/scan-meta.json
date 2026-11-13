@@ -1,58 +1,229 @@
 {
-  "last_successful_scan": "2026-11-12T07:21:03.412169Z",
-  "interval_days": 5,
-  "job_count": 1,
-  "archive_count": 19,
-  "review_count": 0,
+  "last_scan_attempt": "2026-11-13T03:52:26.415562Z",
+  "last_successful_scan": "2026-11-13T03:52:26.415562Z",
+  "interval_days": 1,
+  "scan_status": "ok",
+  "job_count": 17,
+  "review_count": 6,
+  "archive_count": 20,
+  "records_examined": 4243,
+  "new_count": 17,
+  "new_ids": [
+    "ntu-econ-18559",
+    "sinica-12248",
+    "sinica-12179",
+    "line-3133",
+    "gh-dcard-4513091",
+    "line-3130",
+    "sinica-11289",
+    "sinica-8604",
+    "sinica-11887",
+    "nstc-43aaeb83-c9d4-401a-862a-2b70c255bfc0",
+    "sinica-12186",
+    "gh-dcard-1562896",
+    "sinica-12127",
+    "sinica-12093",
+    "sinica-10241",
+    "sinica-9577",
+    "sinica-12133"
+  ],
+  "recent_ids": [
+    "ntu-econ-18559",
+    "sinica-12248",
+    "sinica-12179",
+    "line-3133",
+    "gh-dcard-4513091",
+    "line-3130",
+    "sinica-11289",
+    "sinica-8604",
+    "sinica-11887",
+    "nstc-43aaeb83-c9d4-401a-862a-2b70c255bfc0",
+    "sinica-12186",
+    "gh-dcard-1562896",
+    "sinica-12127",
+    "sinica-12093",
+    "sinica-10241",
+    "sinica-9577",
+    "sinica-12133"
+  ],
+  "new_review_count": 6,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
+      "source": "台灣就業通（台北 12 區）",
+      "sourceKey": "taiwanjobs:taipei",
+      "url": "https://data.gov.tw/dataset/44062",
+      "status": "ok",
+      "examined": 2397,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
+    },
+    {
+      "source": "LINE Careers",
+      "sourceKey": "line:taiwan",
+      "url": "https://careers.linecorp.com/jobs?ca=All&cp=LINE+Taiwan",
+      "status": "ok",
+      "examined": 53,
+      "matches": 2,
+      "issues": [],
+      "active": 2,
+      "review": 0
+    },
+    {
+      "source": "Dcard",
+      "sourceKey": "greenhouse:dcard",
+      "url": "https://job-boards.greenhouse.io/dcard",
+      "status": "ok",
+      "examined": 11,
+      "matches": 2,
+      "issues": [],
+      "active": 2,
+      "review": 0
+    },
+    {
+      "source": "中央研究院人才招募",
+      "sourceKey": "sinica:research",
+      "url": "https://www.sinica.edu.tw/recruitment/53?Datas_Query.workType=3",
+      "status": "ok",
+      "examined": 114,
+      "matches": 11,
+      "issues": [],
+      "active": 11,
+      "review": 0
+    },
+    {
+      "source": "台大經濟系實習與就業公告",
+      "sourceKey": "rss:ntu-econ",
+      "url": "https://econ.ntu.edu.tw/archives/category/%E5%AF%A6%E7%BF%92%E8%88%87%E5%B0%B1%E6%A5%AD",
+      "status": "ok",
+      "examined": 10,
+      "matches": 1,
+      "issues": [],
+      "active": 1,
+      "review": 0
+    },
+    {
+      "source": "國科會求才公告",
+      "sourceKey": "rss:nstc",
+      "url": "https://www.nstc.gov.tw/folksonomy/list/ba3d22f3-96fd-4adf-a078-91a05b8f0166?l=ch",
+      "status": "ok",
+      "examined": 30,
+      "matches": 1,
+      "issues": [],
+      "active": 1,
+      "review": 0
+    },
+    {
+      "source": "Himalayas 遠端職缺",
+      "sourceKey": "himalayas:tw",
+      "url": "https://himalayas.app/",
+      "status": "ok",
+      "examined": 33,
+      "matches": 7,
+      "issues": [],
+      "active": 0,
+      "review": 6
+    },
+    {
       "source": "Appier",
       "sourceKey": "greenhouse:appier",
+      "url": "https://job-boards.greenhouse.io/appier",
       "status": "ok",
-      "matches": 0
+      "examined": 65,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "Point72",
       "sourceKey": "greenhouse:point72",
+      "url": "https://job-boards.greenhouse.io/point72",
       "status": "ok",
-      "matches": 0
+      "examined": 200,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "WorldQuant",
       "sourceKey": "greenhouse:worldquant",
+      "url": "https://job-boards.greenhouse.io/worldquant",
       "status": "ok",
-      "matches": 0
+      "examined": 82,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "Agoda",
       "sourceKey": "greenhouse:agoda",
+      "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "matches": 0
+      "examined": 348,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "Anthropic",
       "sourceKey": "greenhouse:anthropic",
+      "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "matches": 0
+      "examined": 672,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "Mercari",
       "sourceKey": "greenhouse:mercari",
+      "url": "https://job-boards.greenhouse.io/mercari",
       "status": "ok",
-      "matches": 0
+      "examined": 0,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "ShopBack",
       "sourceKey": "lever:shopback-2",
+      "url": "https://jobs.lever.co/shopback-2",
       "status": "ok",
-      "matches": 0
+      "examined": 75,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     },
     {
       "source": "Ninja Van",
       "sourceKey": "lever:ninjavan",
+      "url": "https://jobs.lever.co/ninjavan",
       "status": "ok",
-      "matches": 0
+      "examined": 144,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
+    },
+    {
+      "source": "Portcast",
+      "sourceKey": "lever:portcast",
+      "url": "https://jobs.lever.co/portcast",
+      "status": "ok",
+      "examined": 9,
+      "matches": 0,
+      "issues": [],
+      "active": 0,
+      "review": 0
     }
   ]
 }

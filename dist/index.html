@@ -106,6 +106,9 @@
     .source-item { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: .84rem; text-decoration: none; }
     .source-item:last-child { border-bottom: 0; }
     .source-item span:last-child { color: var(--muted); }
+    .source-item span:first-child { min-width: 0; overflow-wrap: anywhere; }
+    .source-item span:last-child { text-align: right; flex: 0 0 auto; }
+    .job-dates { margin: 8px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.5; }
     .notice { color: #41506a; font-size: .84rem; margin: 0; }
     .status-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
     .mini-btn { border: 1px solid #cfd6e1; background: #fff; border-radius: 9px; padding: 7px 9px; font-size: .76rem; font-weight: 700; cursor: pointer; }
@@ -164,9 +167,9 @@
           </div>
           <div class="scan-card">
             <div>
-              <span class="label">五日背景掃描</span>
-              <strong id="scanHeadline">資料是新的</strong>
-              <p id="scanNote">GitHub 每天檢查一次；距上次成功掃描滿五天時，才重新讀取官方職缺來源。</p>
+              <span class="label">每日搜尋</span>
+              <strong id="scanHeadline">讀取搜尋紀錄</strong>
+              <p id="scanNote">查看這輪搜尋的刊登筆數、首次找到的機會和來源狀態。</p>
             </div>
             <button id="scanBtn" class="primary-btn" type="button"><span aria-hidden="true">↻</span> 讀取最新資料</button>
           </div>
@@ -174,7 +177,7 @@
 
         <div class="stats" aria-label="機會摘要">
           <div class="stat"><b id="statTotal">0</b><span>目前顯示</span></div>
-          <div class="stat"><b id="statPriority">0</b><span>優先處理</span></div>
+          <div class="stat"><b id="statNew">0</b><span>近七天新發現</span></div>
           <div class="stat"><b id="statTaiwan">0</b><span>台北機會</span></div>
           <div class="stat"><b id="statSaved">0</b><span>已收藏</span></div>
           <div class="stat"><b id="statArchive">0</b><span>Archive</span></div>
@@ -184,7 +187,7 @@
           <label class="search-wrap"><span class="sr-only">搜尋</span><input id="search" class="search" type="search" placeholder="搜尋職稱、公司或技能…" /></label>
           <label><span class="sr-only">方向</span><select id="trackFilter" class="filter"><option value="all">所有方向</option><option value="industry">產品／資料</option><option value="research">研究／predoc</option><option value="finance">風控／金融資料</option></select></label>
           <label><span class="sr-only">工作位置</span><select id="locationFilter" class="filter"><option value="all">所有工作位置</option><option value="taipei">台北實體／混合</option><option value="remote">可從台灣遠端</option><option value="remote-review">遠端地區待確認</option></select></label>
-          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="review">遠端資格待確認</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／歷史紀錄</option></select></label>
+          <label><span class="sr-only">清單狀態</span><select id="stateFilter" class="filter"><option value="active">目前機會</option><option value="new">近七天新發現</option><option value="review">待查核（含國際遠端）</option><option value="saved">只看收藏</option><option value="applied">已申請</option><option value="dismissed">已略過</option><option value="all">全部目前機會</option><option value="archive">Archive／歷史紀錄</option></select></label>
         </div>
 
         <div class="results-head"><h2>機會清單</h2><span id="resultsMeta">按個人契合度排序</span></div>
@@ -205,25 +208,13 @@
         </section>
 
         <section class="panel">
-          <h2>追蹤來源</h2>
-          <div class="source-list">
-            <a class="source-item" href="https://job-boards.greenhouse.io/appier?offices%5B%5D=23563" target="_blank" rel="noreferrer"><span>Appier 官方職缺</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://jobs.lever.co/shopback-2?commitment=Intern" target="_blank" rel="noreferrer"><span>ShopBack Intern</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://job-boards.greenhouse.io/point72" target="_blank" rel="noreferrer"><span>Point72 Asia</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://job-boards.greenhouse.io/worldquant" target="_blank" rel="noreferrer"><span>WorldQuant</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://job-boards.greenhouse.io/agoda" target="_blank" rel="noreferrer"><span>Agoda</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://job-boards.greenhouse.io/anthropic" target="_blank" rel="noreferrer"><span>Anthropic</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://job-boards.greenhouse.io/mercari" target="_blank" rel="noreferrer"><span>Mercari Japan</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://jobs.lever.co/ninjavan" target="_blank" rel="noreferrer"><span>Ninja Van</span><span>背景掃描</span></a>
-            <a class="source-item" href="https://www.povertyactionlab.org/careers" target="_blank" rel="noreferrer"><span>J-PAL Careers</span><span>人工查核</span></a>
-            <a class="source-item" href="https://www.nanshanlife.com.tw/nanshanlife/nsintern-1/" target="_blank" rel="noreferrer"><span>南山實習計畫</span><span>人工查核</span></a>
-            <a class="source-item" href="https://www.104.com.tw/jobs/search/?keyword=%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E5%AF%A6%E7%BF%92" target="_blank" rel="noreferrer"><span>104 數據實習</span><span>人工查核</span></a>
-          </div>
+          <h2>本輪搜尋來源</h2>
+          <div id="sourceList" class="source-list"><p class="notice">載入來源狀態…</p></div>
         </section>
 
         <section class="panel">
           <h2>更新怎麼運作</h2>
-          <p class="notice">每五天背景掃描官方來源，不必開著網站。上方按鈕只讀取已發布的最新資料。遠端地區不明的機會放在「待確認」，不混入主清單。來源故障時保留仍符合地點條件的舊資料；人工追蹤項目會標示實際查核日。</p>
+          <p class="notice">GitHub 每天搜尋一次，不必開著網站。「讀取最新資料」會載入已發布的結果。主清單顯示本輪在公開招募來源查到的職缺；遠端平台線索、來源讀取不完整及收件狀態不明的公告放在「待查核」。</p>
         </section>
 
         <section class="panel">
@@ -234,7 +225,7 @@
             <button class="mini-btn" data-quick="saved" type="button">收藏</button>
             <button class="mini-btn" data-quick="applied" type="button">已申請</button>
             <button class="mini-btn" data-quick="archive" type="button">Archive</button>
-            <button class="mini-btn" data-quick="review" type="button">遠端待確認</button>
+            <button class="mini-btn" data-quick="review" type="button">待查核</button>
           </div>
         </section>
       </aside>
@@ -244,8 +235,7 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script>
-    const FIVE_DAYS = 5 * 24 * 60 * 60 * 1000;
-    // Only the centrally filtered published data is used; legacy browser scans are ignored.
+    const STALE_AFTER = 48 * 60 * 60 * 1000;
 
     const els = {
       list: document.querySelector("#jobList"), search: document.querySelector("#search"),
@@ -253,15 +243,16 @@
       state: document.querySelector("#stateFilter"), scan: document.querySelector("#scanBtn"),
       freshText: document.querySelector("#freshText"), freshDot: document.querySelector("#freshDot"),
       scanHeadline: document.querySelector("#scanHeadline"), scanNote: document.querySelector("#scanNote"),
-      toast: document.querySelector("#toast"), meta: document.querySelector("#resultsMeta")
+      toast: document.querySelector("#toast"), meta: document.querySelector("#resultsMeta"),
+      sources: document.querySelector("#sourceList")
     };
     const state = {
       jobs: [],
       archiveJobs: [],
       reviewJobs: [],
       actions: readJson("radar_actions_v1", {}),
-      lastScan: null,
-      scanning: false, loaded: false, loadError: false, sourceErrors: 0
+      scanMeta: null, newIds: new Set(),
+      scanning: false, loaded: false, loadError: false
     };
 
     function readJson(key, fallback) {
@@ -269,6 +260,9 @@
     }
     function escapeHtml(value = "") {
       return String(value).replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]));
+    }
+    function safeLink(value) {
+      try { const url = new URL(value); return url.protocol === "https:" ? escapeHtml(url.href) : "#"; } catch { return "#"; }
     }
     function getAction(id) { return state.actions[id] || "active"; }
     function setAction(id, action) {
@@ -291,17 +285,18 @@
         ["saved", "applied", "dismissed"].includes(els.state.value) ? [...state.jobs, ...state.reviewJobs] : state.jobs;
       return source.filter(job => {
         const action = getAction(job.id);
-        const stateMatch = showingArchive || showingReview || els.state.value === "all" || (els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
-        const haystack = [job.title, job.company, job.location, job.fit, job.eligibility, job.archiveReason, ...(job.skills || [])].join(" ").toLowerCase();
+        const stateMatch = showingArchive || showingReview || els.state.value === "all" ||
+          (els.state.value === "new" ? state.newIds.has(job.id) : els.state.value === "active" ? !["dismissed","applied"].includes(action) : action === els.state.value);
+        const haystack = [job.title, job.company, job.location, job.jobType, job.sourceName, job.fit, job.eligibility, job.archiveReason, ...(job.skills || [])].join(" ").toLowerCase();
         return stateMatch && (els.track.value === "all" || job.track === els.track.value) && (els.location.value === "all" || job.locationKey === els.location.value) && (!query || haystack.includes(query));
       });
     }
     function render() {
       const jobs = filteredJobs();
       const showingArchive = els.state.value === "archive";
-      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依封存日期` : els.state.value === "review" ? `${jobs.length} 筆遠端待確認 · 尚未確認可從台灣工作` : `${jobs.length} 筆結果 · 先過地點門檻，再按契合度排序`;
+      els.meta.textContent = showingArchive ? `${jobs.length} 筆歷史紀錄 · 依封存日期` : els.state.value === "review" ? `${jobs.length} 筆待查核 · 請先核對雇主公告` : `${jobs.length} 筆結果 · 依契合度排序`;
       document.querySelector("#statTotal").textContent = jobs.length;
-      document.querySelector("#statPriority").textContent = showingArchive ? "—" : jobs.filter(j => j.score >= 90 && j.locationDisposition === "eligible").length;
+      document.querySelector("#statNew").textContent = state.newIds.size;
       document.querySelector("#statTaiwan").textContent = jobs.filter(j => j.locationKey === "taipei").length;
       document.querySelector("#statSaved").textContent = Object.values(state.actions).filter(v => v === "saved").length;
       document.querySelector("#statArchive").textContent = state.archiveJobs.length;
@@ -312,36 +307,44 @@
         }
         els.list.innerHTML = showingArchive
           ? '<div class="empty"><strong>Archive 目前沒有符合條件的紀錄。</strong><br>調整地點、方向或搜尋文字。</div>'
-          : '<div class="empty"><strong>這個篩選組合目前沒有符合條件的機會。</strong><br>尚未找到不代表沒有機會；未確認可從台灣遠端的項目不會列入主清單。</div>';
+          : els.state.value === "new" && !state.newIds.size
+            ? '<div class="empty"><strong>近七天沒有首次找到且仍列出的職缺。</strong><br>切回「目前機會」查看其餘結果。</div>'
+            : '<div class="empty"><strong>這個篩選組合沒有符合條件的機會。</strong><br>調整篩選，或到「待查核」查看還需確認的線索。</div>';
         return;
       }
       els.list.innerHTML = jobs.map(job => {
         const action = getAction(job.id);
         const archived = showingArchive || job.status === "archived";
         const actions = archived ? "" : `<div class="actions" aria-label="處理 ${escapeHtml(job.title)}">
-              <button class="icon-btn ${action === "saved" ? "active" : ""}" type="button" data-action="saved" data-id="${job.id}" title="收藏" aria-label="收藏">★</button>
-              <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${job.id}" title="標記已申請" aria-label="標記已申請">✓</button>
-              <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${job.id}" title="略過" aria-label="略過">×</button>
+              <button class="icon-btn ${action === "saved" ? "active" : ""}" type="button" data-action="saved" data-id="${escapeHtml(job.id)}" title="收藏" aria-label="收藏">★</button>
+              <button class="icon-btn ${action === "applied" ? "active" : ""}" type="button" data-action="applied" data-id="${escapeHtml(job.id)}" title="標記已申請" aria-label="標記已申請">✓</button>
+              <button class="icon-btn ${action === "dismissed" ? "active" : ""}" type="button" data-action="dismissed" data-id="${escapeHtml(job.id)}" title="略過" aria-label="略過">×</button>
             </div>`;
-        const statusTag = archived ? '<span class="tag risk">歷史紀錄</span>' : `<span class="tag ${job.priorityType}">${escapeHtml(job.priority)}</span>`;
+        const statusTag = archived ? '<span class="tag risk">歷史紀錄</span>' : `<span class="tag ${job.priorityType === "priority" ? "priority" : "watch"}">${escapeHtml(job.priority)}</span>`;
+        const dates = [job.postedAt ? `刊登 ${job.postedAt}` : null,
+          job.sourceUpdatedAt ? `來源更新 ${job.sourceUpdatedAt}` : null,
+          job.deadline ? `${job.sourceKey === "himalayas:tw" ? "平台到期" : "截止"} ${job.deadline}` : null,
+          `最近查到 ${job.lastSeen || job.checked || "未知"}`].filter(Boolean).join(" · ");
+        const sourceLink = `<a class="source-link" href="${safeLink(job.source)}" target="_blank" rel="noreferrer">${escapeHtml(job.sourceName || "查看原始來源")} ↗</a>`;
         const details = archived ? `
               <div><h4>出現紀錄</h4><p>首次：${escapeHtml(job.firstSeen || job.checked || "未知")} · 最後：${escapeHtml(job.lastSeen || job.checked || "未知")}</p></div>
               <div><h4>封存</h4><p>${escapeHtml(job.archivedAt || "未知")} · ${escapeHtml(job.archiveReason || "已不在目前清單")}</p></div>
               <div><h4>當時資訊</h4><p>${escapeHtml(job.timing || "未記錄")}</p></div>
-              <div><h4>原始來源</h4><p><a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>` : `
+              <div><h4>原始來源</h4><p>${sourceLink}</p></div>` : `
               <div><h4>時間</h4><p>${escapeHtml(job.timing)}</p></div>
               <div><h4>資格</h4><p>${escapeHtml(job.eligibility)}</p></div>
               <div><h4>申請前先確認</h4><p>${escapeHtml(job.risk)}</p></div>
               <div><h4>工作位置判定</h4><p>${escapeHtml(job.locationReason)}<br>${(job.locationEvidence || []).map(escapeHtml).join("<br>")}</p></div>
-              <div><h4>${job.verificationMode === "manual" ? "人工查核（不隨掃描自動驗證）" : "來源查核"}</h4><p>${escapeHtml(job.checked)}${job.firstSeen ? ` · 首次看見 ${escapeHtml(job.firstSeen)}` : ""} · <a class="source-link" href="${escapeHtml(job.source)}" target="_blank" rel="noreferrer">開啟原始職缺 ↗</a></p></div>`;
+              <div><h4>來源與發現紀錄</h4><p>首次找到 ${escapeHtml(job.firstSeen || "未知")} · ${sourceLink}</p></div>`;
         return `<article class="job-card ${archived ? "archived" : ""}">
           <div class="job-main">
-            <div class="score"><div><b>${job.score}</b><small>FIT</small></div></div>
+            <div class="score"><div><b>${escapeHtml(job.score)}</b><small>FIT</small></div></div>
             <div>
-              <div class="job-title"><h3>${escapeHtml(job.title)}</h3>${statusTag}</div>
+              <div class="job-title"><h3>${escapeHtml(job.title)}</h3>${statusTag}${!archived && state.newIds.has(job.id) ? '<span class="tag priority">近期新發現</span>' : ''}</div>
               <div class="company">${escapeHtml(job.company)} · ${escapeHtml(job.location)}</div>
               <div class="tags">${!archived ? `<span class="tag ${job.locationDisposition === "review" ? "watch" : "priority"}">${escapeHtml(({taipei:"台北",remote:"台灣／全球全遠端","remote-review":"遠端地區待確認"})[job.locationKey] || "歷史地點")}</span>` : ""}${(job.skills || []).map(skill => `<span class="tag">${escapeHtml(skill)}</span>`).join("")}</div>
-              <p class="job-summary">${escapeHtml(job.fit)}</p>
+              <p class="job-summary">${escapeHtml(job.verificationNote && !archived ? job.verificationNote : job.fit)}</p>
+              ${archived ? "" : `<p class="job-dates">${escapeHtml(dates)}</p>${sourceLink}`}
             </div>
             ${actions}
           </div>
@@ -355,15 +358,28 @@
       }).join("");
     }
     function updateFreshness() {
-      const time = state.lastScan ? new Date(state.lastScan).getTime() : NaN;
-      const age = Date.now() - time;
-      const stale = !Number.isFinite(time) || age >= FIVE_DAYS;
-      const date = Number.isFinite(time) ? new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short" }).format(new Date(time)) : "尚未掃描";
-      els.freshText.textContent = `上次掃描：${date}`;
-      els.freshDot.classList.toggle("stale", stale);
-      els.scanHeadline.textContent = state.loadError ? "資料載入失敗" : state.sourceErrors ? "部分來源待重試" : stale ? "等待背景更新" : "背景掃描已更新";
-      els.scanNote.textContent = stale ? "已超過五天；GitHub 下一次背景作業會重新讀取官方職缺來源。" : "GitHub 每天檢查一次；距上次成功掃描滿五天時，才重新讀取官方職缺來源。";
-      return stale;
+      const meta = state.scanMeta;
+      if (!meta) {
+        els.scanHeadline.textContent = state.loadError ? "資料載入失敗" : "讀取搜尋紀錄";
+        return;
+      }
+      const time = Date.parse(meta.last_scan_attempt || meta.last_successful_scan || "");
+      const stale = !Number.isFinite(time) || Date.now() - time >= STALE_AFTER;
+      const date = Number.isFinite(time) ? new Intl.DateTimeFormat("zh-TW", { dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Taipei" }).format(time) : "尚無紀錄";
+      const sources = meta.sources || [];
+      const total = meta.records_examined || 0;
+      const checked = sources.filter(s => s.status === "ok").length;
+      els.freshText.textContent = `上次搜尋：${date}（台北時間）`;
+      els.freshDot.classList.toggle("stale", stale || meta.scan_status !== "ok");
+      els.scanHeadline.textContent = state.loadError ? "未能讀取最新資料" : stale ? "超過兩天未更新" :
+        meta.scan_status === "error" ? "本輪來源無法讀取" : meta.scan_status === "partial" ? "部分來源未完成" :
+        meta.new_count ? `首次找到 ${meta.new_count} 筆` : "本輪無新符合職缺";
+      els.scanNote.textContent = `${checked}/${sources.length} 個來源完整讀取 · 檢查 ${total.toLocaleString("zh-TW")} 筆刊登 · 本輪首次找到 ${meta.new_count || 0} 筆 · ${meta.job_count} 筆目前機會 · ${meta.review_count} 筆待查核。`;
+      els.sources.innerHTML = sources.map(source => {
+        const label = source.status === "ok" ? `${source.examined || 0} 筆 · ${source.active || 0} 符合` :
+          source.status === "partial" ? "部分未讀取" : "讀取失敗";
+        return `<a class="source-item" href="${safeLink(source.url)}" target="_blank" rel="noreferrer" title="${escapeHtml((source.issues || []).join("；"))}"><span>${escapeHtml(source.source)}</span><span>${escapeHtml(label)}</span></a>`;
+      }).join("");
     }
     async function loadPublishedData(manual = false) {
       if (state.scanning) return;
@@ -380,14 +396,14 @@
         const [jobs, meta, archive, review] = payload;
         if (meta.location_policy !== "taipei-taiwan-remote-v1" ||
             !Array.isArray(jobs) || !Array.isArray(archive) || !Array.isArray(review)) throw new Error("schema");
-        state.jobs = jobs.filter(job => job.locationDisposition === "eligible" &&
+        state.jobs = jobs.filter(job => job.verificationStatus === "confirmed" && job.locationDisposition === "eligible" &&
           ["taipei", "remote"].includes(job.locationKey)).sort((a,b) => b.score - a.score);
         state.archiveJobs = archive;
-        state.reviewJobs = review.filter(job => job.locationDisposition === "review");
-        state.lastScan = meta.last_successful_scan || null;
+        state.reviewJobs = review.filter(job => job.verificationStatus === "pending");
+        state.scanMeta = meta;
+        state.newIds = new Set(meta.recent_ids || meta.new_ids || []);
         state.loaded = true;
         state.loadError = false;
-        state.sourceErrors = (meta.sources || []).filter(source => source.status === "error").length;
         if (manual) showToast("已讀取網站最新資料；此按鈕不會啟動背景掃描");
       } catch (error) {
         state.loadError = true;

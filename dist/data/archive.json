@@ -1,5 +1,43 @@
 [
   {
+    "id": "nanshan-data-intern",
+    "title": "數據分析實習",
+    "company": "南山人壽",
+    "location": "臺北，臺灣",
+    "locationKey": "taipei",
+    "track": "finance",
+    "score": 82,
+    "priority": "列入組合",
+    "priorityType": "watch",
+    "timing": "下半年通常 10–12 月；總公司學期實習每週至少 2 日",
+    "eligibility": "大專院校在學生，大三以上或碩士生尤佳；官方 FAQ 列出碩士學期實習時薪 NT$240",
+    "fit": "數據洞察、使用者研究與數位專案，可測試金融資料／風控次線，同時維持分析主軸。",
+    "risk": "官方頁是實習計畫總覽，不是單一職缺；投遞前需查當期部門、內容與截止日。",
+    "source": "https://www.nanshanlife.com.tw/nanshanlife/nsintern-1/",
+    "skills": [
+      "金融資料",
+      "數據洞察",
+      "數位專案"
+    ],
+    "sourceKey": "manual",
+    "checked": "2026-09-17",
+    "verificationMode": "manual",
+    "locationPolicy": "taipei-taiwan-remote-v1",
+    "locationDisposition": "eligible",
+    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
+    "locationEvidence": [
+      "招募地點：臺北，臺灣"
+    ],
+    "rawLocation": "臺北，臺灣",
+    "workplaceType": "",
+    "firstSeen": "2026-09-17",
+    "lastSeen": "2026-09-17",
+    "status": "archived",
+    "archived": true,
+    "archivedAt": "2026-11-13",
+    "archiveReason": "原為人工追蹤；尚無近期可驗證的單一招募公告，已移出目前職缺。"
+  },
+  {
     "id": "watsons-ai-data-science-intern",
     "title": "AI & Data Science Intern",
     "company": "台灣屈臣氏",
