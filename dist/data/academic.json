@@ -2268,12 +2268,10 @@
       "source": "台大語言所",
       "url": "https://linguistics.ntu.edu.tw/announcement/events",
       "group": "events",
-      "examined": 0,
+      "examined": 10,
       "matches": 0,
-      "issues": [
-        "HTTP 502"
-      ],
-      "status": "error"
+      "issues": [],
+      "status": "ok"
     },
     {
       "sourceKey": "sinica-econ-seminars",
@@ -2414,6 +2412,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-14T16:39:29.296230Z",
-  "run_id": "43616664901"
+  "last_scan_attempt": "2026-11-15T06:52:52.544628Z",
+  "run_id": "43687327278"
 }
