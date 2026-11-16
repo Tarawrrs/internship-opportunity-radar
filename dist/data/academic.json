@@ -1,76 +1,6 @@
 {
   "events": [
     {
-      "id": "89f83a6909e113592000",
-      "title": "語言環境對句法分佈的影響",
-      "date": "2026-11-16",
-      "time": "10:00",
-      "endTime": "12:00",
-      "venue": "中央研究院人文社會科學館(南棟5樓519會議室)",
-      "speaker": "林愷胤 助研究員",
-      "url": "https://www.ling.sinica.edu.tw/main/zh-tw?/sign/1116",
-      "type": "演講",
-      "institution": "中研院",
-      "sourceKey": "sinica-ling-seminars",
-      "sourceName": "中研院語言所",
-      "topics": [
-        "語言學"
-      ]
-    },
-    {
-      "id": "162fd6e6544b1049adb3",
-      "title": "社會經濟史研究群講論會：戰後臺灣經濟史中的李登輝：經濟思想、政策選擇與經濟轉型",
-      "date": "2026-11-16",
-      "time": "11:00",
-      "endTime": "13:00",
-      "venue": "",
-      "speaker": "",
-      "url": "https://www.sinica.edu.tw/calendar_content/57/7666",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-calendar",
-      "sourceName": "中研院近期活動",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "8b9ba9a6ec9c934d1fc3",
-      "title": "Bargaining over Health Treatments",
-      "date": "2026-11-16",
-      "time": "14:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Ching-to Albert Ma",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8519",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "個體經濟",
-        "應用個經",
-        "賽局理論"
-      ]
-    },
-    {
-      "id": "aa1477daa71abb1564c7",
-      "title": "Puyuma and language endangerment",
-      "date": "2026-11-16",
-      "time": "",
-      "endTime": "",
-      "venue": "",
-      "speaker": "",
-      "url": "https://www.ling.sinica.edu.tw/main/zh-tw?act=activity_list&c=list&type=2",
-      "type": "研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-ling-seminars",
-      "sourceName": "中研院語言所",
-      "topics": [
-        "語言學"
-      ]
-    },
-    {
       "id": "7590e004a0683a9f62bd",
       "title": "Pay Attention! Promoting Energy-Saving Goals through Task-Based Incentives: A Field Experiment",
       "date": "2026-11-17",
@@ -329,6 +259,23 @@
       ]
     },
     {
+      "id": "588de8a14a2097e833b1",
+      "title": "專題演講｜Language, Cognition and Communication Across the Lifespan",
+      "date": "2026-12-04",
+      "time": "09:00",
+      "endTime": "13:00",
+      "venue": "國立臺灣大學人文館 B113-2（地下一樓）",
+      "speaker": "Michal Láznička、I-Ting Chiu、Pei-Wen Yeh、Po-Heng Chen",
+      "url": "https://linguistics.ntu.edu.tw/announcement/events#n071bi7u1te242dzyxgcmo97",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-gil",
+      "sourceName": "台大語言所",
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
       "id": "6079f3ae32aa35840f68",
       "title": "Modality for cross-linguistic use",
       "date": "2026-12-08",
@@ -400,6 +347,294 @@
   ],
   "papers": [
     {
+      "id": "72e28db2ef29ceb84eb2",
+      "title": "Wirkt intensive Beratung nachhaltig? Soziale Ungleichheit im Bildungsweg 4, 5 Jahre nach dem Abitur",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:zbw:wzbslm:344523",
+      "type": "工作論文",
+      "authors": [
+        "Pietrzyk, Irena",
+        "Schneider, Juliana",
+        "Erdmann, Melinda",
+        "Helbig, Marcel",
+        "Jacob, Marita"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "9c0eaac36a571c331fc5",
+      "title": "Who Responds to Intermittent Energy Nudges? Heterogeneity by Socioeconomic Status and Female Education in Armenia",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:cer:papers:wp823",
+      "type": "工作論文",
+      "authors": [
+        "Yermone Sargsyan",
+        "Salim Turdaliev",
+        "Silvester van Koten"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟",
+        "應用個經"
+      ]
+    },
+    {
+      "id": "1a7bf2f01089d9ae8425",
+      "title": "Sorting by Participation: A Field Experiment in a Stem-cell Registry",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:35998",
+      "type": "工作論文",
+      "authors": [
+        "Michael Haylock",
+        "Patrick Kampkötter",
+        "Mario Macis",
+        "Susanne Seitz",
+        "Robert Slonim",
+        "Daniel Wiesen"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "7f2a21950db7f56d86ec",
+      "title": "Randomized Experiments with Ambiguous Record Linkage",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.15063",
+      "type": "工作論文",
+      "authors": [
+        "Bruno Ferman",
+        "Lucas Finamor"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "b51dee9a502b73822f7a",
+      "title": "Money, Time, and the Demand for Children",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ces:ceswps:_13124",
+      "type": "工作論文",
+      "authors": [
+        "Evie Thompson",
+        "Guy Michaels"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "e552f5ce3a98644bbd77",
+      "title": "Knowledge Without Taxation? Experimental Evidence from a Tax Education Program",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:36002",
+      "type": "工作論文",
+      "authors": [
+        "Anders Jensen",
+        "Nikhil Kumar",
+        "Konstantin Poensgen"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "32c5a0ac522aa07b8697",
+      "title": "Generative AI Boosts Productivity Across the Expertise Ladder",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ces:ceswps:_13138",
+      "type": "工作論文",
+      "authors": [
+        "Juan P. et al. Aparicio"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "115bef4a3b87b0bc9c5f",
+      "title": "Gambling, Saving and Lumpy Liquidity Needs - A Reproducibility and Replicability Assessment of Herskowitz (2021)",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:zbw:i4rdps:339",
+      "type": "工作論文",
+      "authors": [
+        "Hammar, Olle",
+        "Neubauer, Florian",
+        "Rose, Julian"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "d0f10e4c7c285c20936c",
+      "title": "Experimentally Validated Digital Twins: Evaluating Workforce Training Programs in the Age of Big Data",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.03938",
+      "type": "工作論文",
+      "authors": [
+        "Raj Chetty",
+        "Jamie Fogel",
+        "Lawrence F. Katz",
+        "Kadeem Noray",
+        "Sonya Porter",
+        "James Reisinger"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "b466ac9ce3b9c513b0ba",
+      "title": "Digitizing Extension Services: Evidence from a Two-Sided Randomized Experiment in Indonesia",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:iza:izadps:dp19041",
+      "type": "工作論文",
+      "authors": [
+        "Furlani, Irene",
+        "Grimm, Michael",
+        "Raya, Alia",
+        "Ishadiyanto, Salim",
+        "Widjanarko, Nadila"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "4317af8f2070aaaf63ce",
+      "title": "Designing Behavioral Profiles for Language Model Simulation of Out-of-Distribution Human Behavior",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.00661",
+      "type": "工作論文",
+      "authors": [
+        "Robin Na",
+        "Kehang Zhu",
+        "Logan Cross",
+        "Michiel A. Bakker"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "574dfa5c33051e826ebd",
+      "title": "Debiasing Law Enforcement Officers: Evidence from an Expressive Arts Intervention in India",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:35986",
+      "type": "工作論文",
+      "authors": [
+        "Sofia Amaral",
+        "Girija Borker",
+        "Nishith Prakash",
+        "María Micaela Sviatschi"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "dce45fa02e8446fdb9c7",
+      "title": "Credit and small-scale solar demand: Experimental evidence from small firms in Kenya",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:unu:wpaper:wp-2026-110",
+      "type": "工作論文",
+      "authors": [
+        "Jiayue Zhang",
+        "Yunyu Shu",
+        "Wycliffe Oluoch"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "398c29e4974396850420",
+      "title": "Creative destruction: Human-AI competition in an experimental market",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.18921",
+      "type": "工作論文",
+      "authors": [
+        "John Conlon",
+        "Peter Schwardmann"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
       "id": "5ef77ac877efe4d3cb7a",
       "title": "Who Creates Demand? Retail Entry and Distribution Networks",
       "date": "2026-11-09",
@@ -455,7 +690,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "f3087c20f273da1d646b",
@@ -475,7 +711,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "b92423f8340c6381253a",
@@ -496,7 +733,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7fdaee1242631decd80c",
@@ -534,7 +772,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ec3d29c1f9aa7f2f4bd0",
@@ -555,7 +794,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "f5bc5359f29f03d3201f",
@@ -576,7 +816,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "33adf596466503e28885",
@@ -669,7 +910,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a742a521e957145d890d",
@@ -689,7 +931,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "16eee6c07b23a17b1540",
@@ -748,7 +991,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "d7bbb8299160d6654a81",
@@ -769,7 +1013,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "d51ec2a5c4925c83095e",
@@ -849,7 +1094,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7f121fb1440e8084fd5c",
@@ -871,7 +1117,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "8c52bb7eb452d731bae2",
@@ -929,7 +1176,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ff39c7c8837f2e339e88",
@@ -952,7 +1200,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "6ce471b31faa43dae99c",
@@ -2269,7 +2518,7 @@
       "url": "https://linguistics.ntu.edu.tw/announcement/events",
       "group": "events",
       "examined": 10,
-      "matches": 0,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -2279,7 +2528,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 7,
+      "matches": 6,
       "issues": [],
       "status": "ok"
     },
@@ -2288,8 +2537,8 @@
       "source": "中研院語言所",
       "url": "https://www.ling.sinica.edu.tw/main/zh-tw",
       "group": "events",
-      "examined": 6,
-      "matches": 6,
+      "examined": 4,
+      "matches": 4,
       "issues": [],
       "status": "ok"
     },
@@ -2299,7 +2548,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 2,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -2318,7 +2567,7 @@
       "source": "RePEc NEP · Experimental Economics",
       "url": "https://nep.repec.org/nep-exp",
       "group": "papers",
-      "examined": 39,
+      "examined": 35,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -2412,6 +2661,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-15T16:39:21.302323Z",
-  "run_id": "43736575194"
+  "last_scan_attempt": "2026-11-16T16:39:29.658165Z",
+  "run_id": "43909693035"
 }

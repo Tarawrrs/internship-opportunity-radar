@@ -1,12 +1,12 @@
 {
-  "last_scan_attempt": "2026-11-15T16:39:14.802332Z",
-  "last_successful_scan": "2026-11-15T16:39:14.802332Z",
+  "last_scan_attempt": "2026-11-16T16:39:23.319162Z",
+  "last_successful_scan": "2026-11-16T16:39:23.319162Z",
   "interval_days": 1,
-  "scan_status": "ok",
-  "job_count": 47,
-  "review_count": 42,
-  "archive_count": 21,
-  "records_examined": 4487,
+  "scan_status": "partial",
+  "job_count": 42,
+  "review_count": 46,
+  "archive_count": 23,
+  "records_examined": 4377,
   "new_count": 0,
   "new_ids": [],
   "recent_ids": [
@@ -29,8 +29,6 @@
     "sinica-8604",
     "sinica-11438",
     "sinica-11887",
-    "nstc-43aaeb83-c9d4-401a-862a-2b70c255bfc0",
-    "gh-appier-1068719",
     "gh-dcard-1562896",
     "line-3131",
     "lever-shopback-2-345e1f49-ca8c-432f-b402-a91452f78116",
@@ -38,7 +36,6 @@
     "sinica-12093",
     "sinica-11823",
     "sinica-10241",
-    "gh-appier-6820898",
     "line-3135",
     "line-3136",
     "gh-appier-7431293",
@@ -49,10 +46,8 @@
     "nccu-career-4342",
     "nccu-career-4343",
     "nccu-career-4344",
-    "sc-1374647057",
     "nccu-career-3750",
     "capital-2027-winter-settlement",
-    "workday-pwc-772190WD",
     "sinica-12133",
     "line-3134",
     "nccu-career-1570",
@@ -66,7 +61,7 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2334,
+      "examined": 2288,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -124,8 +119,8 @@
       "examined": 30,
       "matches": 1,
       "issues": [],
-      "active": 1,
-      "review": 0
+      "active": 0,
+      "review": 2
     },
     {
       "source": "台大職涯中心｜實習公告",
@@ -177,19 +172,21 @@
       "url": "https://jobs.standardchartered.com/",
       "status": "ok",
       "examined": 20,
-      "matches": 1,
+      "matches": 0,
       "issues": [],
-      "active": 1,
-      "review": 0
+      "active": 0,
+      "review": 1
     },
     {
       "source": "星展銀行",
       "sourceKey": "workday:dbs",
       "url": "https://dbs.wd3.myworkdayjobs.com/DBS_Careers",
-      "status": "ok",
-      "examined": 40,
+      "status": "error",
+      "examined": 0,
       "matches": 0,
-      "issues": [],
+      "issues": [
+        "HTTPError"
+      ],
       "active": 0,
       "review": 0
     },
@@ -197,12 +194,14 @@
       "source": "資誠 PwC",
       "sourceKey": "workday:pwc",
       "url": "https://pwc.wd3.myworkdayjobs.com/Global_Campus_Careers",
-      "status": "ok",
-      "examined": 5,
-      "matches": 1,
-      "issues": [],
-      "active": 1,
-      "review": 0
+      "status": "error",
+      "examined": 0,
+      "matches": 0,
+      "issues": [
+        "HTTPError"
+      ],
+      "active": 0,
+      "review": 1
     },
     {
       "source": "Mastercard",
@@ -243,8 +242,8 @@
       "sourceKey": "himalayas:tw",
       "url": "https://himalayas.app/",
       "status": "ok",
-      "examined": 35,
-      "matches": 25,
+      "examined": 34,
+      "matches": 23,
       "issues": [],
       "active": 0,
       "review": 24
@@ -254,10 +253,10 @@
       "sourceKey": "greenhouse:appier",
       "url": "https://job-boards.greenhouse.io/appier",
       "status": "ok",
-      "examined": 65,
-      "matches": 5,
+      "examined": 64,
+      "matches": 3,
       "issues": [],
-      "active": 5,
+      "active": 3,
       "review": 0
     },
     {
@@ -265,7 +264,7 @@
       "sourceKey": "greenhouse:point72",
       "url": "https://job-boards.greenhouse.io/point72",
       "status": "ok",
-      "examined": 200,
+      "examined": 197,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -276,7 +275,7 @@
       "sourceKey": "greenhouse:worldquant",
       "url": "https://job-boards.greenhouse.io/worldquant",
       "status": "ok",
-      "examined": 82,
+      "examined": 81,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -287,7 +286,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 354,
+      "examined": 349,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -298,7 +297,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 668,
+      "examined": 661,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -320,7 +319,7 @@
       "sourceKey": "lever:shopback-2",
       "url": "https://jobs.lever.co/shopback-2",
       "status": "ok",
-      "examined": 76,
+      "examined": 75,
       "matches": 1,
       "issues": [],
       "active": 1,
@@ -351,6 +350,18 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "43909693035",
+      "event": "repository_dispatch",
+      "finished": "2026-11-16T16:39:23.319162Z",
+      "scan_date": "2026-11-17",
+      "examined": 4377,
+      "new": 0,
+      "status": "partial",
+      "timer_run_id": "43736575241",
+      "academic_status": "ok",
+      "academic_examined": 962
+    },
     {
       "id": "43736575194",
       "event": "repository_dispatch",
@@ -461,38 +472,30 @@
       "examined": 4117,
       "new": 0,
       "status": "partial"
-    },
-    {
-      "id": "",
-      "event": "local",
-      "finished": "2026-11-13T13:50:43.085400Z",
-      "examined": 4411,
-      "new": 23,
-      "status": "partial"
     }
   ],
   "run": {
-    "id": "43736575194",
+    "id": "43909693035",
     "event": "repository_dispatch",
-    "finished": "2026-11-15T16:39:14.802332Z",
-    "scan_date": "2026-11-16",
-    "examined": 4487,
+    "finished": "2026-11-16T16:39:23.319162Z",
+    "scan_date": "2026-11-17",
+    "examined": 4377,
     "new": 0,
-    "status": "ok",
-    "timer_run_id": "43616664056",
+    "status": "partial",
+    "timer_run_id": "43736575241",
     "academic_status": "ok",
-    "academic_examined": 968
+    "academic_examined": 962
   },
   "last_schedule": {
-    "id": "43736575194",
+    "id": "43909693035",
     "event": "repository_dispatch",
-    "finished": "2026-11-15T16:39:14.802332Z",
-    "scan_date": "2026-11-16",
-    "examined": 4487,
+    "finished": "2026-11-16T16:39:23.319162Z",
+    "scan_date": "2026-11-17",
+    "examined": 4377,
     "new": 0,
-    "status": "ok",
-    "timer_run_id": "43616664056",
+    "status": "partial",
+    "timer_run_id": "43736575241",
     "academic_status": "ok",
-    "academic_examined": 968
+    "academic_examined": 962
   }
 }
