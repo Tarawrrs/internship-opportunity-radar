@@ -1,12 +1,12 @@
 {
-  "last_scan_attempt": "2026-11-17T08:11:57.509704Z",
-  "last_successful_scan": "2026-11-17T08:11:57.509704Z",
+  "last_scan_attempt": "2026-11-17T16:39:48.517829Z",
+  "last_successful_scan": "2026-11-17T16:39:48.517829Z",
   "interval_days": 1,
   "scan_status": "partial",
   "job_count": 42,
   "review_count": 46,
   "archive_count": 23,
-  "records_examined": 4271,
+  "records_examined": 4436,
   "new_count": 0,
   "new_ids": [],
   "recent_ids": [
@@ -60,12 +60,10 @@
       "source": "台灣就業通（台北 12 區）",
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
-      "status": "partial",
-      "examined": 2192,
+      "status": "ok",
+      "examined": 2356,
       "matches": 0,
-      "issues": [
-        "111 區：ConnectionResetError"
-      ],
+      "issues": [],
       "active": 0,
       "review": 0
     },
@@ -209,10 +207,12 @@
       "source": "Mastercard",
       "sourceKey": "workday:mastercard",
       "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
-      "status": "ok",
-      "examined": 6,
+      "status": "error",
+      "examined": 0,
       "matches": 0,
-      "issues": [],
+      "issues": [
+        "HTTPError"
+      ],
       "active": 0,
       "review": 0
     },
@@ -266,7 +266,7 @@
       "sourceKey": "greenhouse:point72",
       "url": "https://job-boards.greenhouse.io/point72",
       "status": "ok",
-      "examined": 196,
+      "examined": 200,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -277,7 +277,7 @@
       "sourceKey": "greenhouse:worldquant",
       "url": "https://job-boards.greenhouse.io/worldquant",
       "status": "ok",
-      "examined": 81,
+      "examined": 80,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -288,7 +288,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 343,
+      "examined": 348,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -321,7 +321,7 @@
       "sourceKey": "lever:shopback-2",
       "url": "https://jobs.lever.co/shopback-2",
       "status": "ok",
-      "examined": 75,
+      "examined": 74,
       "matches": 1,
       "issues": [],
       "active": 1,
@@ -352,6 +352,18 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "44128062581",
+      "event": "repository_dispatch",
+      "finished": "2026-11-17T16:39:48.517829Z",
+      "scan_date": "2026-11-18",
+      "examined": 4436,
+      "new": 0,
+      "status": "partial",
+      "timer_run_id": "43909695180",
+      "academic_status": "ok",
+      "academic_examined": 962
+    },
     {
       "id": "44044505599",
       "event": "schedule",
@@ -469,35 +481,29 @@
       "examined": 4493,
       "new": 1,
       "status": "ok"
-    },
-    {
-      "id": "43439753741",
-      "event": "workflow_dispatch",
-      "finished": "2026-11-13T14:08:39.969303Z",
-      "examined": 4440,
-      "new": 8,
-      "status": "ok"
     }
   ],
   "run": {
-    "id": "44044505599",
-    "event": "schedule",
-    "finished": "2026-11-17T08:11:57.509704Z",
-    "scan_date": "2026-11-17",
-    "examined": 4271,
+    "id": "44128062581",
+    "event": "repository_dispatch",
+    "finished": "2026-11-17T16:39:48.517829Z",
+    "scan_date": "2026-11-18",
+    "examined": 4436,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "43909695180",
     "academic_status": "ok",
     "academic_examined": 962
   },
   "last_schedule": {
-    "id": "44044505599",
-    "event": "schedule",
-    "finished": "2026-11-17T08:11:57.509704Z",
-    "scan_date": "2026-11-17",
-    "examined": 4271,
+    "id": "44128062581",
+    "event": "repository_dispatch",
+    "finished": "2026-11-17T16:39:48.517829Z",
+    "scan_date": "2026-11-18",
+    "examined": 4436,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "43909695180",
     "academic_status": "ok",
     "academic_examined": 962
   }

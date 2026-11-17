@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "id": "7590e004a0683a9f62bd",
-      "title": "Pay Attention! Promoting Energy-Saving Goals through Task-Based Incentives: A Field Experiment",
-      "date": "2026-11-17",
-      "time": "14:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Yating Chuang (莊雅婷)",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8426",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "實驗／行為經濟"
-      ]
-    },
-    {
       "id": "92c517212c5f82efacb1",
       "title": "2026總體經濟計量模型研討會暨劉大中教授暨蔣碩傑教授紀念研討會",
       "date": "2026-11-18",
@@ -2596,7 +2579,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 8,
+      "matches": 7,
       "issues": [],
       "status": "ok"
     },
@@ -2616,7 +2599,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 3,
+      "matches": 2,
       "issues": [],
       "status": "ok"
     },
@@ -2729,6 +2712,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-17T08:12:20.608561Z",
-  "run_id": "44044505599"
+  "last_scan_attempt": "2026-11-17T16:39:59.801253Z",
+  "run_id": "44128062581"
 }
