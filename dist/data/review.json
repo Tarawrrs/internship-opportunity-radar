@@ -799,7 +799,7 @@
     "deadline": null,
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-17",
     "lastSeen": "2026-11-17",
     "status": "review"
@@ -888,7 +888,7 @@
     "deadline": "2027-02-09",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-13",
     "lastSeen": "2026-11-17",
     "status": "review"
@@ -1341,7 +1341,7 @@
     "deadline": "2027-01-12",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-13",
     "lastSeen": "2026-11-17",
     "status": "review"

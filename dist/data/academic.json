@@ -18,6 +18,40 @@
       ]
     },
     {
+      "id": "92c517212c5f82efacb1",
+      "title": "2026總體經濟計量模型研討會暨劉大中教授暨蔣碩傑教授紀念研討會",
+      "date": "2026-11-18",
+      "time": "09:20",
+      "endTime": "17:10",
+      "venue": "",
+      "speaker": "",
+      "url": "https://www.sinica.edu.tw/calendar_content/57/7521",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-calendar",
+      "sourceName": "中研院近期活動",
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "43369a788b494255d7dc",
+      "title": "Accelerating cosmological inference using Gaussian Process Regression",
+      "date": "2026-11-18",
+      "time": "11:00",
+      "endTime": "12:30",
+      "venue": "",
+      "speaker": "",
+      "url": "https://www.sinica.edu.tw/calendar_content/57/7641",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-calendar",
+      "sourceName": "中研院近期活動",
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
       "id": "cdca7f4bf8ef7cff1981",
       "title": "Language, change, and shamanism: Over four decades of linguistic documentation in Nanwang Puyuma",
       "date": "2026-11-19",
@@ -225,6 +259,23 @@
       ]
     },
     {
+      "id": "57d622b58e45933744cd",
+      "title": "Innovation and Adaptation to Expanding Biological Threats",
+      "date": "2026-11-27",
+      "time": "12:10",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Shu-Chen Tsao (曹書誠)",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8398",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
       "id": "6b04d7d01503d1cce4a3",
       "title": "TIGP (SNHCC) -- Applications of AI in Text Analysis: Capabilities and Limitations through Research Cases",
       "date": "2026-11-30",
@@ -256,6 +307,23 @@
       "sourceName": "中研院語言所",
       "topics": [
         "語言學"
+      ]
+    },
+    {
+      "id": "8ff211deb201d0770c92",
+      "title": "Fintech Credit and Economic Growth: Insights from Direct Quantitative Measures",
+      "date": "2026-12-03",
+      "time": "14:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Yong Wang (汪 勇)",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8542",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "應用個經"
       ]
     },
     {
@@ -2528,7 +2596,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 6,
+      "matches": 8,
       "issues": [],
       "status": "ok"
     },
@@ -2548,7 +2616,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 1,
+      "matches": 3,
       "issues": [],
       "status": "ok"
     },
@@ -2661,6 +2729,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-16T16:39:29.658165Z",
-  "run_id": "43909693035"
+  "last_scan_attempt": "2026-11-17T08:12:20.608561Z",
+  "run_id": "44044505599"
 }
