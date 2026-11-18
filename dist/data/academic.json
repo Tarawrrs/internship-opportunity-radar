@@ -18,23 +18,6 @@
       ]
     },
     {
-      "id": "43369a788b494255d7dc",
-      "title": "Accelerating cosmological inference using Gaussian Process Regression",
-      "date": "2026-11-18",
-      "time": "11:00",
-      "endTime": "12:30",
-      "venue": "",
-      "speaker": "",
-      "url": "https://www.sinica.edu.tw/calendar_content/57/7641",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-calendar",
-      "sourceName": "中研院近期活動",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
       "id": "cdca7f4bf8ef7cff1981",
       "title": "Language, change, and shamanism: Over four decades of linguistic documentation in Nanwang Puyuma",
       "date": "2026-11-19",
@@ -276,6 +259,23 @@
       ]
     },
     {
+      "id": "4c7d7920566ecdf2a8fa",
+      "title": "Searchable Menus",
+      "date": "2026-12-01",
+      "time": "14:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Frank Yang",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8405",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
       "id": "ac6df17683cb4161c16d",
       "title": "Perfect, already, and the case against iamitives",
       "date": "2026-12-03",
@@ -420,6 +420,27 @@
       ]
     },
     {
+      "id": "cc93e4cabe4ad3be414f",
+      "title": "Who Says What: Strategic Communication in Networks",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.40230",
+      "type": "工作論文",
+      "authors": [
+        "Anuj Bhowmik",
+        "Saptarshi P. Ghosh",
+        "Iman Kundu",
+        "Sandipan Saha"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
       "id": "9c0eaac36a571c331fc5",
       "title": "Who Responds to Intermittent Energy Nudges? Heterogeneity by Socioeconomic Status and Female Education in Armenia",
       "date": "2026-11-16",
@@ -438,6 +459,63 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
+      ]
+    },
+    {
+      "id": "ba7bdb59eb22bdf22e72",
+      "title": "Two-Sided Plausibility Constraints in Persuasion",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.13702",
+      "type": "工作論文",
+      "authors": [
+        "Constantine Sorokin"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "cba1d5e433c597ddc8e6",
+      "title": "Training for Alignment",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.40684",
+      "type": "工作論文",
+      "authors": [
+        "Eric Gao",
+        "Alexander Wolitzky"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "5277a13a8862e8c1ba74",
+      "title": "The Leninist Vanguard's Dilemma: Information and Coordination in Revolutions",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:mib:wpaper:583",
+      "type": "工作論文",
+      "authors": [
+        "Davide Bosco",
+        "Mario Gilli",
+        "Lorenzo Portaluri"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
       ]
     },
     {
@@ -464,6 +542,61 @@
       ]
     },
     {
+      "id": "0c68eca51c9fe22ad57f",
+      "title": "Resource Allocation with Midterm Review",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.15786",
+      "type": "工作論文",
+      "authors": [
+        "Yijun Liu"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "9959dd72f8860a9e76cf",
+      "title": "Recommendations with Costly Verification",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.01195",
+      "type": "工作論文",
+      "authors": [
+        "Ying Gao",
+        "Yingju Ma"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "4e681e33646769d92dd0",
+      "title": "Recommendation Design, Pricing, and Regulation",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:bon:boncrc:crctr224_2025_799",
+      "type": "工作論文",
+      "authors": [
+        "Laurenz Marstaller"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
       "id": "7f2a21950db7f56d86ec",
       "title": "Randomized Experiments with Ambiguous Record Linkage",
       "date": "2026-11-16",
@@ -480,6 +613,60 @@
       ],
       "topics": [
         "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "2bc55f487293ad24a231",
+      "title": "Privacy in Search Markets",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:bon:boncrc:crctr224_2025_798",
+      "type": "工作論文",
+      "authors": [
+        "Laurenz Marstaller"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "5bb3a3706600371cefcf",
+      "title": "Optimality of Separate Selling with Finite-Support Values",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.06101",
+      "type": "工作論文",
+      "authors": [
+        "Sho Mikami"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "1672445b26223530c5b7",
+      "title": "More Goods Means More Commitment",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.18581",
+      "type": "工作論文",
+      "authors": [
+        "Mark Whitmeyer"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
       ]
     },
     {
@@ -560,6 +747,25 @@
       ]
     },
     {
+      "id": "bba514cdf1f83d1c73ec",
+      "title": "Falsification-proof non-market allocation mechanisms",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.18625",
+      "type": "工作論文",
+      "authors": [
+        "Eduardo Perez-Richet",
+        "Vasiliki Skreta"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
       "id": "d0f10e4c7c285c20936c",
       "title": "Experimentally Validated Digital Twins: Evaluating Workforce Training Programs in the Age of Big Data",
       "date": "2026-11-16",
@@ -602,6 +808,24 @@
       ],
       "topics": [
         "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "aea751ec24fb9e240770",
+      "title": "Deterministic Implementation of Mean-Preserving Contractions",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.41284",
+      "type": "工作論文",
+      "authors": [
+        "Junze Sun"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
       ]
     },
     {
@@ -686,6 +910,43 @@
       ]
     },
     {
+      "id": "587d999f93e24ba1e31f",
+      "title": "Contracting for Experimentation with Private Findings",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.01037",
+      "type": "工作論文",
+      "authors": [
+        "Hongcheng Li"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "f23b6a522edf09a26585",
+      "title": "A General Theory of Dynamic Mechanism Design with Endogenous Information and Hidden Actions",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.05692",
+      "type": "工作論文",
+      "authors": [
+        "Guoqiang Tian"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟",
+        "賽局理論"
+      ]
+    },
+    {
       "id": "5ef77ac877efe4d3cb7a",
       "title": "Who Creates Demand? Retail Entry and Distribution Networks",
       "date": "2026-11-09",
@@ -702,7 +963,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a23d0585a82e787e1c4d",
@@ -720,7 +982,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "4e3eeefaa4424f2292c0",
@@ -803,7 +1066,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "d622c29daf4575992662",
@@ -886,7 +1150,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "fe3cd51ccbe5e14fa68a",
@@ -905,7 +1170,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "eb30c66525a1c758aee9",
@@ -923,7 +1189,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "75649ed1147afdae8b08",
@@ -941,7 +1208,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "006860e9067cb06b85a6",
@@ -1001,7 +1269,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "e4e73fefa92e5eaf08ea",
@@ -1020,7 +1289,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "c248486e05d461d3eda8",
@@ -1084,7 +1354,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "92d692760f508751248a",
@@ -1103,7 +1374,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "2a86f81d822ec5ef46d9",
@@ -1122,7 +1394,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "53afd433ac426033836f",
@@ -1189,7 +1462,8 @@
       "topics": [
         "個體經濟",
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a33bbf5116b753921cb6",
@@ -1208,7 +1482,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "63f78ddc10f3bbecdef0",
@@ -2579,7 +2854,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 7,
+      "matches": 8,
       "issues": [],
       "status": "ok"
     },
@@ -2599,7 +2874,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 2,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -2638,7 +2913,7 @@
       "source": "RePEc NEP · Microeconomics",
       "url": "https://nep.repec.org/nep-mic",
       "group": "papers",
-      "examined": 28,
+      "examined": 27,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -2712,6 +2987,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-17T16:39:59.801253Z",
-  "run_id": "44128062581"
+  "last_scan_attempt": "2026-11-18T07:46:12.968238Z",
+  "run_id": "44261246313"
 }
