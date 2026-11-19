@@ -38,7 +38,7 @@
     "timing": "平台刊登到期：2027-01-12；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-13",
     "deadline": "2027-01-12",
@@ -46,7 +46,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -88,7 +88,7 @@
     "timing": "平台刊登到期：2026-12-07；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-08",
     "deadline": "2026-12-07",
@@ -96,7 +96,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -137,7 +137,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-01",
@@ -145,7 +145,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -198,53 +198,6 @@
     "status": "review"
   },
   {
-    "id": "himalayas-7100f2fbccd91d1bb201",
-    "sourceKey": "himalayas:tw",
-    "sourceName": "Himalayas 遠端職缺",
-    "source": "https://himalayas.app/companies/binance/jobs/vip-institution-product-manager-6-months-contract-8250672635",
-    "title": "VIP Institution Product Manager (6 months contract)",
-    "company": "Binance",
-    "location": "Remote — Taiwan",
-    "locationPolicy": "taipei-taiwan-remote-v1",
-    "locationDisposition": "eligible",
-    "locationKey": "remote",
-    "locationReason": "職缺明列台灣或全球全遠端；仍需確認聘僱、時區與學籍資格",
-    "locationEvidence": [
-      "招募地點：Remote — Taiwan",
-      "工作模式：remote"
-    ],
-    "rawLocation": "Remote — Taiwan",
-    "workplaceType": "remote",
-    "jobType": "實習",
-    "track": "industry",
-    "winterStatus": "unknown",
-    "winterYear": 2027,
-    "period": "",
-    "note": "",
-    "applicationUrl": "",
-    "score": 83,
-    "priority": "待查核",
-    "priorityType": "watch",
-    "fit": "實習 · 資料分析、GIS",
-    "skills": [
-      "資料分析",
-      "GIS"
-    ],
-    "timing": "平台刊登到期：2026-11-19；雇主可能已先下架。",
-    "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
-    "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
-    "postedAt": null,
-    "sourceUpdatedAt": "2026-09-20",
-    "deadline": "2026-11-19",
-    "deadlineTime": "",
-    "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
-    "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
-    "status": "review"
-  },
-  {
     "id": "nccu-career-4103",
     "sourceKey": "campus:nccu-career",
     "sourceName": "政大職涯平台｜國內實習職缺",
@@ -281,7 +234,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-03-11",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -289,7 +242,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -328,7 +281,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-03-11",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -336,7 +289,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -376,7 +329,7 @@
     "timing": "平台刊登到期：2026-12-12；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-12",
@@ -384,7 +337,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -422,7 +375,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-01",
@@ -430,7 +383,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -467,7 +420,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-11-05",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -475,7 +428,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -514,7 +467,7 @@
     "timing": "平台刊登到期：2026-12-29；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-29",
@@ -522,7 +475,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -561,7 +514,7 @@
     "timing": "平台刊登到期：2027-01-04；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-05",
     "deadline": "2027-01-04",
@@ -569,7 +522,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -607,7 +560,7 @@
     "timing": "平台刊登到期：2027-01-13；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-14",
     "deadline": "2027-01-13",
@@ -615,7 +568,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-15",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -655,7 +608,7 @@
     "timing": "平台刊登到期：2026-12-04；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-04",
@@ -663,7 +616,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -702,7 +655,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-10-02",
     "deadline": "2026-12-01",
@@ -710,7 +663,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -805,49 +758,6 @@
     "status": "review"
   },
   {
-    "id": "richemont-96obx",
-    "sourceKey": "manual-leads:richemont-winter-2027",
-    "sourceName": "歷峯集團｜人工查核線索",
-    "source": "https://www.104.com.tw/job/96obx",
-    "title": "Cartier Marketing Insight & Client Data Intern",
-    "company": "歷峯集團 Richemont",
-    "location": "台北市松山區",
-    "locationPolicy": "taipei-taiwan-remote-v1",
-    "locationDisposition": "eligible",
-    "locationKey": "taipei",
-    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
-    "locationEvidence": [
-      "招募地點：台北市松山區"
-    ],
-    "rawLocation": "台北市松山區",
-    "workplaceType": "",
-    "jobType": "實習",
-    "track": "industry",
-    "winterStatus": "extends",
-    "winterYear": 2027,
-    "period": "2027/01/04–03/30 · 寒假每週 5 天，學期每週至少 3 天",
-    "note": "行銷 ROI、顧客資料及市場洞察報表。",
-    "applicationUrl": "https://www.104.com.tw/job/96obx",
-    "score": 67,
-    "priority": "待查核",
-    "priorityType": "watch",
-    "fit": "實習 · 相關領域，工作內容請見原公告",
-    "skills": [],
-    "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
-    "eligibility": "時薪 NT$220。資格、名額與投遞狀態見職缺原文。",
-    "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-13",
-    "postedAt": null,
-    "sourceUpdatedAt": "2026-11-13",
-    "deadline": null,
-    "deadlineTime": "",
-    "verificationStatus": "pending",
-    "verificationNote": "11/13 人工核對職缺內容，請點原公告確認仍收件。",
-    "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-13",
-    "status": "review"
-  },
-  {
     "id": "himalayas-70655f51553319048b2d",
     "sourceKey": "himalayas:tw",
     "sourceName": "Himalayas 遠端職缺",
@@ -888,7 +798,7 @@
     "deadline": "2027-02-16",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-13",
     "lastSeen": "2026-11-19",
     "status": "review"
@@ -973,7 +883,7 @@
     "timing": "平台刊登到期：2027-01-12；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-13",
     "deadline": "2027-01-12",
@@ -981,7 +891,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1019,7 +929,7 @@
     "timing": "平台刊登到期：2026-12-05；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-06",
     "deadline": "2026-12-05",
@@ -1027,7 +937,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1065,7 +975,7 @@
     "timing": "平台刊登到期：2026-11-30；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-11-30",
@@ -1073,7 +983,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1111,7 +1021,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-01",
@@ -1119,7 +1029,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1203,7 +1113,7 @@
     "timing": "平台刊登到期：2027-01-14；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-15",
     "deadline": "2027-01-14",
@@ -1211,7 +1121,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-16",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1248,7 +1158,7 @@
     "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-11-05",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1256,52 +1166,7 @@
     "verificationStatus": "pending",
     "verificationNote": "公告同時列出外縣市，請在投遞前核對所選職缺的實際辦公地點。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
-    "status": "review"
-  },
-  {
-    "id": "richemont-968mw",
-    "sourceKey": "manual-leads:richemont-winter-2027",
-    "sourceName": "歷峯集團｜人工查核線索",
-    "source": "https://tanji.104.com.tw/job/dad13170-e358-46cb-8bf1-a88f2db40321",
-    "title": "Roger Dubuis Brand Intern",
-    "company": "歷峯集團 Richemont",
-    "location": "台北市松山區",
-    "locationPolicy": "taipei-taiwan-remote-v1",
-    "locationDisposition": "eligible",
-    "locationKey": "taipei",
-    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
-    "locationEvidence": [
-      "招募地點：台北市松山區"
-    ],
-    "rawLocation": "台北市松山區",
-    "workplaceType": "",
-    "jobType": "實習",
-    "track": "industry",
-    "winterStatus": "extends",
-    "winterYear": 2027,
-    "period": "2027/01/04–03/30 · 寒假每週 5 天，學期每週至少 3 天",
-    "note": "品牌零售營運、合作通路和活動成效報表。",
-    "applicationUrl": "https://www.104.com.tw/job/968mw",
-    "score": 63,
-    "priority": "待查核",
-    "priorityType": "watch",
-    "fit": "實習 · 報表／視覺化",
-    "skills": [
-      "報表／視覺化"
-    ],
-    "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
-    "eligibility": "時薪 NT$220。資格、名額與投遞狀態見職缺原文。",
-    "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-13",
-    "postedAt": null,
-    "sourceUpdatedAt": "2026-11-13",
-    "deadline": null,
-    "deadlineTime": "",
-    "verificationStatus": "pending",
-    "verificationNote": "11/13 人工核對職缺內容，請點原公告確認仍收件。",
-    "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-13",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1336,7 +1201,7 @@
     "timing": "公告截止：2027-01-31。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-11-13",
     "sourceUpdatedAt": null,
     "deadline": "2027-01-31",
@@ -1344,7 +1209,7 @@
     "verificationStatus": "pending",
     "verificationNote": "公告同時列出外縣市，請在投遞前核對所選職缺的實際辦公地點。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1424,7 +1289,7 @@
     "timing": "平台刊登到期：2026-12-24；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-01",
     "deadline": "2026-12-24",
@@ -1432,7 +1297,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1474,7 +1339,7 @@
     "deadline": "2027-01-17",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-13",
     "lastSeen": "2026-11-19",
     "status": "review"
@@ -1511,7 +1376,7 @@
     "timing": "公告截止：2026-12-31。如提前額滿，以原公告為準。",
     "eligibility": "兼任須為在學學生，具統計、數學、資訊背景或修過高等／數理統計等課程，熟悉 R 者佳。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-04-14",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-31",
@@ -1519,7 +1384,7 @@
     "verificationStatus": "pending",
     "verificationNote": "公告有兼任名額。若希望寒假到職，請先詢問起聘時間與每週工時。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1683,7 +1548,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-05-19",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1691,7 +1556,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1726,7 +1591,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-05-19",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1734,7 +1599,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1769,7 +1634,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-05-19",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1777,7 +1642,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1812,7 +1677,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-05-19",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1820,50 +1685,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
-    "status": "review"
-  },
-  {
-    "id": "richemont-968pa",
-    "sourceKey": "manual-leads:richemont-winter-2027",
-    "sourceName": "歷峯集團｜人工查核線索",
-    "source": "https://tanji.104.com.tw/job/7234be6c-b5d7-4719-baf6-13e0034a3aa5",
-    "title": "Vacheron Constantin CRM Intern",
-    "company": "歷峯集團 Richemont",
-    "location": "台北市松山區",
-    "locationPolicy": "taipei-taiwan-remote-v1",
-    "locationDisposition": "eligible",
-    "locationKey": "taipei",
-    "locationReason": "招募地點明列台北；實體或混合辦公皆納入",
-    "locationEvidence": [
-      "招募地點：台北市松山區"
-    ],
-    "rawLocation": "台北市松山區",
-    "workplaceType": "",
-    "jobType": "實習",
-    "track": "industry",
-    "winterStatus": "extends",
-    "winterYear": 2027,
-    "period": "2027/01/04–03/30 · 寒假每週 5 天，學期每週 2–3 天",
-    "note": "CRM 報表、資料品質檢查與客群分析。",
-    "applicationUrl": "https://www.104.com.tw/job/968pa",
-    "score": 59,
-    "priority": "待查核",
-    "priorityType": "watch",
-    "fit": "實習 · 相關領域，工作內容請見原公告",
-    "skills": [],
-    "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
-    "eligibility": "時薪 NT$220。資格、名額與投遞狀態見職缺原文。",
-    "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-13",
-    "postedAt": null,
-    "sourceUpdatedAt": "2026-11-13",
-    "deadline": null,
-    "deadlineTime": "",
-    "verificationStatus": "pending",
-    "verificationNote": "11/13 人工核對職缺內容，請點原公告確認仍收件。",
-    "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-13",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -1941,7 +1763,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-09-09",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1949,7 +1771,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -2027,7 +1849,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": "2026-10-21",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -2035,7 +1857,7 @@
     "verificationStatus": "pending",
     "verificationNote": "近期求才公告未列明截止日或隨到隨審，請確認是否仍收件。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -2073,7 +1895,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-10-02",
     "deadline": "2026-12-01",
@@ -2081,7 +1903,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   },
   {
@@ -2119,7 +1941,7 @@
     "timing": "平台刊登到期：2026-12-01；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-19",
+    "checked": "2026-11-20",
     "postedAt": null,
     "sourceUpdatedAt": "2026-10-02",
     "deadline": "2026-12-01",
@@ -2127,7 +1949,7 @@
     "verificationStatus": "pending",
     "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-19",
+    "lastSeen": "2026-11-20",
     "status": "review"
   }
 ]

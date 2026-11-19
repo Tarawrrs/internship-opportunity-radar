@@ -1,59 +1,6 @@
 {
   "events": [
     {
-      "id": "11843937356d8e89fd1f",
-      "title": "Collaborate or (and) Consolidate? A Network Analysis of R&D and M&A",
-      "date": "2026-11-19",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科402",
-      "speaker": "Chih-Sheng Hsieh",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "個體經濟",
-        "應用個經"
-      ]
-    },
-    {
-      "id": "58bb793ebd34bed34f38",
-      "title": "Credit Supply Chains and Monetary Policy",
-      "date": "2026-11-19",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科302",
-      "speaker": "Cathy Zhang (Purdue University)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "其他學術活動"
-      ]
-    },
-    {
-      "id": "1773d87fbe1609a32c24",
-      "title": "The Power of Zero: The Impact of Free Pricing on Shared Urban Mobility",
-      "date": "2026-11-19",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科604",
-      "speaker": "Chung-Ying Lee (NTU)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "應用個經",
-        "個體經濟"
-      ]
-    },
-    {
       "id": "6719a75478f5f5ef988f",
       "title": "Nonparametric Identification of Treatment Effect with Misclassified and Endogenous Treatment",
       "date": "2026-11-20",
@@ -154,6 +101,40 @@
       "topics": [
         "個體經濟",
         "應用個經"
+      ]
+    },
+    {
+      "id": "a98e937ee12f7089ae8c",
+      "title": "Edutainment, Parental Involvement, and Child Development: Evidence from a Home-Based Intervention",
+      "date": "2026-11-26",
+      "time": "13:30",
+      "endTime": "15:00",
+      "venue": "社科604",
+      "speaker": "Tim Ruberg (U of Tokyo)",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "60c5f4de615fc3e065ff",
+      "title": "Overreaction in Expectations under Signal Extraction: Experimental Evidence",
+      "date": "2026-11-26",
+      "time": "13:30",
+      "endTime": "15:00",
+      "venue": "社科302",
+      "speaker": "Donghoon Yoo (Korea University)",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "其他學術活動"
       ]
     },
     {
@@ -2806,8 +2787,8 @@
       "source": "台大經濟系",
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
-      "examined": 671,
-      "matches": 9,
+      "examined": 670,
+      "matches": 8,
       "issues": [],
       "status": "ok"
     },
@@ -2970,6 +2951,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-19T07:42:11.262620Z",
-  "run_id": "44481406281"
+  "last_scan_attempt": "2026-11-19T16:40:30.731632Z",
+  "run_id": "44568437742"
 }
