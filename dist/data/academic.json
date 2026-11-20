@@ -1,40 +1,6 @@
 {
   "events": [
     {
-      "id": "6719a75478f5f5ef988f",
-      "title": "Nonparametric Identification of Treatment Effect with Misclassified and Endogenous Treatment",
-      "date": "2026-11-20",
-      "time": "12:10",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Mr. Yan-Yu Chiou (邱晏瑜)",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8520",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "19b08c62cfebabc54af6",
-      "title": "Cash Transfers and Dependence in Entrepreneurial Finance",
-      "date": "2026-11-20",
-      "time": "14:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Chi-Yang Tsou (鄒季洋)",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8430",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "其他學術活動"
-      ]
-    },
-    {
       "id": "7cd43f61939c11a07c2e",
       "title": "Applied Economics Workshop – Political Economy, Development, Economic History, Labor Keynote: “Growth at the Resource Frontier”",
       "date": "2026-11-23",
@@ -2818,7 +2784,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 8,
+      "matches": 6,
       "issues": [],
       "status": "ok"
     },
@@ -2951,6 +2917,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-20T07:33:20.440856Z",
-  "run_id": "44695607069"
+  "last_scan_attempt": "2026-11-20T16:40:24.340693Z",
+  "run_id": "44775480517"
 }
