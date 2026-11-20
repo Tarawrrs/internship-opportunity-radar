@@ -2838,7 +2838,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 1,
+      "matches": 0,
       "issues": [],
       "status": "ok"
     },
@@ -2951,6 +2951,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-19T16:40:30.731632Z",
-  "run_id": "44568437742"
+  "last_scan_attempt": "2026-11-20T07:33:20.440856Z",
+  "run_id": "44695607069"
 }
