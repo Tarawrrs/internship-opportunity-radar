@@ -1,16 +1,14 @@
 {
-  "last_scan_attempt": "2026-11-20T16:40:17.255509Z",
-  "last_successful_scan": "2026-11-20T16:40:17.255509Z",
+  "last_scan_attempt": "2026-11-21T07:28:33.184802Z",
+  "last_successful_scan": "2026-11-21T07:28:33.184802Z",
   "interval_days": 1,
   "scan_status": "partial",
   "job_count": 43,
   "review_count": 45,
   "archive_count": 27,
-  "records_examined": 4504,
-  "new_count": 1,
-  "new_ids": [
-    "nccu-career-4381"
-  ],
+  "records_examined": 4495,
+  "new_count": 0,
+  "new_ids": [],
   "recent_ids": [
     "nccu-career-4381",
     "nccu-career-780"
@@ -147,7 +145,7 @@
       "examined": 0,
       "matches": 0,
       "issues": [
-        "HTTPError"
+        "JSONDecodeError"
       ],
       "active": 0,
       "review": 0
@@ -173,7 +171,7 @@
       "examined": 0,
       "matches": 0,
       "issues": [
-        "HTTPError"
+        "JSONDecodeError"
       ],
       "active": 0,
       "review": 0
@@ -207,7 +205,7 @@
       "url": "https://himalayas.app/",
       "status": "ok",
       "examined": 33,
-      "matches": 21,
+      "matches": 22,
       "issues": [],
       "active": 0,
       "review": 24
@@ -228,7 +226,7 @@
       "sourceKey": "greenhouse:point72",
       "url": "https://job-boards.greenhouse.io/point72",
       "status": "ok",
-      "examined": 203,
+      "examined": 202,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -239,7 +237,7 @@
       "sourceKey": "greenhouse:worldquant",
       "url": "https://job-boards.greenhouse.io/worldquant",
       "status": "ok",
-      "examined": 80,
+      "examined": 81,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -250,7 +248,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 345,
+      "examined": 344,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -261,7 +259,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 641,
+      "examined": 633,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -314,6 +312,17 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "44880318538",
+      "event": "schedule",
+      "finished": "2026-11-21T07:28:33.184802Z",
+      "scan_date": "2026-11-21",
+      "examined": 4495,
+      "new": 0,
+      "status": "partial",
+      "academic_status": "ok",
+      "academic_examined": 960
+    },
     {
       "id": "44775480517",
       "event": "repository_dispatch",
@@ -440,41 +449,27 @@
       "status": "ok",
       "academic_status": "ok",
       "academic_examined": 968
-    },
-    {
-      "id": "43616664901",
-      "event": "repository_dispatch",
-      "finished": "2026-11-14T16:39:20.485129Z",
-      "scan_date": "2026-11-15",
-      "examined": 4502,
-      "new": 0,
-      "status": "ok",
-      "timer_run_id": "43464639967",
-      "academic_status": "partial",
-      "academic_examined": 958
     }
   ],
   "run": {
-    "id": "44775480517",
-    "event": "repository_dispatch",
-    "finished": "2026-11-20T16:40:17.255509Z",
+    "id": "44880318538",
+    "event": "schedule",
+    "finished": "2026-11-21T07:28:33.184802Z",
     "scan_date": "2026-11-21",
-    "examined": 4504,
-    "new": 1,
+    "examined": 4495,
+    "new": 0,
     "status": "partial",
-    "timer_run_id": "44568437327",
     "academic_status": "ok",
     "academic_examined": 960
   },
   "last_schedule": {
-    "id": "44775480517",
-    "event": "repository_dispatch",
-    "finished": "2026-11-20T16:40:17.255509Z",
+    "id": "44880318538",
+    "event": "schedule",
+    "finished": "2026-11-21T07:28:33.184802Z",
     "scan_date": "2026-11-21",
-    "examined": 4504,
-    "new": 1,
+    "examined": 4495,
+    "new": 0,
     "status": "partial",
-    "timer_run_id": "44568437327",
     "academic_status": "ok",
     "academic_examined": 960
   }

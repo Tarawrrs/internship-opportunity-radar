@@ -1799,6 +1799,26 @@
       ]
     },
     {
+      "id": "a56be34d4b8bb1737879",
+      "title": "Priority-swapping-proof allocation",
+      "date": "2026-11-01",
+      "dateLabel": "出版月份",
+      "url": "https://doi.org/10.1016/j.jmateco.2026.103329",
+      "type": "期刊紀錄",
+      "authors": [
+        "Xiang Han",
+        "Junxiao Zhang"
+      ],
+      "sourceName": "Journal of Mathematical Economics",
+      "sourceKeys": [
+        "0304-4068"
+      ],
+      "topics": [
+        "數理經濟",
+        "個體經濟"
+      ]
+    },
+    {
       "id": "8045859145ef5020e8a9",
       "title": "The role of vagueness in distributive marking: Evidence from Albanian nga",
       "date": "2026-10-29",
@@ -2384,7 +2404,8 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "95f2ebc70733b14006ae",
@@ -2917,6 +2938,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-20T16:40:24.340693Z",
-  "run_id": "44775480517"
+  "last_scan_attempt": "2026-11-21T07:28:40.533015Z",
+  "run_id": "44880318538"
 }
