@@ -1,6 +1,6 @@
 {
-  "last_scan_attempt": "2026-11-22T07:10:06.305830Z",
-  "last_successful_scan": "2026-11-22T07:10:06.305830Z",
+  "last_scan_attempt": "2026-11-22T16:40:43.866065Z",
+  "last_successful_scan": "2026-11-22T16:40:43.866065Z",
   "interval_days": 1,
   "scan_status": "partial",
   "job_count": 43,
@@ -21,7 +21,7 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2431,
+      "examined": 2428,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -167,12 +167,10 @@
       "source": "Mastercard",
       "sourceKey": "workday:mastercard",
       "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
-      "status": "error",
-      "examined": 0,
+      "status": "ok",
+      "examined": 6,
       "matches": 0,
-      "issues": [
-        "HTTPError"
-      ],
+      "issues": [],
       "active": 0,
       "review": 0
     },
@@ -248,7 +246,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 344,
+      "examined": 343,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -259,7 +257,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 635,
+      "examined": 633,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -312,6 +310,18 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "45045047093",
+      "event": "repository_dispatch",
+      "finished": "2026-11-22T16:40:43.866065Z",
+      "scan_date": "2026-11-23",
+      "examined": 4478,
+      "new": 0,
+      "status": "partial",
+      "timer_run_id": "44925736904",
+      "academic_status": "ok",
+      "academic_examined": 963
+    },
     {
       "id": "44996874964",
       "event": "schedule",
@@ -437,40 +447,30 @@
       "status": "partial",
       "academic_status": "ok",
       "academic_examined": 962
-    },
-    {
-      "id": "43909693035",
-      "event": "repository_dispatch",
-      "finished": "2026-11-16T16:39:23.319162Z",
-      "scan_date": "2026-11-17",
-      "examined": 4377,
-      "new": 0,
-      "status": "partial",
-      "timer_run_id": "43736575241",
-      "academic_status": "ok",
-      "academic_examined": 962
     }
   ],
   "run": {
-    "id": "44996874964",
-    "event": "schedule",
-    "finished": "2026-11-22T07:10:06.305830Z",
-    "scan_date": "2026-11-22",
+    "id": "45045047093",
+    "event": "repository_dispatch",
+    "finished": "2026-11-22T16:40:43.866065Z",
+    "scan_date": "2026-11-23",
     "examined": 4478,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "44925736904",
     "academic_status": "ok",
-    "academic_examined": 959
+    "academic_examined": 963
   },
   "last_schedule": {
-    "id": "44996874964",
-    "event": "schedule",
-    "finished": "2026-11-22T07:10:06.305830Z",
-    "scan_date": "2026-11-22",
+    "id": "45045047093",
+    "event": "repository_dispatch",
+    "finished": "2026-11-22T16:40:43.866065Z",
+    "scan_date": "2026-11-23",
     "examined": 4478,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "44925736904",
     "academic_status": "ok",
-    "academic_examined": 959
+    "academic_examined": 963
   }
 }

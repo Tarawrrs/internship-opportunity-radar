@@ -362,11 +362,13 @@
         "Iman Kundu",
         "Sandipan Saha"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
+        "nep-gth",
         "nep-mic"
       ],
       "topics": [
+        "賽局理論",
         "個體經濟"
       ]
     },
@@ -401,11 +403,13 @@
       "authors": [
         "Constantine Sorokin"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
+        "nep-gth",
         "nep-mic"
       ],
       "topics": [
+        "賽局理論",
         "個體經濟"
       ]
     },
@@ -440,12 +444,34 @@
         "Mario Gilli",
         "Lorenzo Portaluri"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
+        "nep-gth",
         "nep-mic"
       ],
       "topics": [
+        "賽局理論",
         "個體經濟"
+      ]
+    },
+    {
+      "id": "da0ff7363ff666221572",
+      "title": "Stability and Perfection in Constrained Weighted Network Games",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.06775",
+      "type": "工作論文",
+      "authors": [
+        "Julien Fixary",
+        "R\\'emi Castera",
+        "Rida Laraki"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
       ]
     },
     {
@@ -469,6 +495,29 @@
       ],
       "topics": [
         "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "331377bb4dc1bec1b00e",
+      "title": "Simultaneous Gradient Learning in First-Price Auctions",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.38487",
+      "type": "工作論文",
+      "authors": [
+        "Janik B\\\"urgermeister",
+        "Julius Durmann",
+        "Martin Bichler",
+        "Mete \\c{S}eref Ahunbay",
+        "Bary Pradelski",
+        "Marco Scarsini"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
       ]
     },
     {
@@ -564,6 +613,46 @@
       ]
     },
     {
+      "id": "3d5d8db6d7bc10184210",
+      "title": "Popular Admissibility and Parliamentary Stability in sequential Spatial Voting Games",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:crb:wpaper:2026-16",
+      "type": "工作論文",
+      "authors": [
+        "Mostapha Diss",
+        "Salma Larabi",
+        "Zéphirin Nganmeni"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "9ea7ca7c3d875e8feaa6",
+      "title": "Persuasion by Parts",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.02845",
+      "type": "工作論文",
+      "authors": [
+        "Shuyuan Jia",
+        "Kangning Wang",
+        "Renzhe Xu"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "5bb3a3706600371cefcf",
       "title": "Optimality of Separate Selling with Finite-Support Values",
       "date": "2026-11-16",
@@ -582,6 +671,42 @@
       ]
     },
     {
+      "id": "5d925f712aedc2a62987",
+      "title": "Optimal Information Disclosure in Classic Auctions Revisited: Endogenous Information Acquisition and Costly Verification",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.38263",
+      "type": "工作論文",
+      "authors": [
+        "Guoqiang Tian"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "b5f0ad029a05df409069",
+      "title": "Multiplicity and Uniqueness of Stationary Expected Payoffs in Coalitional Bargaining",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.00542",
+      "type": "工作論文",
+      "authors": [
+        "Kirill S. Evdokimov"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "1672445b26223530c5b7",
       "title": "More Goods Means More Commitment",
       "date": "2026-11-16",
@@ -591,11 +716,13 @@
       "authors": [
         "Mark Whitmeyer"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
+        "nep-gth",
         "nep-mic"
       ],
       "topics": [
+        "賽局理論",
         "個體經濟"
       ]
     },
@@ -616,6 +743,25 @@
       ],
       "topics": [
         "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "dcaa9edf78eaeceb6cca",
+      "title": "Mean Field Games of Optimal Trading with an SPDE Model of the Limit Order Book",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.38988",
+      "type": "工作論文",
+      "authors": [
+        "Hanchao Liu",
+        "Dena Firoozi"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
       ]
     },
     {
@@ -780,6 +926,26 @@
       ]
     },
     {
+      "id": "35d8a0f16c00e9e70017",
+      "title": "Design of efficient mechanisms for industrial pollution control",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:gmf:papers:2026-07",
+      "type": "工作論文",
+      "authors": [
+        "Alberto Álvarez-López",
+        "Filipe Martins",
+        "Alberto A. Pinto"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "574dfa5c33051e826ebd",
       "title": "Debiasing Law Enforcement Officers: Evidence from an Expressive Arts Intervention in India",
       "date": "2026-11-16",
@@ -858,6 +1024,25 @@
       ]
     },
     {
+      "id": "ec6f123d8e8be98829bb",
+      "title": "A game-theoretic analysis of the market microstructure in decentralized exchanges with concentrated liquidity",
+      "date": "2026-11-16",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.28863",
+      "type": "工作論文",
+      "authors": [
+        "Mikhail Belokon",
+        "Rostislav Berezovskiy"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "f23b6a522edf09a26585",
       "title": "A General Theory of Dynamic Mechanism Design with Endogenous Information and Hidden Actions",
       "date": "2026-11-16",
@@ -867,13 +1052,14 @@
       "authors": [
         "Guoqiang Tian"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
+        "nep-gth",
         "nep-mic"
       ],
       "topics": [
-        "個體經濟",
-        "賽局理論"
+        "賽局理論",
+        "個體經濟"
       ]
     },
     {
@@ -977,7 +1163,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "b92423f8340c6381253a",
@@ -1101,7 +1288,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "fe3cd51ccbe5e14fa68a",
@@ -1140,7 +1328,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "61d0fb803143e6a6a6c3",
@@ -1159,7 +1348,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "eb30c66525a1c758aee9",
@@ -1177,7 +1367,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "75649ed1147afdae8b08",
@@ -1341,7 +1532,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "266aca9fa5c1a0f1167d",
@@ -1360,7 +1552,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "92d692760f508751248a",
@@ -1379,7 +1572,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "2a86f81d822ec5ef46d9",
@@ -1441,7 +1635,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7f121fb1440e8084fd5c",
@@ -1482,7 +1677,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "8c52bb7eb452d731bae2",
@@ -1543,7 +1739,8 @@
         "賽局理論",
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "467c232cc38e77397832",
@@ -1564,7 +1761,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "006166e1ef2c5e079a48",
@@ -1582,7 +1780,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "4193e6c922d755028f0a",
@@ -1600,7 +1799,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ff39c7c8837f2e339e88",
@@ -3035,7 +3235,7 @@
       "source": "RePEc NEP · Game Theory",
       "url": "https://nep.repec.org/nep-gth",
       "group": "papers",
-      "examined": 21,
+      "examined": 25,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -3119,6 +3319,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-22T07:10:15.195738Z",
-  "run_id": "44996874964"
+  "last_scan_attempt": "2026-11-22T16:40:50.752599Z",
+  "run_id": "45045047093"
 }
