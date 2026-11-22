@@ -959,6 +959,27 @@
       "stale": false
     },
     {
+      "id": "486944d2050bc89279b7",
+      "title": "The Geography of (Concurrent) Block Proposing",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.18812",
+      "type": "工作論文",
+      "authors": [
+        "Ciamac C. Moallemi",
+        "Mallesh M. Pai",
+        "Dan Robinson",
+        "Christoph Schlegel"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "b92423f8340c6381253a",
       "title": "The Conceptual Foundations of Self-Control and its Link to Impulsivity and Attention",
       "date": "2026-11-09",
@@ -1074,14 +1095,13 @@
       "authors": [
         "Haohui Wang"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "個體經濟"
-      ],
-      "stale": false
+        "賽局理論"
+      ]
     },
     {
       "id": "fe3cd51ccbe5e14fa68a",
@@ -1104,6 +1124,44 @@
       "stale": false
     },
     {
+      "id": "25fa49a2f176c340f40a",
+      "title": "Nash Bargaining in Coalitional Games",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:wrk:warwec:1633",
+      "type": "工作論文",
+      "authors": [
+        "Rajiv Vohra",
+        "Debraj Ray"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "61d0fb803143e6a6a6c3",
+      "title": "Multiplicity and Uniqueness of Equilibria in Continuous-Time Dynamic Discrete Games",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.33660",
+      "type": "工作論文",
+      "authors": [
+        "Jason R. Blevins",
+        "Youngjae Jeong"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "eb30c66525a1c758aee9",
       "title": "Information Transmission in Political Factions",
       "date": "2026-11-09",
@@ -1113,14 +1171,13 @@
       "authors": [
         "Francesco Squintani"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "個體經濟"
-      ],
-      "stale": false
+        "賽局理論"
+      ]
     },
     {
       "id": "75649ed1147afdae8b08",
@@ -1278,14 +1335,32 @@
         "Seiya Hirano",
         "Yuta Kittaka"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "個體經濟"
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "266aca9fa5c1a0f1167d",
+      "title": "Conference Design for Consensus under KL Acceptance",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.33555",
+      "type": "工作論文",
+      "authors": [
+        "Liping Tang",
+        "Michiko Ogaku"
       ],
-      "stale": false
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
     },
     {
       "id": "92d692760f508751248a",
@@ -1298,14 +1373,13 @@
         "Germ\\'an Gieczewski",
         "Maria Titova"
       ],
-      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "個體經濟"
-      ],
-      "stale": false
+        "賽局理論"
+      ]
     },
     {
       "id": "2a86f81d822ec5ef46d9",
@@ -1352,6 +1426,24 @@
       "stale": false
     },
     {
+      "id": "2983bc707e3eaf40dff0",
+      "title": "Centripetal Structure in Electoral Competition with Alienation-Based AbstentionAuthor-Name: Aman Ray",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:mad:wpaper:2026-312",
+      "type": "工作論文",
+      "authors": [
+        "Srikanth B. Pai"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
       "id": "7f121fb1440e8084fd5c",
       "title": "Artificial Intelligence and Support for Labor Market Policies: Evidence from a Survey Experiment",
       "date": "2026-11-09",
@@ -1373,6 +1465,24 @@
         "應用個經"
       ],
       "stale": false
+    },
+    {
+      "id": "ccfe097954617a266af4",
+      "title": "Are opposite-order equilibria impossible?Author-Name: Aman Ray",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:mad:wpaper:2026-313",
+      "type": "工作論文",
+      "authors": [
+        "Srikanth B. Pai"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
     },
     {
       "id": "8c52bb7eb452d731bae2",
@@ -1425,15 +1535,72 @@
       "authors": [
         "Lisa Bruttel"
       ],
-      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-exp"
+        "nep-gth"
       ],
       "topics": [
+        "賽局理論",
         "實驗／行為經濟",
         "應用個經"
+      ]
+    },
+    {
+      "id": "467c232cc38e77397832",
+      "title": "A network approach to geopolitics",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ehl:lserod:141793",
+      "type": "工作論文",
+      "authors": [
+        "Liu, Ernest",
+        "Redding, Stephen J.",
+        "Smith-Worthington, Bennett",
+        "Yang, David Y."
       ],
-      "stale": false
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "006166e1ef2c5e079a48",
+      "title": "A metric on solutions of the bargaining problem",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.32877",
+      "type": "工作論文",
+      "authors": [
+        "Stefan Steinerberger"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "4193e6c922d755028f0a",
+      "title": "A Mean Field Model of Consumption Inertia and Keeping Up with the Joneses",
+      "date": "2026-11-09",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.16019",
+      "type": "工作論文",
+      "authors": [
+        "Junkee Jeon"
+      ],
+      "sourceName": "RePEc NEP · Game Theory",
+      "sourceKeys": [
+        "nep-gth"
+      ],
+      "topics": [
+        "賽局理論"
+      ]
     },
     {
       "id": "ff39c7c8837f2e339e88",
@@ -1543,7 +1710,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "cbf9c3fa6bd915ca7179",
@@ -1561,7 +1729,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "43cbb241714f17109575",
@@ -1581,7 +1750,8 @@
       "topics": [
         "賽局理論",
         "數理經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "27d8a9de09b8c6889e00",
@@ -1601,7 +1771,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "40f2b85e834395a33d83",
@@ -1619,7 +1790,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a69ffd2f4fd1cd8ddf52",
@@ -1638,7 +1810,8 @@
       "topics": [
         "賽局理論",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "b20435a887569a1dc52a",
@@ -1657,7 +1830,8 @@
       "topics": [
         "賽局理論",
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "14172218fdc718df95f7",
@@ -1676,7 +1850,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "115467e915d35471719f",
@@ -1696,7 +1871,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a92d5a694debfd51aaf0",
@@ -1715,7 +1891,8 @@
       "topics": [
         "賽局理論",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7521bf7b432e6043425b",
@@ -1736,7 +1913,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "be1e7be7191107c02e67",
@@ -1757,7 +1935,8 @@
       "topics": [
         "賽局理論",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "eddb542168095b7620a3",
@@ -1778,7 +1957,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ff11158aa349590734bc",
@@ -1796,7 +1976,8 @@
       ],
       "topics": [
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a56be34d4b8bb1737879",
@@ -2854,7 +3035,7 @@
       "source": "RePEc NEP · Game Theory",
       "url": "https://nep.repec.org/nep-gth",
       "group": "papers",
-      "examined": 22,
+      "examined": 21,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -2938,6 +3119,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-21T16:40:26.486708Z",
-  "run_id": "44925737733"
+  "last_scan_attempt": "2026-11-22T07:10:15.195738Z",
+  "run_id": "44996874964"
 }
