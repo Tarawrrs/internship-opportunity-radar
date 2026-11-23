@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "id": "7cd43f61939c11a07c2e",
-      "title": "Applied Economics Workshop – Political Economy, Development, Economic History, Labor Keynote: “Growth at the Resource Frontier”",
-      "date": "2026-11-23",
-      "time": "15:00",
-      "endTime": "17:00",
-      "venue": "線上｜活動公告",
-      "speaker": "Noam Yuchtman (London School of Economics and Political Science)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
       "id": "57a0f51a165102bbbcae",
       "title": "Price Feedback and the Memory of Ratings",
       "date": "2026-11-24",
@@ -328,6 +311,561 @@
   ],
   "papers": [
     {
+      "id": "3de19d699cd7f0dbcb52",
+      "title": "Why Do People Migrate Irregularly? Evidence from a Lab-in-the-Field Experiment in West Africa",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:crm:wpaper:26259",
+      "type": "工作論文",
+      "authors": [
+        "Tijan Bah",
+        "Catia Batista"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "9d12e5ed17d11e06fd19",
+      "title": "When are complements and substitutes dual?",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.39844",
+      "type": "工作論文",
+      "authors": [
+        "Philip R. Neary"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "6e074177879da94197cb",
+      "title": "When Is Prosocial Behavior Intuitive? The Moderating Role of Empathic Perspective Taking",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.10155",
+      "type": "工作論文",
+      "authors": [
+        "Enrico D'Ecclesiis",
+        "Francesca Pancotto",
+        "Barbara Luppi",
+        "Simone Righi"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "dc298d5356de3d9b820a",
+      "title": "Transparency in Team Contracts",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.07494",
+      "type": "工作論文",
+      "authors": [
+        "Paul D\\\"utting",
+        "Yingkai Li",
+        "Inbal Talgam-Cohen",
+        "Jinzhao Wu"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "0c0af39c5c4ce895df94",
+      "title": "The Welfare Limits of Market Segmentation with Captive Consumers",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.39139",
+      "type": "工作論文",
+      "authors": [
+        "Irfan Tekdir"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "aae2c6b82723f419d77c",
+      "title": "Strategic Licensing with Retail Competition: an Innovation Theory of Harm",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:col:000092:023652",
+      "type": "工作論文",
+      "authors": [
+        "Kayi Cagatay",
+        "Roig Roig Guillem"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "48e48d70e8d97ed0fc22",
+      "title": "Selling Evidence Bit by Bit",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.30563",
+      "type": "工作論文",
+      "authors": [
+        "Nima Haghpanah",
+        "Xiao Lin",
+        "Ron Siegel"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "6decc60dd1afe1d04f57",
+      "title": "Safe manipulation of tops-only voting rules",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.18282",
+      "type": "工作論文",
+      "authors": [
+        "Toshiya Yoshimura"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "062fe2cc4ec9e3d3e763",
+      "title": "Robust prizes in all-pay contests with loss aversion",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.07419",
+      "type": "工作論文",
+      "authors": [
+        "Dmitry Ryvkin",
+        "Qin Wu"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "741012fdfaf02ab3bd98",
+      "title": "Reverse Gender Bias in Performance Ratings",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ajk:ajkdps:447",
+      "type": "工作論文",
+      "authors": [
+        "Simon Dato",
+        "Svenja Hippel",
+        "Asri Özgümüs"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "44a239cc95fde334d115",
+      "title": "Revenue Guarantee Equivalence between Dominant-Strategy and Bayesian Mechanisms",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.29208",
+      "type": "工作論文",
+      "authors": [
+        "Nir Bachrach",
+        "Yi-Chun Chen",
+        "Inbal Talgam-Cohen",
+        "Xiangqian Yang",
+        "Wanchang Zhang"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "7d6f7687eecf21def484",
+      "title": "Opportunity-sensitive social welfare",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:crm:wpaper:26270",
+      "type": "工作論文",
+      "authors": [
+        "Tim Wienand",
+        "Brice Magdalou",
+        "Richard Nock",
+        "Paul Hufe"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "fa96682c49a8cac5ad48",
+      "title": "Minimax-Optimal Static Estimators Under Interference",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.02048",
+      "type": "工作論文",
+      "authors": [
+        "Arthur Delarue",
+        "Ilan Lobel"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "3985a89cab293e345d6a",
+      "title": "Menu Design Meets Market Design: Strategic Simplicity vs. Choice Complexity",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.17984",
+      "type": "工作論文",
+      "authors": [
+        "Gian Caspari",
+        "Paul Erg\\\"un Hild",
+        "Michael Hilweg-Waldeck",
+        "Manshu Khanna",
+        "Vincent Meisner"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟",
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "5a7d882721443eeb84b3",
+      "title": "Labor Market Returns to Education and Intra-family Educational Inequality: Theory and Experimental Evidence",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.02959",
+      "type": "工作論文",
+      "authors": [
+        "Esther Gehrke",
+        "Michelle Gonz\\'alez Amador"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟",
+        "應用個經"
+      ]
+    },
+    {
+      "id": "9558d0bd6adf0e485621",
+      "title": "Institutional Transmission of Social Preferences",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:sef:csefwp:804",
+      "type": "工作論文",
+      "authors": [
+        "Amalia Di Girolamo",
+        "Michele Giannola",
+        "Julen Zarate-Pina"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "73224e2e8427aa2949d0",
+      "title": "Input Price Discrimination with Advertising",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:koe:wpaper:2615",
+      "type": "工作論文",
+      "authors": [
+        "Qing Hu",
+        "Ryo Masuyama",
+        "Tomomichi Mizuno"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "745d498513af01e42824",
+      "title": "Hypothetical Shocks as Designed Data: What Survey Experiments Can Teach Us about Consumption Behavior",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:sef:csefwp:803",
+      "type": "工作論文",
+      "authors": [
+        "Tullio Jappelli"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "7281c88965418d9a2428",
+      "title": "Extending Mechanisms",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.27839",
+      "type": "工作論文",
+      "authors": [
+        "Sergiu Hart",
+        "Noam Nisan"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "e0c4b1673062a0cf23fc",
+      "title": "Experimentally Validated Digital Twins: Evaluating Workforce Training Programs in the Age of Big Data",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:cen:wpaper:26-69",
+      "type": "工作論文",
+      "authors": [
+        "Raj Chetty",
+        "Jamie Fogel",
+        "Lawrence F. Katz",
+        "Kadeem Noray",
+        "Sonya Porter",
+        "James Reisinger"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "7f31aacd8151f27adf99",
+      "title": "Enforcing Vote-Buying: Experimental Evidence from Angola",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:hic:wpaper:461",
+      "type": "工作論文",
+      "authors": [
+        "Wolfgang Stojetz",
+        "Andrej Smirnov",
+        "Pedro C. Vicente"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "bbcf2e3f7b76fe3eca00",
+      "title": "Disruption in the Classroom: Experimental Evidence from Ecuador",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:crm:wpaper:26268",
+      "type": "工作論文",
+      "authors": [
+        "Pedro Carneiro",
+        "Yyannú Cruz-Aguayo",
+        "Francesca Salvati",
+        "Norbert Schady"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "725ba2fdafeb9b6fd30b",
+      "title": "Designing Public Information for Strategic Advice",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.07744",
+      "type": "工作論文",
+      "authors": [
+        "Vasudha Jain",
+        "Jaideep Roy"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "31e20852e926d64f4c84",
+      "title": "Can AI Chat Replace Traditional Search? Evidence from a RAG-based Live Events Experiment",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.28639",
+      "type": "工作論文",
+      "authors": [
+        "Rakesh Allu",
+        "Evgeny Kagan"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "9e1fb31fab4a8c6ebdf4",
+      "title": "Auction Design with Private Priors and Costly Learning",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.04643",
+      "type": "工作論文",
+      "authors": [
+        "Kemal Ozbek"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟",
+        "賽局理論"
+      ]
+    },
+    {
+      "id": "a6e407839d4ed1f74ead",
+      "title": "Asymmetric Information in Wage Contracts: Experimental Evidence and Welfare Implications",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:crm:wpaper:26272",
+      "type": "工作論文",
+      "authors": [
+        "Daniel Herbst"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟",
+        "應用個經"
+      ]
+    },
+    {
+      "id": "df5f3dc194bd32def7e4",
+      "title": "Artificial Shoppers and Attention Competition",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2611.09399",
+      "type": "工作論文",
+      "authors": [
+        "Xiaomeng Guo",
+        "Fasheng Xu",
+        "Xiaoli Zhang"
+      ],
+      "sourceName": "RePEc NEP · Microeconomics",
+      "sourceKeys": [
+        "nep-mic"
+      ],
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "52cd873eba1a6dd39e6c",
+      "title": "Anytime-Valid Inference in Conjoint Experiments",
+      "date": "2026-11-23",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:arx:papers:2610.28979",
+      "type": "工作論文",
+      "authors": [
+        "Daniel Molitor",
+        "Jennah Gosciak",
+        "Michael Lindon"
+      ],
+      "sourceName": "RePEc NEP · Experimental Economics",
+      "sourceKeys": [
+        "nep-exp"
+      ],
+      "topics": [
+        "實驗／行為經濟"
+      ]
+    },
+    {
       "id": "72e28db2ef29ceb84eb2",
       "title": "Wirkt intensive Beratung nachhaltig? Soziale Ungleichheit im Bildungsweg 4, 5 Jahre nach dem Abitur",
       "date": "2026-11-16",
@@ -347,7 +885,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "cc93e4cabe4ad3be414f",
@@ -364,12 +903,10 @@
       ],
       "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-gth",
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "賽局理論",
-        "個體經濟"
+        "賽局理論"
       ]
     },
     {
@@ -391,7 +928,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ba7bdb59eb22bdf22e72",
@@ -405,12 +943,10 @@
       ],
       "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-gth",
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "賽局理論",
-        "個體經濟"
+        "賽局理論"
       ]
     },
     {
@@ -430,7 +966,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "5277a13a8862e8c1ba74",
@@ -446,12 +983,10 @@
       ],
       "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-gth",
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "賽局理論",
-        "個體經濟"
+        "賽局理論"
       ]
     },
     {
@@ -495,7 +1030,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "331377bb4dc1bec1b00e",
@@ -536,7 +1072,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "9959dd72f8860a9e76cf",
@@ -555,7 +1092,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "4e681e33646769d92dd0",
@@ -573,7 +1111,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7f2a21950db7f56d86ec",
@@ -592,7 +1131,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "2bc55f487293ad24a231",
@@ -610,7 +1150,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "3d5d8db6d7bc10184210",
@@ -668,7 +1209,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "5d925f712aedc2a62987",
@@ -718,12 +1260,10 @@
       ],
       "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-gth",
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
-        "賽局理論",
-        "個體經濟"
+        "賽局理論"
       ]
     },
     {
@@ -743,7 +1283,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "dcaa9edf78eaeceb6cca",
@@ -782,7 +1323,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "32c5a0ac522aa07b8697",
@@ -800,7 +1342,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "115bef4a3b87b0bc9c5f",
@@ -820,7 +1363,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "bba514cdf1f83d1c73ec",
@@ -839,7 +1383,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "d0f10e4c7c285c20936c",
@@ -862,7 +1407,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "b466ac9ce3b9c513b0ba",
@@ -884,7 +1430,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "aea751ec24fb9e240770",
@@ -902,7 +1449,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "4317af8f2070aaaf63ce",
@@ -923,7 +1471,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "35d8a0f16c00e9e70017",
@@ -964,7 +1513,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "dce45fa02e8446fdb9c7",
@@ -984,7 +1534,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "398c29e4974396850420",
@@ -1003,7 +1554,8 @@
       ],
       "topics": [
         "實驗／行為經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "587d999f93e24ba1e31f",
@@ -1021,7 +1573,8 @@
       ],
       "topics": [
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "ec6f123d8e8be98829bb",
@@ -1054,8 +1607,7 @@
       ],
       "sourceName": "RePEc NEP · Game Theory",
       "sourceKeys": [
-        "nep-gth",
-        "nep-mic"
+        "nep-gth"
       ],
       "topics": [
         "賽局理論",
@@ -3156,7 +3708,7 @@
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
       "examined": 670,
-      "matches": 8,
+      "matches": 7,
       "issues": [],
       "status": "ok"
     },
@@ -3225,7 +3777,7 @@
       "source": "RePEc NEP · Experimental Economics",
       "url": "https://nep.repec.org/nep-exp",
       "group": "papers",
-      "examined": 35,
+      "examined": 29,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -3245,7 +3797,7 @@
       "source": "RePEc NEP · Microeconomics",
       "url": "https://nep.repec.org/nep-mic",
       "group": "papers",
-      "examined": 27,
+      "examined": 34,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -3319,6 +3871,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-23T07:56:31.684002Z",
-  "run_id": "45134565897"
+  "last_scan_attempt": "2026-11-23T16:40:25.858921Z",
+  "run_id": "45218972958"
 }
