@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "id": "57a0f51a165102bbbcae",
-      "title": "Price Feedback and the Memory of Ratings",
-      "date": "2026-11-24",
-      "time": "14:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Gunhaeng Lee (李根行)",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8422",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "其他學術活動"
-      ]
-    },
-    {
       "id": "3679faed9c17acc07e4f",
       "title": "Robust Estimation and Inference with Given Marginals",
       "date": "2026-11-25",
@@ -412,6 +395,44 @@
     }
   ],
   "papers": [
+    {
+      "id": "e2105b22543233975e8f",
+      "title": "Who did what to whom? Marking event participants in Lengua de Señas Nicaragüense (LSN)",
+      "date": "2026-11-24",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0097850726000196",
+      "type": "期刊紀錄",
+      "authors": [
+        "Annemarie Kocab",
+        "Jesse Snedeker"
+      ],
+      "sourceName": "Language",
+      "sourceKeys": [
+        "0097-8507"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "9a9148ad08978e912937",
+      "title": "Past and present futurates: the role of tense and modality",
+      "date": "2026-11-24",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101492",
+      "type": "期刊紀錄",
+      "authors": [
+        "Hadil Karawani",
+        "Hedde Zeijlstra"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
     {
       "id": "3de19d699cd7f0dbcb52",
       "title": "Why Do People Migrate Irregularly? Evidence from a Lab-in-the-Field Experiment in West Africa",
@@ -3890,47 +3911,6 @@
       "topics": [
         "應用個經"
       ]
-    },
-    {
-      "id": "1c4ee985764fe78e51c9",
-      "title": "Innovation through Inventor Mobility: Evidence from Noncompete Agreements",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240804",
-      "type": "期刊紀錄",
-      "authors": [
-        "Kate Reinmuth",
-        "Emma Rockall"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "6b3fa2842c55c75c0ede",
-      "title": "From Access to Achievement: The Primary School-Age Impacts of an At-Scale Preschool Construction Program in Highly Deprived Communities",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240364",
-      "type": "期刊紀錄",
-      "authors": [
-        "Marina Bassi",
-        "Bruno Besbas",
-        "Lelys Dinarte-Diaz",
-        "Saravana Ravindran",
-        "Ana Reynoso"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
     }
   ],
   "sources": [
@@ -3969,8 +3949,8 @@
       "source": "中研院經濟所",
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
-      "examined": 30,
-      "matches": 11,
+      "examined": 29,
+      "matches": 10,
       "issues": [],
       "status": "ok"
     },
@@ -4069,8 +4049,8 @@
       "source": "Journal of Linguistics",
       "url": "https://www.cambridge.org/core/journals/journal-of-linguistics",
       "group": "papers",
-      "examined": 6,
-      "matches": 6,
+      "examined": 7,
+      "matches": 7,
       "issues": [],
       "status": "ok"
     },
@@ -4079,8 +4059,8 @@
       "source": "Language",
       "url": "https://www.cambridge.org/core/journals/language",
       "group": "papers",
-      "examined": 1,
-      "matches": 1,
+      "examined": 2,
+      "matches": 2,
       "issues": [],
       "status": "ok"
     },
@@ -4103,6 +4083,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-24T10:09:58.341946Z",
-  "run_id": "45371913259"
+  "last_scan_attempt": "2026-11-24T16:40:58.585411Z",
+  "run_id": "45439706560"
 }
