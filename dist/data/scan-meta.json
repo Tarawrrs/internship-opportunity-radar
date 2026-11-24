@@ -1,22 +1,29 @@
 {
-  "last_scan_attempt": "2026-11-23T16:40:20.435797Z",
-  "last_successful_scan": "2026-11-23T16:40:20.435797Z",
+  "last_scan_attempt": "2026-11-24T10:09:50.704906Z",
+  "last_successful_scan": "2026-11-24T10:09:50.704906Z",
   "interval_days": 1,
   "scan_status": "partial",
-  "job_count": 42,
+  "job_count": 46,
   "review_count": 46,
   "archive_count": 29,
-  "records_examined": 4536,
-  "new_count": 1,
+  "records_examined": 4587,
+  "new_count": 4,
   "new_ids": [
-    "taiwanjobs-14832887"
+    "taiwanjobs-14835337",
+    "sinica-12255",
+    "line-3159",
+    "line-3158"
   ],
   "recent_ids": [
     "nccu-career-4381",
+    "taiwanjobs-14835337",
     "taiwanjobs-14832887",
-    "nccu-career-780"
+    "sinica-12255",
+    "nccu-career-780",
+    "line-3159",
+    "line-3158"
   ],
-  "new_review_count": 1,
+  "new_review_count": 0,
   "location_policy": "taipei-taiwan-remote-v1",
   "sources": [
     {
@@ -24,10 +31,10 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2506,
-      "matches": 1,
+      "examined": 2556,
+      "matches": 2,
       "issues": [],
-      "active": 1,
+      "active": 2,
       "review": 0
     },
     {
@@ -35,10 +42,10 @@
       "sourceKey": "line:taiwan",
       "url": "https://careers.linecorp.com/jobs?ca=All&cp=LINE+Taiwan",
       "status": "ok",
-      "examined": 56,
-      "matches": 8,
+      "examined": 58,
+      "matches": 10,
       "issues": [],
-      "active": 8,
+      "active": 10,
       "review": 0
     },
     {
@@ -57,10 +64,10 @@
       "sourceKey": "sinica:research",
       "url": "https://www.sinica.edu.tw/recruitment/53?Datas_Query.workType=3",
       "status": "ok",
-      "examined": 117,
+      "examined": 118,
       "matches": 12,
       "issues": [],
-      "active": 10,
+      "active": 11,
       "review": 1
     },
     {
@@ -207,8 +214,8 @@
       "sourceKey": "himalayas:tw",
       "url": "https://himalayas.app/",
       "status": "ok",
-      "examined": 33,
-      "matches": 22,
+      "examined": 34,
+      "matches": 23,
       "issues": [],
       "active": 0,
       "review": 25
@@ -218,7 +225,7 @@
       "sourceKey": "greenhouse:appier",
       "url": "https://job-boards.greenhouse.io/appier",
       "status": "ok",
-      "examined": 60,
+      "examined": 59,
       "matches": 3,
       "issues": [],
       "active": 3,
@@ -251,7 +258,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 333,
+      "examined": 337,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -262,7 +269,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 634,
+      "examined": 630,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -284,7 +291,7 @@
       "sourceKey": "lever:shopback-2",
       "url": "https://jobs.lever.co/shopback-2",
       "status": "ok",
-      "examined": 69,
+      "examined": 67,
       "matches": 1,
       "issues": [],
       "active": 1,
@@ -295,7 +302,7 @@
       "sourceKey": "lever:ninjavan",
       "url": "https://jobs.lever.co/ninjavan",
       "status": "ok",
-      "examined": 137,
+      "examined": 139,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -306,7 +313,7 @@
       "sourceKey": "lever:portcast",
       "url": "https://jobs.lever.co/portcast",
       "status": "ok",
-      "examined": 9,
+      "examined": 7,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -315,6 +322,17 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "45371913259",
+      "event": "schedule",
+      "finished": "2026-11-24T10:09:50.704906Z",
+      "scan_date": "2026-11-24",
+      "examined": 4587,
+      "new": 4,
+      "status": "partial",
+      "academic_status": "ok",
+      "academic_examined": 958
+    },
     {
       "id": "45218972958",
       "event": "repository_dispatch",
@@ -441,41 +459,28 @@
       "timer_run_id": "44128060386",
       "academic_status": "partial",
       "academic_examined": 265
-    },
-    {
-      "id": "44261246313",
-      "event": "schedule",
-      "finished": "2026-11-18T07:46:03.280513Z",
-      "scan_date": "2026-11-18",
-      "examined": 4472,
-      "new": 1,
-      "status": "partial",
-      "academic_status": "ok",
-      "academic_examined": 961
     }
   ],
   "run": {
-    "id": "45218972958",
-    "event": "repository_dispatch",
-    "finished": "2026-11-23T16:40:20.435797Z",
+    "id": "45371913259",
+    "event": "schedule",
+    "finished": "2026-11-24T10:09:50.704906Z",
     "scan_date": "2026-11-24",
-    "examined": 4536,
-    "new": 1,
+    "examined": 4587,
+    "new": 4,
     "status": "partial",
-    "timer_run_id": "45045043733",
     "academic_status": "ok",
-    "academic_examined": 964
+    "academic_examined": 958
   },
   "last_schedule": {
-    "id": "45218972958",
-    "event": "repository_dispatch",
-    "finished": "2026-11-23T16:40:20.435797Z",
+    "id": "45371913259",
+    "event": "schedule",
+    "finished": "2026-11-24T10:09:50.704906Z",
     "scan_date": "2026-11-24",
-    "examined": 4536,
-    "new": 1,
+    "examined": 4587,
+    "new": 4,
     "status": "partial",
-    "timer_run_id": "45045043733",
     "academic_status": "ok",
-    "academic_examined": 964
+    "academic_examined": 958
   }
 }

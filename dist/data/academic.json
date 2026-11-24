@@ -223,6 +223,40 @@
       ]
     },
     {
+      "id": "52c9facbf8b45b9ba23a",
+      "title": "Consistent Moment Selection Procedures for Many Moments",
+      "date": "2026-12-07",
+      "time": "10:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Xuetao Shi (施學韜)",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8357",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
+      "id": "a95ef3a662f16badadb9",
+      "title": "Platforms for Growth: Multinationals, Trade, and Technology Diffusion",
+      "date": "2026-12-08",
+      "time": "14:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Nghiêm Q. Huỳnh",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8427",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
       "id": "6079f3ae32aa35840f68",
       "title": "Modality for cross-linguistic use",
       "date": "2026-12-08",
@@ -257,6 +291,23 @@
       ]
     },
     {
+      "id": "41cbb5d4a4d65dfb2b64",
+      "title": "Characteristics Design: A Hedonic Approach to Optimal Product Differentiation",
+      "date": "2026-12-09",
+      "time": "14:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Masaki Miyashita",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8518",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
       "id": "abebbb939cf6ee0cf8a2",
       "title": "Oceanic clausal morphosyntax: a diachronic endpoint or evidence of processes of change?",
       "date": "2026-12-10",
@@ -271,6 +322,57 @@
       "sourceName": "中研院語言所",
       "topics": [
         "語言學"
+      ]
+    },
+    {
+      "id": "240a661b22480b654086",
+      "title": "Information Design in Supermodular Games",
+      "date": "2026-12-10",
+      "time": "10:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Yi-Chun Chen (陳逸羣)",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8555",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "9e218732edaa1df60b4b",
+      "title": "清代珠江流域的糧價結構：數據可信度與市場整合度分析，1737-1911",
+      "date": "2026-12-10",
+      "time": "13:30",
+      "endTime": "15:00",
+      "venue": "社科604",
+      "speaker": "賴建誠、高志祥 (NTHU)",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
+      "id": "a3fb6970172c5cb1fcb0",
+      "title": "Finance Gets Personal: The Lasting Effects of Idiosyncratic Crisis Experiences on Investment Behavior",
+      "date": "2026-12-10",
+      "time": "14:30",
+      "endTime": "",
+      "venue": "Conference Room B110",
+      "speaker": "Professor Danielle Zhang",
+      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8521",
+      "type": "演講／研討會",
+      "institution": "中研院",
+      "sourceKey": "sinica-econ-seminars",
+      "sourceName": "中研院經濟所",
+      "topics": [
+        "其他學術活動"
       ]
     },
     {
@@ -2446,6 +2548,68 @@
       ]
     },
     {
+      "id": "56652cbb25eabd71e0d8",
+      "title": "What Can (and Cannot) Be Learned about Systemic Racial Discrimination from Randomized Controlled Trials?",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:35882",
+      "type": "工作論文",
+      "authors": [
+        "Dania V. Francis",
+        "Rob Gillezeau",
+        "Damon Jones",
+        "Angelino C. G. Viceisza"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經",
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "3a6755e3e5dc78f7c436",
+      "title": "The Returns to Temporary Migration: Experimental Evidence from the H-2A Program",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:35941",
+      "type": "工作論文",
+      "authors": [
+        "Melanie Morten",
+        "Beatriz Magaloni",
+        "Sebastián Cubillos",
+        "Alice Yiqian Wang"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "e6624b9786afae89d329",
+      "title": "The Geography of Job Search, Social Networks and Match Quality",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:bie:wpaper:771",
+      "type": "工作論文",
+      "authors": [
+        "Belete, Asimamaw",
+        "Zaharieva, Anna"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
       "id": "2a4c1cdbdcd2290bfe8c",
       "title": "Strategic Complementarity and Persistence in Linear-Quadratic Mean Field Games",
       "date": "2026-11-02",
@@ -2464,6 +2628,29 @@
         "賽局理論"
       ],
       "stale": false
+    },
+    {
+      "id": "2d0996490480b406e37e",
+      "title": "Skill Certifications and Migrant Labor Market Integration: Experimental Evidence from Colombia",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:idb:brikps:14806",
+      "type": "工作論文",
+      "authors": [
+        "Busso, Matías",
+        "González-Velosa, Carolina",
+        "Muñoz-Morales, Juan S.",
+        "Ruiz, Juanita",
+        "Valencia Romero, Juan Diego",
+        "van der Werf, Cynthia"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
     },
     {
       "id": "cbf9c3fa6bd915ca7179",
@@ -2606,6 +2793,111 @@
       "stale": false
     },
     {
+      "id": "f0edd37cdfeec563a3b3",
+      "title": "Job Seekersâ€™ Beliefs and Preferences over Wages and Benefits: Experimental Evidence from Online Job Boards",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:iza:izadps:dp18992",
+      "type": "工作論文",
+      "authors": [
+        "Beerli, Andreas",
+        "Fiorin, Stefano",
+        "Gulyas, Andreas",
+        "Kopp, Daniel",
+        "Khoshnama, Mahsa",
+        "Siegenthaler, Michael"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "e9ac5741a044d18b3576",
+      "title": "Immigrant Earnings and Labour-Market Positioning in a Transforming Digital Labour Market: Evidence from Canada, 1971â€“2021",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:iza:izadps:dp19008",
+      "type": "工作論文",
+      "authors": [
+        "Doganay, Husame",
+        "Fang, Tony",
+        "Liu, Xingfei",
+        "Ranjb, Saba",
+        "Sweetman, Arthur"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "c59726bc2a446da306e1",
+      "title": "Gender Gaps: International Evidence on the Role of Family Policy",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:nbr:nberwo:35939",
+      "type": "工作論文",
+      "authors": [
+        "Francine D. Blau",
+        "Lawrence Kahn",
+        "Freddy Bachmann",
+        "Helen Burkhardt",
+        "Leonardo Peñaloza-Pacheco",
+        "David Titus"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "4b62527f6373b7ba2845",
+      "title": "Gender Differences in the Genetics of Skill Formation",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ces:ceswps:_13078",
+      "type": "工作論文",
+      "authors": [
+        "Mikkel Aagaard Houmark",
+        "Victor Ronda"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "78807123416b6dc2e431",
+      "title": "Friends in Low Places: Network Capital and the Scarring of Labor Markets",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:tcd:tcduee:tep2626",
+      "type": "工作論文",
+      "authors": [
+        "Joseph Kopecky"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
       "id": "115467e915d35471719f",
       "title": "Extremal Perfect Monotone Equilibria in Bayesian Games with Strategic Complementarities",
       "date": "2026-11-02",
@@ -2625,6 +2917,50 @@
         "賽局理論"
       ],
       "stale": false
+    },
+    {
+      "id": "a5b9ece2656e0c830561",
+      "title": "Does Limiting Temporary Work Improve Employment Stability? Evidence for Young Workers in Spain",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:iza:izadps:dp18988",
+      "type": "工作論文",
+      "authors": [
+        "Felgueroso, Florentino",
+        "García-Pérez, José Ignacio",
+        "Jansen, Marcel",
+        "Jiménez-Martín, Sergi",
+        "Pérez-Gutiérrez, Daniel"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "953b875aa48e1f9d5f39",
+      "title": "Deliver Us from Crime? Gig Jobs, Labor-Market Opportunities, and Offending",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:iza:izadps:dp19006",
+      "type": "工作論文",
+      "authors": [
+        "Allouard, Hugo",
+        "Cecere, Grazia",
+        "De Sousa, Jose",
+        "Marie, Olivier",
+        "Picard, Ines"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
     },
     {
       "id": "a92d5a694debfd51aaf0",
@@ -2691,6 +3027,67 @@
       "stale": false
     },
     {
+      "id": "b7bfe2183152ca1c622e",
+      "title": "Biased Beliefs, Job Search, and Welfare: A Structural Analysis of Coaching and Counseling",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ces:ceswps:_13090",
+      "type": "工作論文",
+      "authors": [
+        "Patrick Arni",
+        "Bart Cockx",
+        "Andrey Launov"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經",
+        "實驗／行為經濟"
+      ]
+    },
+    {
+      "id": "b5cef570ca5236c633e7",
+      "title": "Amenities and wages over the business cycle: Dynamics and gender implications",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:zbw:iwqwdp:344227",
+      "type": "工作論文",
+      "authors": [
+        "Lochner, Benjamin",
+        "Merkl, Christian"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
+      "id": "d5228f281b59d93003b9",
+      "title": "A new model of parental time investments: a paradigm shift for addressing gender inequality in the labor market",
+      "date": "2026-11-02",
+      "dateLabel": "選刊日期",
+      "url": "https://econpapers.repec.org/RePEc:ehl:lserod:141519",
+      "type": "工作論文",
+      "authors": [
+        "Cuevas Ruiz, Pilar",
+        "Gimenez-Nadal, Jose Ignacio",
+        "Manfredi, Sveva",
+        "Sevilla Sanz, Maria Almudena"
+      ],
+      "sourceName": "RePEc NEP · Labor Economics",
+      "sourceKeys": [
+        "nep-lab"
+      ],
+      "topics": [
+        "應用個經"
+      ]
+    },
+    {
       "id": "eddb542168095b7620a3",
       "title": "A Network Approach to Geopolitics",
       "date": "2026-11-02",
@@ -2732,6 +3129,44 @@
       "stale": false
     },
     {
+      "id": "f7d153aa62c4e042726e",
+      "title": "Type-anonymity and strategy-proofness in a domain of single-peaked and single-dipped preferences",
+      "date": "2026-11-01",
+      "dateLabel": "出版月份",
+      "url": "https://doi.org/10.1016/j.jmateco.2026.103327",
+      "type": "期刊紀錄",
+      "authors": [
+        "Oihane Gallo"
+      ],
+      "sourceName": "Journal of Mathematical Economics",
+      "sourceKeys": [
+        "0304-4068"
+      ],
+      "topics": [
+        "數理經濟",
+        "個體經濟"
+      ]
+    },
+    {
+      "id": "3fa35e0a6c51725d64b8",
+      "title": "Subjective timing of information arrival",
+      "date": "2026-11-01",
+      "dateLabel": "出版月份",
+      "url": "https://doi.org/10.1016/j.jmateco.2026.103330",
+      "type": "期刊紀錄",
+      "authors": [
+        "Daniele Pennesi"
+      ],
+      "sourceName": "Journal of Mathematical Economics",
+      "sourceKeys": [
+        "0304-4068"
+      ],
+      "topics": [
+        "數理經濟",
+        "個體經濟"
+      ]
+    },
+    {
       "id": "a56be34d4b8bb1737879",
       "title": "Priority-swapping-proof allocation",
       "date": "2026-11-01",
@@ -2749,6 +3184,29 @@
       "topics": [
         "數理經濟",
         "個體經濟"
+      ]
+    },
+    {
+      "id": "5983d41ceffa80c9e498",
+      "title": "Mechanism design in max-flows with private capacities",
+      "date": "2026-11-01",
+      "dateLabel": "出版月份",
+      "url": "https://doi.org/10.1016/j.jmateco.2026.103328",
+      "type": "期刊紀錄",
+      "authors": [
+        "Shengyuan Huang",
+        "Wenjun Mei",
+        "Xiaoguang Yang",
+        "Cao Zhigang"
+      ],
+      "sourceName": "Journal of Mathematical Economics",
+      "sourceKeys": [
+        "0304-4068"
+      ],
+      "topics": [
+        "數理經濟",
+        "個體經濟",
+        "賽局理論"
       ]
     },
     {
@@ -2817,7 +3275,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "af3560ab94b326b4720f",
@@ -2836,7 +3295,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "506e2babbe6ec9c69bff",
@@ -2856,7 +3316,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "fe2353685b32ba4ec50c",
@@ -2875,7 +3336,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "7e0e1a64fc27261f4dcd",
@@ -2897,7 +3359,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "c17602b7c29565d773c9",
@@ -2918,7 +3381,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "c8ac8f7eff0785f65173",
@@ -2938,7 +3402,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "364fb0820a747623c97f",
@@ -2956,7 +3421,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "f457c25377bc847e5013",
@@ -2977,7 +3443,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "24a6d5a4cb938fae80fb",
@@ -2997,7 +3464,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "5697ed48f875016c3d3c",
@@ -3017,7 +3485,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "1b1a6724cbfed07664cb",
@@ -3037,7 +3506,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "86d15a54a67d95336a71",
@@ -3076,7 +3546,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "c86ef11cd48c8989aee2",
@@ -3098,7 +3569,8 @@
       ],
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "09236c7d741b93bac594",
@@ -3397,7 +3869,8 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "b4e506b1290a08ee8de4",
@@ -3458,247 +3931,6 @@
       "topics": [
         "應用個經"
       ]
-    },
-    {
-      "id": "58297ef9cd787b8b4e0e",
-      "title": "Equal treatment and its market design implications",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103286",
-      "type": "期刊紀錄",
-      "authors": [
-        "Kenzo Imamura",
-        "Kentaro Tomoeda"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ]
-    },
-    {
-      "id": "8b354ab95ca416ea396b",
-      "title": "Do Workfare Programs Live Up to Their Promises? Experimental Evidence from Côte d'Ivoire",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240586",
-      "type": "期刊紀錄",
-      "authors": [
-        "Marianne Bertrand",
-        "Bruno Crépon",
-        "Alicia Marguerie",
-        "Patrick Premand"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "11501850bd27bbe0c4bd",
-      "title": "Disastrous Displacement: The Long-Run Impacts of Landslides",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240759",
-      "type": "期刊紀錄",
-      "authors": [
-        "Travis Baseler",
-        "Jakob Hennig"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "9d50dd11b998237d517a",
-      "title": "Detection of Collusive Networks in Multistage Auctions",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240232",
-      "type": "期刊紀錄",
-      "authors": [
-        "Bruno Baránek",
-        "Leon Musolff",
-        "Vítězslav Titl"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經",
-        "賽局理論"
-      ]
-    },
-    {
-      "id": "879fbc6b0b4126f228d2",
-      "title": "Deadwood Labor? The Effects of Eliminating Employment Protection for Older Workers",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20250414",
-      "type": "期刊紀錄",
-      "authors": [
-        "Emmanuel Saez",
-        "Benjamin Schoefer",
-        "David Seim"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "7f26253c4c94aa0b40b2",
-      "title": "Comparative statics of Nash bargaining solution: Equality and insensitivity biases",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103291",
-      "type": "期刊紀錄",
-      "authors": [
-        "Yoshio Kamijo",
-        "Koji Yokote"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟",
-        "賽局理論"
-      ]
-    },
-    {
-      "id": "e01ae3a0f4713915d516",
-      "title": "Climate change and complexity: Accounting for singularities in environmental dynamics",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103274",
-      "type": "期刊紀錄",
-      "authors": [
-        "Davide La Torre",
-        "Simone Marsiglio",
-        "Franklin Mendivil",
-        "Fabio Privileggi"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ]
-    },
-    {
-      "id": "677dc6748a80c9460578",
-      "title": "Balancing Acts",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103273",
-      "type": "期刊紀錄",
-      "authors": [
-        "Berend Roorda",
-        "Reinoud Joosten"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ]
-    },
-    {
-      "id": "40034c7598091c0b1191",
-      "title": "All Roads Lead to Rome: Global Air Connectivity and Bilateral Trade",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240370",
-      "type": "期刊紀錄",
-      "authors": [
-        "Zheng Wang",
-        "Feicheng Wang",
-        "Zhuo Zhou"
-      ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "aa8f82d64caa5002325b",
-      "title": "Teun A. Van Dijk. Discourse and Ideologies of the Radical Right. Cambridge: Cambridge University Press, 2024. 94 pp.",
-      "date": "2026-09-25",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1017/s0022226726101352",
-      "type": "期刊紀錄",
-      "authors": [
-        "Siyi Zhou",
-        "Lei Li",
-        "Yumei Liu"
-      ],
-      "sourceName": "Journal of Linguistics",
-      "sourceKeys": [
-        "0022-2267"
-      ],
-      "topics": [
-        "語言學"
-      ]
-    },
-    {
-      "id": "a010718e12058732bb36",
-      "title": "Control of clitics in Greek tough -constructions",
-      "date": "2026-09-24",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1017/s0022226726101315",
-      "type": "期刊紀錄",
-      "authors": [
-        "Leonardo Russo Cardona",
-        "Ioanna Sitaridou"
-      ],
-      "sourceName": "Journal of Linguistics",
-      "sourceKeys": [
-        "0022-2267"
-      ],
-      "topics": [
-        "語言學"
-      ]
-    },
-    {
-      "id": "19e05f07d0de012dea61",
-      "title": "Anastasia Giannakidou and Alda Mari, Modal sentences (Key Topics in Semantics and Pragmatics). Cambridge: Cambridge University Press, 2026. Pp. xiv + 332.",
-      "date": "2026-09-23",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1017/s0022226726101364",
-      "type": "期刊紀錄",
-      "authors": [
-        "Qijun Xiang"
-      ],
-      "sourceName": "Journal of Linguistics",
-      "sourceKeys": [
-        "0022-2267"
-      ],
-      "topics": [
-        "語言學"
-      ]
     }
   ],
   "sources": [
@@ -3708,7 +3940,7 @@
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
       "examined": 670,
-      "matches": 7,
+      "matches": 8,
       "issues": [],
       "status": "ok"
     },
@@ -3738,7 +3970,7 @@
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
       "examined": 30,
-      "matches": 6,
+      "matches": 11,
       "issues": [],
       "status": "ok"
     },
@@ -3758,7 +3990,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 0,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -3807,7 +4039,7 @@
       "source": "RePEc NEP · Labor Economics",
       "url": "https://nep.repec.org/nep-lab",
       "group": "papers",
-      "examined": 24,
+      "examined": 18,
       "matches": 14,
       "issues": [],
       "status": "ok"
@@ -3818,7 +4050,7 @@
       "url": "https://www.sciencedirect.com/journal/journal-of-mathematical-economics",
       "group": "papers",
       "examined": 12,
-      "matches": 11,
+      "matches": 12,
       "issues": [],
       "status": "ok"
     },
@@ -3871,6 +4103,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-23T16:40:25.858921Z",
-  "run_id": "45218972958"
+  "last_scan_attempt": "2026-11-24T10:09:58.341946Z",
+  "run_id": "45371913259"
 }
