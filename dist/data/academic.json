@@ -223,6 +223,23 @@
       ]
     },
     {
+      "id": "e5f2da143295ded871fb",
+      "title": "No-Regret Forecasting with Egalitarian Committees",
+      "date": "2026-12-07",
+      "time": "13:30",
+      "endTime": "14:30",
+      "venue": "社科609",
+      "speaker": "Jiun-Hua Su",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
       "id": "a95ef3a662f16badadb9",
       "title": "Platforms for Growth: Multinationals, Trade, and Technology Diffusion",
       "date": "2026-12-08",
@@ -374,6 +391,23 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
+      ]
+    },
+    {
+      "id": "d799454f95563727eafd",
+      "title": "Experimental studies of Tagalog child language: Relative clauses and wh- questions",
+      "date": "2026-12-18",
+      "time": "10:30",
+      "endTime": "12:00",
+      "venue": "519會議室",
+      "speaker": "田中望（Nozomi TANAKA）",
+      "url": "https://www.ling.sinica.edu.tw/main/zh-tw?/sign/tagalog",
+      "type": "演講",
+      "institution": "中研院",
+      "sourceKey": "sinica-ling-seminars",
+      "sourceName": "中研院語言所",
+      "topics": [
+        "語言學"
       ]
     },
     {
@@ -3205,7 +3239,8 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "5983d41ceffa80c9e498",
@@ -3890,8 +3925,7 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ],
-      "stale": false
+      ]
     },
     {
       "id": "b4e506b1290a08ee8de4",
@@ -3919,8 +3953,8 @@
       "source": "台大經濟系",
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
-      "examined": 670,
-      "matches": 8,
+      "examined": 671,
+      "matches": 9,
       "issues": [],
       "status": "ok"
     },
@@ -3959,8 +3993,8 @@
       "source": "中研院語言所",
       "url": "https://www.ling.sinica.edu.tw/main/zh-tw",
       "group": "events",
-      "examined": 4,
-      "matches": 4,
+      "examined": 5,
+      "matches": 5,
       "issues": [],
       "status": "ok"
     },
@@ -3970,7 +4004,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 1,
+      "matches": 0,
       "issues": [],
       "status": "ok"
     },
@@ -4083,6 +4117,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-24T16:40:58.585411Z",
-  "run_id": "45439706560"
+  "last_scan_attempt": "2026-11-25T08:55:24.485288Z",
+  "run_id": "45580309041"
 }
