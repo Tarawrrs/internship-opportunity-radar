@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "id": "3679faed9c17acc07e4f",
-      "title": "Robust Estimation and Inference with Given Marginals",
-      "date": "2026-11-25",
-      "time": "10:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Dr. Grigory Franguridi",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8537",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
       "id": "c83dc79f7fcf2c151b95",
       "title": "Economies of Scope from Shared Inputs",
       "date": "2026-11-26",
@@ -3983,8 +3966,8 @@
       "source": "中研院經濟所",
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
-      "examined": 29,
-      "matches": 10,
+      "examined": 28,
+      "matches": 9,
       "issues": [],
       "status": "ok"
     },
@@ -4004,7 +3987,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 0,
+      "matches": 1,
       "issues": [],
       "status": "ok"
     },
@@ -4117,6 +4100,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-25T08:55:24.485288Z",
-  "run_id": "45580309041"
+  "last_scan_attempt": "2026-11-25T16:41:26.593311Z",
+  "run_id": "45656332662"
 }
