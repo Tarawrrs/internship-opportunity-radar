@@ -1,12 +1,12 @@
 {
-  "last_scan_attempt": "2026-11-26T08:40:50.656956Z",
-  "last_successful_scan": "2026-11-26T08:40:50.656956Z",
+  "last_scan_attempt": "2026-11-26T16:41:14.854448Z",
+  "last_successful_scan": "2026-11-26T16:41:14.854448Z",
   "interval_days": 1,
   "scan_status": "partial",
   "job_count": 45,
-  "review_count": 44,
-  "archive_count": 33,
-  "records_examined": 4551,
+  "review_count": 39,
+  "archive_count": 38,
+  "records_examined": 4516,
   "new_count": 0,
   "new_ids": [],
   "recent_ids": [
@@ -26,7 +26,7 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2526,
+      "examined": 2493,
       "matches": 2,
       "issues": [],
       "active": 2,
@@ -37,7 +37,7 @@
       "sourceKey": "line:taiwan",
       "url": "https://careers.linecorp.com/jobs?ca=All&cp=LINE+Taiwan",
       "status": "ok",
-      "examined": 57,
+      "examined": 58,
       "matches": 10,
       "issues": [],
       "active": 10,
@@ -59,7 +59,7 @@
       "sourceKey": "sinica:research",
       "url": "https://www.sinica.edu.tw/recruitment/53?Datas_Query.workType=3",
       "status": "ok",
-      "examined": 117,
+      "examined": 118,
       "matches": 11,
       "issues": [],
       "active": 10,
@@ -85,7 +85,7 @@
       "matches": 0,
       "issues": [],
       "active": 0,
-      "review": 4
+      "review": 3
     },
     {
       "source": "台大職涯中心｜實習公告",
@@ -140,7 +140,7 @@
       "matches": 0,
       "issues": [],
       "active": 0,
-      "review": 1
+      "review": 0
     },
     {
       "source": "星展銀行",
@@ -166,18 +166,16 @@
         "HTTPError"
       ],
       "active": 0,
-      "review": 1
+      "review": 0
     },
     {
       "source": "Mastercard",
       "sourceKey": "workday:mastercard",
       "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",
-      "status": "error",
-      "examined": 0,
+      "status": "ok",
+      "examined": 4,
       "matches": 0,
-      "issues": [
-        "HTTPError"
-      ],
+      "issues": [],
       "active": 0,
       "review": 0
     },
@@ -209,11 +207,11 @@
       "sourceKey": "himalayas:tw",
       "url": "https://himalayas.app/",
       "status": "ok",
-      "examined": 33,
-      "matches": 22,
+      "examined": 32,
+      "matches": 21,
       "issues": [],
       "active": 0,
-      "review": 25
+      "review": 23
     },
     {
       "source": "Appier",
@@ -242,7 +240,7 @@
       "sourceKey": "greenhouse:worldquant",
       "url": "https://job-boards.greenhouse.io/worldquant",
       "status": "ok",
-      "examined": 79,
+      "examined": 78,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -253,7 +251,7 @@
       "sourceKey": "greenhouse:agoda",
       "url": "https://job-boards.greenhouse.io/agoda",
       "status": "ok",
-      "examined": 336,
+      "examined": 331,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -297,7 +295,7 @@
       "sourceKey": "lever:ninjavan",
       "url": "https://jobs.lever.co/ninjavan",
       "status": "ok",
-      "examined": 138,
+      "examined": 137,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -317,6 +315,18 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "45860852260",
+      "event": "repository_dispatch",
+      "finished": "2026-11-26T16:41:14.854448Z",
+      "scan_date": "2026-11-27",
+      "examined": 4516,
+      "new": 0,
+      "status": "partial",
+      "timer_run_id": "45656321553",
+      "academic_status": "ok",
+      "academic_examined": 962
+    },
     {
       "id": "45784998883",
       "event": "schedule",
@@ -442,40 +452,30 @@
       "status": "partial",
       "academic_status": "ok",
       "academic_examined": 960
-    },
-    {
-      "id": "44775480517",
-      "event": "repository_dispatch",
-      "finished": "2026-11-20T16:40:17.255509Z",
-      "scan_date": "2026-11-21",
-      "examined": 4504,
-      "new": 1,
-      "status": "partial",
-      "timer_run_id": "44568437327",
-      "academic_status": "ok",
-      "academic_examined": 960
     }
   ],
   "run": {
-    "id": "45784998883",
-    "event": "schedule",
-    "finished": "2026-11-26T08:40:50.656956Z",
-    "scan_date": "2026-11-26",
-    "examined": 4551,
+    "id": "45860852260",
+    "event": "repository_dispatch",
+    "finished": "2026-11-26T16:41:14.854448Z",
+    "scan_date": "2026-11-27",
+    "examined": 4516,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "45656321553",
     "academic_status": "ok",
-    "academic_examined": 961
+    "academic_examined": 962
   },
   "last_schedule": {
-    "id": "45784998883",
-    "event": "schedule",
-    "finished": "2026-11-26T08:40:50.656956Z",
-    "scan_date": "2026-11-26",
-    "examined": 4551,
+    "id": "45860852260",
+    "event": "repository_dispatch",
+    "finished": "2026-11-26T16:41:14.854448Z",
+    "scan_date": "2026-11-27",
+    "examined": 4516,
     "new": 0,
     "status": "partial",
+    "timer_run_id": "45656321553",
     "academic_status": "ok",
-    "academic_examined": 961
+    "academic_examined": 962
   }
 }

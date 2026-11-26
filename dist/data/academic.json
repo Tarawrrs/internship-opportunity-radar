@@ -1,92 +1,6 @@
 {
   "events": [
     {
-      "id": "c83dc79f7fcf2c151b95",
-      "title": "Economies of Scope from Shared Inputs",
-      "date": "2026-11-26",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科402(CRETA協辦)",
-      "speaker": "Paul Sungwook Koh (Yonsei University)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "個體經濟",
-        "應用個經"
-      ]
-    },
-    {
-      "id": "a98e937ee12f7089ae8c",
-      "title": "Edutainment, Parental Involvement, and Child Development: Evidence from a Home-Based Intervention",
-      "date": "2026-11-26",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科604",
-      "speaker": "Tim Ruberg (U of Tokyo)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "60c5f4de615fc3e065ff",
-      "title": "Overreaction in Expectations under Signal Extraction: Experimental Evidence",
-      "date": "2026-11-26",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "社科302",
-      "speaker": "Donghoon Yoo (Korea University)",
-      "url": "https://econ.ntu.edu.tw/archives/18955",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-econ-seminars",
-      "sourceName": "台大經濟系",
-      "topics": [
-        "其他學術活動"
-      ]
-    },
-    {
-      "id": "8e9be059e8a5d43132bf",
-      "title": "Robust estimation and inference with given marginals (G. Franguridi, J. Hahn, A. Kapteyn, G. Ridder)",
-      "date": "2026-11-26",
-      "time": "13:30",
-      "endTime": "15:00",
-      "venue": "國立臺灣大學管理學院二號館 3 樓 304 教室",
-      "speaker": "王耀輝教授 (臺大財務金融學系)",
-      "url": "https://www.creta.org.tw/news-2-351",
-      "type": "演講／研討會",
-      "institution": "台大",
-      "sourceKey": "ntu-creta",
-      "sourceName": "台大 CRETA",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
-      "id": "eea920b7ce6446f237f5",
-      "title": "Bridging Quasi-Experimental and Structural Approaches for Robust Evaluation of US Airline Mergers",
-      "date": "2026-11-26",
-      "time": "14:30",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Gaurab Aryal",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8113",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "應用個經"
-      ]
-    },
-    {
       "id": "57d622b58e45933744cd",
       "title": "Innovation and Adaptation to Expanding Biological Threats",
       "date": "2026-11-27",
@@ -412,6 +326,38 @@
     }
   ],
   "papers": [
+    {
+      "id": "550836698bbf8ee39191",
+      "title": "LIN volume 62 issue 4 Cover and Front matter",
+      "date": "2026-11-26",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226725100911",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "9f871570202fe94d4d10",
+      "title": "LIN volume 62 issue 4 Cover and Back matter",
+      "date": "2026-11-26",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226725100923",
+      "type": "期刊紀錄",
+      "authors": [],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
     {
       "id": "e2105b22543233975e8f",
       "title": "Who did what to whom? Marking event participants in Lengua de Señas Nicaragüense (LSN)",
@@ -3265,7 +3211,8 @@
         "數理經濟",
         "個體經濟",
         "賽局理論"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "8045859145ef5020e8a9",
@@ -3632,7 +3579,7 @@
     },
     {
       "id": "09236c7d741b93bac594",
-      "title": "Stefana Garello, 2024, The Enigma of Metaphor: Philosophy, Pragmatics, Cognitive Science. Cham, Switzerland: Springer, pp. xiii + 172.",
+      "title": "Stefana Garello, 2024, The enigma of metaphor: Philosophy, pragmatics, cognitive science. Cham, Switzerland: Springer, pp. xiii + 172.",
       "date": "2026-10-23",
       "dateLabel": "出版日期",
       "url": "https://doi.org/10.1017/s0022226726101376",
@@ -3889,46 +3836,6 @@
         "數理經濟",
         "個體經濟"
       ]
-    },
-    {
-      "id": "1621aeba42b7e39d359b",
-      "title": "Pareto optimal uncertainty sharing under smooth ambiguity",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103285",
-      "type": "期刊紀錄",
-      "authors": [
-        "Riccardo Formenti"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ]
-    },
-    {
-      "id": "e66177883834f299fbd6",
-      "title": "Optimal fixed-terms contracts under one-sided enforcement and persistent adverse selection",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103294",
-      "type": "期刊紀錄",
-      "authors": [
-        "David Martimort",
-        "Aggey Simons (Semenov)"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ],
-      "stale": false
     }
   ],
   "sources": [
@@ -3938,7 +3845,7 @@
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
       "examined": 671,
-      "matches": 9,
+      "matches": 4,
       "issues": [],
       "status": "ok"
     },
@@ -3948,7 +3855,7 @@
       "url": "https://www.creta.org.tw/",
       "group": "events",
       "examined": 25,
-      "matches": 1,
+      "matches": 0,
       "issues": [],
       "status": "ok"
     },
@@ -3967,8 +3874,8 @@
       "source": "中研院經濟所",
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
-      "examined": 28,
-      "matches": 9,
+      "examined": 27,
+      "matches": 8,
       "issues": [],
       "status": "ok"
     },
@@ -3988,7 +3895,7 @@
       "url": "https://www.sinica.edu.tw/#Calendars",
       "group": "events",
       "examined": 12,
-      "matches": 1,
+      "matches": 0,
       "issues": [],
       "status": "ok"
     },
@@ -4067,8 +3974,8 @@
       "source": "Journal of Linguistics",
       "url": "https://www.cambridge.org/core/journals/journal-of-linguistics",
       "group": "papers",
-      "examined": 7,
-      "matches": 7,
+      "examined": 9,
+      "matches": 9,
       "issues": [],
       "status": "ok"
     },
@@ -4101,6 +4008,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-26T08:40:59.202098Z",
-  "run_id": "45784998883"
+  "last_scan_attempt": "2026-11-26T16:41:20.983679Z",
+  "run_id": "45860852260"
 }
