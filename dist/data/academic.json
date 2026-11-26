@@ -3205,6 +3205,25 @@
       ]
     },
     {
+      "id": "c6201ceb9abf2576fe21",
+      "title": "Recursive utility, social discounting, and sustainable consumption",
+      "date": "2026-11-01",
+      "dateLabel": "出版月份",
+      "url": "https://doi.org/10.1016/j.jmateco.2026.103337",
+      "type": "期刊紀錄",
+      "authors": [
+        "Junkee Jeon"
+      ],
+      "sourceName": "Journal of Mathematical Economics",
+      "sourceKeys": [
+        "0304-4068"
+      ],
+      "topics": [
+        "數理經濟",
+        "個體經濟"
+      ]
+    },
+    {
       "id": "a56be34d4b8bb1737879",
       "title": "Priority-swapping-proof allocation",
       "date": "2026-11-01",
@@ -3908,26 +3927,8 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ]
-    },
-    {
-      "id": "b4e506b1290a08ee8de4",
-      "title": "Money, Time, and Grant Design",
-      "date": "2026-10-01",
-      "dateLabel": "出版日期",
-      "url": "https://doi.org/10.1257/app.20240477",
-      "type": "期刊紀錄",
-      "authors": [
-        "Kyle Myers",
-        "Wei Yang Tham"
       ],
-      "sourceName": "AEJ · Applied Economics",
-      "sourceKeys": [
-        "1945-7782"
-      ],
-      "topics": [
-        "應用個經"
-      ]
+      "stale": false
     }
   ],
   "sources": [
@@ -3996,7 +3997,7 @@
       "source": "中研院資訊所",
       "url": "https://www.iis.sinica.edu.tw/zh/page/Events/seminar.html",
       "group": "events",
-      "examined": 60,
+      "examined": 61,
       "matches": 1,
       "issues": [],
       "status": "ok"
@@ -4100,6 +4101,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-25T16:41:26.593311Z",
-  "run_id": "45656332662"
+  "last_scan_attempt": "2026-11-26T08:40:59.202098Z",
+  "run_id": "45784998883"
 }

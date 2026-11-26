@@ -567,7 +567,7 @@
     "deadline": "2026-12-29",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
+    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
     "firstSeen": "2026-11-13",
     "lastSeen": "2026-11-26",
     "status": "review"
@@ -886,15 +886,15 @@
     "timing": "平台刊登到期：2027-02-16；雇主可能已先下架。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
-    "checked": "2026-11-25",
+    "checked": "2026-11-26",
     "postedAt": null,
-    "sourceUpdatedAt": "2026-11-25",
+    "sourceUpdatedAt": "2026-11-26",
     "deadline": "2027-02-16",
     "deadlineTime": "",
     "verificationStatus": "pending",
-    "verificationNote": "已不在本輪近期公告範圍內，是否仍收件請見原公告。",
+    "verificationNote": "遠端平台標記接受台灣、UTC+8；原雇主刊登與地區限制仍需確認。",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-25",
+    "lastSeen": "2026-11-26",
     "status": "review"
   },
   {

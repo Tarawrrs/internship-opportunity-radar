@@ -1,16 +1,14 @@
 {
-  "last_scan_attempt": "2026-11-25T16:41:17.903254Z",
-  "last_successful_scan": "2026-11-25T16:41:17.903254Z",
+  "last_scan_attempt": "2026-11-26T08:40:50.656956Z",
+  "last_successful_scan": "2026-11-26T08:40:50.656956Z",
   "interval_days": 1,
   "scan_status": "partial",
-  "job_count": 46,
+  "job_count": 45,
   "review_count": 44,
-  "archive_count": 32,
-  "records_examined": 4557,
-  "new_count": 1,
-  "new_ids": [
-    "nccu-career-4385"
-  ],
+  "archive_count": 33,
+  "records_examined": 4551,
+  "new_count": 0,
+  "new_ids": [],
   "recent_ids": [
     "nccu-career-4381",
     "taiwanjobs-14835337",
@@ -28,7 +26,7 @@
       "sourceKey": "taiwanjobs:taipei",
       "url": "https://data.gov.tw/dataset/44062",
       "status": "ok",
-      "examined": 2525,
+      "examined": 2526,
       "matches": 2,
       "issues": [],
       "active": 2,
@@ -39,7 +37,7 @@
       "sourceKey": "line:taiwan",
       "url": "https://careers.linecorp.com/jobs?ca=All&cp=LINE+Taiwan",
       "status": "ok",
-      "examined": 58,
+      "examined": 57,
       "matches": 10,
       "issues": [],
       "active": 10,
@@ -223,9 +221,9 @@
       "url": "https://job-boards.greenhouse.io/appier",
       "status": "ok",
       "examined": 59,
-      "matches": 3,
+      "matches": 2,
       "issues": [],
-      "active": 3,
+      "active": 2,
       "review": 0
     },
     {
@@ -233,7 +231,7 @@
       "sourceKey": "greenhouse:point72",
       "url": "https://job-boards.greenhouse.io/point72",
       "status": "ok",
-      "examined": 199,
+      "examined": 200,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -266,7 +264,7 @@
       "sourceKey": "greenhouse:anthropic",
       "url": "https://job-boards.greenhouse.io/anthropic",
       "status": "ok",
-      "examined": 635,
+      "examined": 634,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -288,7 +286,7 @@
       "sourceKey": "lever:shopback-2",
       "url": "https://jobs.lever.co/shopback-2",
       "status": "ok",
-      "examined": 69,
+      "examined": 64,
       "matches": 1,
       "issues": [],
       "active": 1,
@@ -299,7 +297,7 @@
       "sourceKey": "lever:ninjavan",
       "url": "https://jobs.lever.co/ninjavan",
       "status": "ok",
-      "examined": 139,
+      "examined": 138,
       "matches": 0,
       "issues": [],
       "active": 0,
@@ -319,6 +317,17 @@
   ],
   "winter_year": 2027,
   "history": [
+    {
+      "id": "45784998883",
+      "event": "schedule",
+      "finished": "2026-11-26T08:40:50.656956Z",
+      "scan_date": "2026-11-26",
+      "examined": 4551,
+      "new": 0,
+      "status": "partial",
+      "academic_status": "ok",
+      "academic_examined": 961
+    },
     {
       "id": "45656332662",
       "event": "repository_dispatch",
@@ -445,41 +454,28 @@
       "timer_run_id": "44568437327",
       "academic_status": "ok",
       "academic_examined": 960
-    },
-    {
-      "id": "44695607069",
-      "event": "schedule",
-      "finished": "2026-11-20T07:33:12.609949Z",
-      "scan_date": "2026-11-20",
-      "examined": 4471,
-      "new": 0,
-      "status": "partial",
-      "academic_status": "ok",
-      "academic_examined": 960
     }
   ],
   "run": {
-    "id": "45656332662",
-    "event": "repository_dispatch",
-    "finished": "2026-11-25T16:41:17.903254Z",
+    "id": "45784998883",
+    "event": "schedule",
+    "finished": "2026-11-26T08:40:50.656956Z",
     "scan_date": "2026-11-26",
-    "examined": 4557,
-    "new": 1,
+    "examined": 4551,
+    "new": 0,
     "status": "partial",
-    "timer_run_id": "45439705792",
     "academic_status": "ok",
-    "academic_examined": 960
+    "academic_examined": 961
   },
   "last_schedule": {
-    "id": "45656332662",
-    "event": "repository_dispatch",
-    "finished": "2026-11-25T16:41:17.903254Z",
+    "id": "45784998883",
+    "event": "schedule",
+    "finished": "2026-11-26T08:40:50.656956Z",
     "scan_date": "2026-11-26",
-    "examined": 4557,
-    "new": 1,
+    "examined": 4551,
+    "new": 0,
     "status": "partial",
-    "timer_run_id": "45439705792",
     "academic_status": "ok",
-    "academic_examined": 960
+    "academic_examined": 961
   }
 }
