@@ -100,7 +100,8 @@
       "sourceName": "台大語言所",
       "topics": [
         "語言學"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "52c9facbf8b45b9ba23a",
@@ -134,7 +135,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "a95ef3a662f16badadb9",
@@ -185,7 +187,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "41cbb5d4a4d65dfb2b64",
@@ -253,7 +256,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "a3fb6970172c5cb1fcb0",
@@ -288,7 +292,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "d799454f95563727eafd",
@@ -3844,30 +3849,36 @@
       "source": "台大經濟系",
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
-      "examined": 671,
-      "matches": 4,
-      "issues": [],
-      "status": "ok"
+      "examined": 0,
+      "matches": 0,
+      "issues": [
+        "ValueError"
+      ],
+      "status": "error"
     },
     {
       "sourceKey": "ntu-creta",
       "source": "台大 CRETA",
       "url": "https://www.creta.org.tw/",
       "group": "events",
-      "examined": 25,
+      "examined": 0,
       "matches": 0,
-      "issues": [],
-      "status": "ok"
+      "issues": [
+        "ValueError"
+      ],
+      "status": "error"
     },
     {
       "sourceKey": "ntu-gil",
       "source": "台大語言所",
       "url": "https://linguistics.ntu.edu.tw/announcement/events",
       "group": "events",
-      "examined": 10,
-      "matches": 1,
-      "issues": [],
-      "status": "ok"
+      "examined": 0,
+      "matches": 0,
+      "issues": [
+        "URLError"
+      ],
+      "status": "error"
     },
     {
       "sourceKey": "sinica-econ-seminars",
@@ -4008,6 +4019,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-26T16:41:20.983679Z",
-  "run_id": "45860852260"
+  "last_scan_attempt": "2026-11-27T08:52:00.732279Z",
+  "run_id": "45968788890"
 }
