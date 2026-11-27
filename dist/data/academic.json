@@ -1,23 +1,6 @@
 {
   "events": [
     {
-      "id": "57d622b58e45933744cd",
-      "title": "Innovation and Adaptation to Expanding Biological Threats",
-      "date": "2026-11-27",
-      "time": "12:10",
-      "endTime": "",
-      "venue": "Conference Room B110",
-      "speaker": "Professor Shu-Chen Tsao (曹書誠)",
-      "url": "https://www.econ.sinica.edu.tw/4d49b1b1-d551-4956-84a5-6bbf392d8417/posts/8398",
-      "type": "演講／研討會",
-      "institution": "中研院",
-      "sourceKey": "sinica-econ-seminars",
-      "sourceName": "中研院經濟所",
-      "topics": [
-        "其他學術活動"
-      ]
-    },
-    {
       "id": "6b04d7d01503d1cce4a3",
       "title": "TIGP (SNHCC) -- Applications of AI in Text Analysis: Capabilities and Limitations through Research Cases",
       "date": "2026-11-30",
@@ -66,6 +49,23 @@
       "sourceName": "中研院語言所",
       "topics": [
         "語言學"
+      ]
+    },
+    {
+      "id": "5b963777dacdf5655f81",
+      "title": "The Cost of Housework:Part-Time Penalties and Gender Pay Gap",
+      "date": "2026-12-03",
+      "time": "13:30",
+      "endTime": "15:00",
+      "venue": "社科302",
+      "speaker": "Terry Cheung (Institute of Economics, Academia Sinica)",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "其他學術活動"
       ]
     },
     {
@@ -127,7 +127,7 @@
       "time": "13:30",
       "endTime": "14:30",
       "venue": "社科609",
-      "speaker": "Jiun-Hua Su",
+      "speaker": "全/Jiun-Hua Su",
       "url": "https://econ.ntu.edu.tw/archives/18955",
       "type": "演講／研討會",
       "institution": "台大",
@@ -135,8 +135,7 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ],
-      "stale": true
+      ]
     },
     {
       "id": "a95ef3a662f16badadb9",
@@ -179,7 +178,7 @@
       "time": "09:00",
       "endTime": "10:30",
       "venue": "HKBU\nPolitical Economy",
-      "speaker": "Prof. Andrew KOSENKO (Marist University)",
+      "speaker": "聯校/Prof. Andrew KOSENKO (Marist University)",
       "url": "https://econ.ntu.edu.tw/archives/18955",
       "type": "演講／研討會",
       "institution": "台大",
@@ -187,8 +186,7 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ],
-      "stale": true
+      ]
     },
     {
       "id": "41cbb5d4a4d65dfb2b64",
@@ -242,6 +240,23 @@
       ]
     },
     {
+      "id": "a877351192567c492f5b",
+      "title": "Monetary Policy and Diagnostic Asset Price Bubbles",
+      "date": "2026-12-10",
+      "time": "13:30",
+      "endTime": "15:00",
+      "venue": "社科302",
+      "speaker": "Ernie Chuang (NTU)",
+      "url": "https://econ.ntu.edu.tw/archives/18955",
+      "type": "演講／研討會",
+      "institution": "台大",
+      "sourceKey": "ntu-econ-seminars",
+      "sourceName": "台大經濟系",
+      "topics": [
+        "其他學術活動"
+      ]
+    },
+    {
       "id": "9e218732edaa1df60b4b",
       "title": "清代珠江流域的糧價結構：數據可信度與市場整合度分析，1737-1911",
       "date": "2026-12-10",
@@ -255,9 +270,8 @@
       "sourceKey": "ntu-econ-seminars",
       "sourceName": "台大經濟系",
       "topics": [
-        "其他學術活動"
-      ],
-      "stale": true
+        "應用個經"
+      ]
     },
     {
       "id": "a3fb6970172c5cb1fcb0",
@@ -292,8 +306,7 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ],
-      "stale": true
+      ]
     },
     {
       "id": "d799454f95563727eafd",
@@ -331,6 +344,44 @@
     }
   ],
   "papers": [
+    {
+      "id": "97690d538d73714e4a3d",
+      "title": "Making inferences: What do participants take away from being in linguistics experiments?",
+      "date": "2026-11-27",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0097850726000202",
+      "type": "期刊紀錄",
+      "authors": [
+        "Charlotte Vaughn",
+        "Abby Walker"
+      ],
+      "sourceName": "Language",
+      "sourceKeys": [
+        "0097-8507"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
+    {
+      "id": "00df800bc2ec365b54cf",
+      "title": "An emergent noun–verb distinction in Zinacantec Family Sign Language",
+      "date": "2026-11-27",
+      "dateLabel": "出版日期",
+      "url": "https://doi.org/10.1017/s0022226726101509",
+      "type": "期刊紀錄",
+      "authors": [
+        "Austin German",
+        "Diane Brentari"
+      ],
+      "sourceName": "Journal of Linguistics",
+      "sourceKeys": [
+        "0022-2267"
+      ],
+      "topics": [
+        "語言學"
+      ]
+    },
     {
       "id": "550836698bbf8ee39191",
       "title": "LIN volume 62 issue 4 Cover and Front matter",
@@ -3172,7 +3223,8 @@
       "topics": [
         "數理經濟",
         "個體經濟"
-      ]
+      ],
+      "stale": false
     },
     {
       "id": "a56be34d4b8bb1737879",
@@ -3798,49 +3850,6 @@
         "數理經濟",
         "個體經濟"
       ]
-    },
-    {
-      "id": "73785c823a849d2c23b4",
-      "title": "Rationing to avoid conflict: A centralized assignment problem",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103289",
-      "type": "期刊紀錄",
-      "authors": [
-        "Zéphirin Nganmeni",
-        "Roland Pongou",
-        "Bertrand Tchantcho",
-        "Jean Baptiste Tondji"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ],
-      "stale": false
-    },
-    {
-      "id": "95f2ebc70733b14006ae",
-      "title": "Progressive and robust scoring rules: Axiomatic taxonomy",
-      "date": "2026-10-01",
-      "dateLabel": "出版月份",
-      "url": "https://doi.org/10.1016/j.jmateco.2026.103282",
-      "type": "期刊紀錄",
-      "authors": [
-        "Guy Barokas",
-        "Shmuel Nitzan"
-      ],
-      "sourceName": "Journal of Mathematical Economics",
-      "sourceKeys": [
-        "0304-4068"
-      ],
-      "topics": [
-        "數理經濟",
-        "個體經濟"
-      ]
     }
   ],
   "sources": [
@@ -3849,24 +3858,20 @@
       "source": "台大經濟系",
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
-      "examined": 0,
-      "matches": 0,
-      "issues": [
-        "ValueError"
-      ],
-      "status": "error"
+      "examined": 674,
+      "matches": 6,
+      "issues": [],
+      "status": "ok"
     },
     {
       "sourceKey": "ntu-creta",
       "source": "台大 CRETA",
       "url": "https://www.creta.org.tw/",
       "group": "events",
-      "examined": 0,
+      "examined": 25,
       "matches": 0,
-      "issues": [
-        "ValueError"
-      ],
-      "status": "error"
+      "issues": [],
+      "status": "ok"
     },
     {
       "sourceKey": "ntu-gil",
@@ -3885,8 +3890,8 @@
       "source": "中研院經濟所",
       "url": "https://www.econ.sinica.edu.tw/pages/29",
       "group": "events",
-      "examined": 27,
-      "matches": 8,
+      "examined": 26,
+      "matches": 7,
       "issues": [],
       "status": "ok"
     },
@@ -3985,8 +3990,8 @@
       "source": "Journal of Linguistics",
       "url": "https://www.cambridge.org/core/journals/journal-of-linguistics",
       "group": "papers",
-      "examined": 9,
-      "matches": 9,
+      "examined": 10,
+      "matches": 10,
       "issues": [],
       "status": "ok"
     },
@@ -3995,8 +4000,8 @@
       "source": "Language",
       "url": "https://www.cambridge.org/core/journals/language",
       "group": "papers",
-      "examined": 2,
-      "matches": 2,
+      "examined": 3,
+      "matches": 3,
       "issues": [],
       "status": "ok"
     },
@@ -4019,6 +4024,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-27T08:52:00.732279Z",
-  "run_id": "45968788890"
+  "last_scan_attempt": "2026-11-27T16:41:55.474231Z",
+  "run_id": "46035544276"
 }

@@ -1,5 +1,54 @@
 [
   {
+    "id": "ntu-econ-18559",
+    "sourceKey": "rss:ntu-econ",
+    "sourceName": "台大經濟系實習與就業公告",
+    "source": "https://econ.ntu.edu.tw/archives/18559",
+    "title": "臺大經濟系許軒銘老師誠徵兼任研究助理",
+    "company": "台大經濟系／公告單位",
+    "location": "台北｜臺大社會科學院，或遠距工作 / College of Social Sciences, NTU, or remote",
+    "locationPolicy": "taipei-taiwan-remote-v1",
+    "locationDisposition": "eligible",
+    "locationKey": "remote",
+    "locationReason": "職缺明列台灣或全球全遠端；仍需確認聘僱、時區與學籍資格",
+    "locationEvidence": [
+      "招募地點：台北｜臺大社會科學院，或遠距工作 / College of Social Sciences, NTU, or remote"
+    ],
+    "rawLocation": "台北｜臺大社會科學院，或遠距工作 / College of Social Sciences, NTU, or remote",
+    "workplaceType": "",
+    "jobType": "兼任研究助理",
+    "track": "research",
+    "winterStatus": "flexible",
+    "winterYear": 2027,
+    "period": "彈性，以 2027年1 月 1 日前到職為佳；初期為期三個月，雙方同意後可續聘",
+    "note": "",
+    "applicationUrl": "",
+    "score": 96,
+    "priority": "優先查核",
+    "priorityType": "priority",
+    "fit": "兼任研究助理 · 實證／因果、資料分析、Python、R、GIS",
+    "skills": [
+      "實證／因果",
+      "資料分析",
+      "Python",
+      "R",
+      "GIS"
+    ],
+    "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
+    "eligibility": "限台大在學學生（大學部或研究所）；其他條件見原公告。",
+    "risk": "從台灣全程線上仍須符合雇主的聘僱、工時與時區要求。",
+    "checked": "2026-11-28",
+    "postedAt": "2026-11-10",
+    "sourceUpdatedAt": null,
+    "deadline": null,
+    "deadlineTime": "",
+    "verificationStatus": "confirmed",
+    "verificationNote": "",
+    "firstSeen": "2026-11-13",
+    "lastSeen": "2026-11-28",
+    "status": "active"
+  },
+  {
     "id": "nccu-career-4381",
     "sourceKey": "campus:nccu-career",
     "sourceName": "政大職涯平台｜國內實習職缺",
@@ -37,7 +86,7 @@
     "timing": "公告截止：2026-12-20。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-20",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-20",
@@ -45,7 +94,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-21",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -86,7 +135,7 @@
     "timing": "公告截止：2026-12-31。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-13",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-31",
@@ -94,7 +143,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -134,7 +183,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-03",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -142,7 +191,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -180,7 +229,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -188,7 +237,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -225,7 +274,7 @@
     "timing": "公告截止：2026-12-18。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-02",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-18",
@@ -233,7 +282,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -271,7 +320,7 @@
     "timing": "公告截止：2027-10-12。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-12",
     "sourceUpdatedAt": null,
     "deadline": "2027-10-12",
@@ -279,7 +328,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -317,7 +366,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2022-08-26",
     "sourceUpdatedAt": "2026-09-16",
     "deadline": null,
@@ -325,7 +374,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -362,7 +411,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -370,7 +419,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -410,7 +459,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-09-22",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -418,7 +467,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -456,7 +505,7 @@
     "timing": "公告截止：2026-12-22。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-26",
     "deadline": "2026-12-22",
@@ -464,7 +513,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-24",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -501,7 +550,7 @@
     "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
     "eligibility": "須具在學身分並能以中文與英文溝通，詳各組原公告。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-05",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -509,7 +558,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -546,7 +595,7 @@
     "timing": "公告截止：2026-12-07。如提前額滿，以原公告為準。",
     "eligibility": "大學或碩士在學，大四與碩二優先。時薪 NT$250。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-22",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-07",
@@ -554,7 +603,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -591,7 +640,7 @@
     "timing": "公告截止：2026-12-07。如提前額滿，以原公告為準。",
     "eligibility": "大學或碩士在學，大四與碩二優先。時薪 NT$250。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-22",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-07",
@@ -599,7 +648,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -637,7 +686,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-05-20",
     "sourceUpdatedAt": "2026-11-26",
     "deadline": null,
@@ -645,7 +694,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -683,7 +732,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -691,7 +740,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -729,7 +778,7 @@
     "timing": "公告截止：2026-12-31。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-02-13",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-31",
@@ -737,7 +786,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -775,7 +824,7 @@
     "timing": "公告截止：2026-12-22。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": null,
     "sourceUpdatedAt": "2026-11-24",
     "deadline": "2026-12-22",
@@ -783,7 +832,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-24",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -821,7 +870,7 @@
     "timing": "公告截止：2027-01-31。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-13",
     "sourceUpdatedAt": null,
     "deadline": "2027-01-31",
@@ -829,7 +878,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -866,7 +915,7 @@
     "timing": "公告截止：2027-03-31。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-24",
     "sourceUpdatedAt": null,
     "deadline": "2027-03-31",
@@ -874,7 +923,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-24",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -911,7 +960,7 @@
     "timing": "公告截止：2026-12-31。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-06-16",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-31",
@@ -919,7 +968,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -954,7 +1003,7 @@
     "timing": "公告截止：2026-12-11。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-09-11",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-11",
@@ -962,7 +1011,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -999,7 +1048,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2019-02-19",
     "sourceUpdatedAt": "2026-09-03",
     "deadline": null,
@@ -1007,7 +1056,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1044,7 +1093,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -1052,7 +1101,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1090,7 +1139,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-08-21",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1098,7 +1147,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1135,7 +1184,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-20",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1143,7 +1192,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1180,7 +1229,7 @@
     "timing": "公告截止：2026-12-31。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-13",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-31",
@@ -1188,7 +1237,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1225,7 +1274,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "全職職缺，需核對到職日、學位要求與能否配合目前課業。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-20",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1233,7 +1282,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1271,7 +1320,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -1279,7 +1328,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1316,7 +1365,7 @@
     "timing": "公告截止：2027-01-24。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-02",
     "sourceUpdatedAt": null,
     "deadline": "2027-01-24",
@@ -1324,7 +1373,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-18",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1362,7 +1411,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -1370,7 +1419,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1405,7 +1454,7 @@
     "timing": "本輪仍列於招募清單，來源未提供明確截止日。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-12",
     "sourceUpdatedAt": "2026-11-12",
     "deadline": null,
@@ -1413,7 +1462,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1448,7 +1497,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -1456,7 +1505,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1491,7 +1540,7 @@
     "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-23",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1499,7 +1548,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-24",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1534,7 +1583,7 @@
     "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-23",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1542,7 +1591,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-24",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1577,7 +1626,7 @@
     "timing": "公告採隨到隨審或額滿為止，投遞前確認尚有名額。",
     "eligibility": "須具在學身分並能以中文與英文溝通，詳各組原公告。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-05",
     "sourceUpdatedAt": null,
     "deadline": null,
@@ -1585,7 +1634,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1620,7 +1669,7 @@
     "timing": "公告截止：2026-12-18。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-02",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-18",
@@ -1628,7 +1677,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1663,7 +1712,7 @@
     "timing": "公告截止：2026-12-18。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-02",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-18",
@@ -1671,7 +1720,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1706,7 +1755,7 @@
     "timing": "公告截止：2026-12-18。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-02",
     "sourceUpdatedAt": null,
     "deadline": "2026-12-18",
@@ -1714,7 +1763,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1749,7 +1798,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "簡章的結算部欄未列特定科系或年級，請核對分行與排班。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-03",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1757,7 +1806,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1792,7 +1841,7 @@
     "timing": "公告截止：2026-11-29。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-10-29",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-29",
@@ -1800,7 +1849,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1835,7 +1884,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-11-25",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1843,7 +1892,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-26",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1878,7 +1927,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-06-18",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1886,7 +1935,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   },
   {
@@ -1921,7 +1970,7 @@
     "timing": "公告截止：2026-11-30。如提前額滿，以原公告為準。",
     "eligibility": "請在原公告核對學籍、所需技能與每週工時。",
     "risk": "請核對每週工時、到班要求和實際分析／研究工作比重。",
-    "checked": "2026-11-27",
+    "checked": "2026-11-28",
     "postedAt": "2026-06-18",
     "sourceUpdatedAt": null,
     "deadline": "2026-11-30",
@@ -1929,7 +1978,7 @@
     "verificationStatus": "confirmed",
     "verificationNote": "",
     "firstSeen": "2026-11-13",
-    "lastSeen": "2026-11-27",
+    "lastSeen": "2026-11-28",
     "status": "active"
   }
 ]
