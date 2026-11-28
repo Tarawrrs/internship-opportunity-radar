@@ -66,7 +66,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "8ff211deb201d0770c92",
@@ -135,7 +136,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "a95ef3a662f16badadb9",
@@ -186,7 +188,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "41cbb5d4a4d65dfb2b64",
@@ -254,7 +257,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "其他學術活動"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "9e218732edaa1df60b4b",
@@ -271,7 +275,8 @@
       "sourceName": "台大經濟系",
       "topics": [
         "應用個經"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "a3fb6970172c5cb1fcb0",
@@ -306,7 +311,8 @@
       "topics": [
         "實驗／行為經濟",
         "應用個經"
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "d799454f95563727eafd",
@@ -3858,20 +3864,24 @@
       "source": "台大經濟系",
       "url": "https://econ.ntu.edu.tw/",
       "group": "events",
-      "examined": 674,
-      "matches": 6,
-      "issues": [],
-      "status": "ok"
+      "examined": 0,
+      "matches": 0,
+      "issues": [
+        "ValueError"
+      ],
+      "status": "error"
     },
     {
       "sourceKey": "ntu-creta",
       "source": "台大 CRETA",
       "url": "https://www.creta.org.tw/",
       "group": "events",
-      "examined": 25,
+      "examined": 0,
       "matches": 0,
-      "issues": [],
-      "status": "ok"
+      "issues": [
+        "ValueError"
+      ],
+      "status": "error"
     },
     {
       "sourceKey": "ntu-gil",
@@ -4024,6 +4034,6 @@
     "應用個經",
     "語言學"
   ],
-  "last_scan_attempt": "2026-11-27T16:41:55.474231Z",
-  "run_id": "46035544276"
+  "last_scan_attempt": "2026-11-28T08:10:16.659258Z",
+  "run_id": "46124422214"
 }
